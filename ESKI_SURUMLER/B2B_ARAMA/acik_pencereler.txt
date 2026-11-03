@@ -1,0 +1,112 @@
+PENCERE: Görev Çubuğu | sinif=Shell_TrayWnd | 0,1032 1920x48
+PENCERE: C:\WINDOWS\system32\cmd.exe | sinif=CASCADIA_HOSTING_WINDOW_CLASS | 200,208 1129x635
+PENCERE: B2B_ARAMA - Dosya Gezgini | sinif=CabinetWClass | 0,0 1918x1006
+PENCERE: Yeni Alka Otomotiv San. Tic. Ltd. Şti. B2B - Google Chrome | sinif=Chrome_WidgetWin_1 | -8,-8 1936x1048
+    sekme: Toyota YARIS FRP 2008 SCP90L-CHGGKW Parts Catalogs | Engine, Fuel, Tool - KATALOG grubunun parçası - Bellek kullanımı - 144 MB
+    sekme: Otoşen Giriş - KATALOG grubunun parçası
+    sekme: Google Takvim - Pazar, 25 Ekim 2026, bugün - coşkun grubunun parçası - Bellek kullanımı - 40,1 MB
+    sekme: Gelen Kutusu (41) - csknsnksn@gmail.com - Gmail - coşkun grubunun parçası - Bellek kullanımı - 206 MB
+    sekme: Portföy & Takip Listesi - Investing.com - coşkun grubunun parçası
+    sekme: Şifremi Unuttum | - coşkun grubunun parçası - Bellek kullanımı - 54,2 MB
+    sekme: Google Çeviri - coşkun grubunun parçası - Bellek kullanımı - 95,3 MB
+    sekme: Lütfiye & Servet - Sürpriz parti - 22 Aralık 2018 - Google Fotoğraflar - coşkun grubunun parçası - Bellek kullanımı - 85,6 MB
+    sekme: netcarkorea.co.kr - coşkun grubunun parçası
+    sekme: Yedek Parça Ara | Otoşen - coşkun grubunun parçası - Bellek kullanımı - 43,1 MB
+    sekme: Arvento (2) - coşkun grubunun parçası - Bellek kullanımı - 116 MB
+    sekme: Satıcı Paneli - Hepsiburada Mağaza - coşkun grubunun parçası - Bellek kullanımı - 151 MB
+    sekme: Trendyol Pazaryeri - coşkun grubunun parçası - Bellek kullanımı - 248 MB
+    sekme: rapor.otobil.com - coşkun grubunun parçası - Ağ hatası
+    sekme: Öğretmene Cevap Yazma - coşkun grubunun parçası - Bellek kullanımı - 342 MB
+    sekme: Otoşen App - coşkun grubunun parçası - Bellek kullanımı - 60,4 MB
+    sekme: Portföy & Takip Listesi - Investing.com - coşkun grubunun parçası
+    sekme: Giriş - coşkun grubunun parçası - Bellek kullanımı - 42,4 MB
+    sekme: Trendyol Pazaryeri - coşkun grubunun parçası
+    sekme: Claude - coşkun grubunun parçası
+    sekme: OTO SEN - coşkun grubunun parçası
+    sekme: 192.168.2.190 - coşkun grubunun parçası - Ağ hatası
+    sekme: QNBpay | Üye İşyeri Paneli - coşkun grubunun parçası
+    sekme: Online Parça > Ara - coşkun grubunun parçası - Bellek kullanımı - 45,7 MB
+    sekme: (4) WhatsApp - b2b grubunun parçası - Bellek kullanımı - 475 MB
+    sekme: Vigo Panel - Claude grubunun parçası - Bellek kullanımı - 137 MB
+    sekme: Devam etme isteği - Claude - Claude grubunun parçası - Bellek kullanımı - 349 MB
+    sekme: ABS OTOMOTİV - VS B2B - Bellek kullanımı - 53,9 MB
+    sekme: Akay Otomotiv B2B - Bellek kullanımı - 61,6 MB
+    sekme: b2b.akkarmotor.com/error.aspx?aspxerrorpath=/Default.aspx
+    sekme: ARKAS OTOMOTİV
+    sekme: ASKAR OTOMOTİV.TİC.LTD.ŞTİ. B2B
+    sekme: ASLAN KARDEŞLER OTOMOTİV VE YEDEK PARÇA SAN.TİC.LTD.ŞTİ - Bellek kullanımı - 113 MB
+    sekme: AŞİN OTOMOTİV SAN VE TİC LTD ŞTİ B2B
+    sekme: Müşteri Girişi - Bellek kullanımı - 38,4 MB
+    sekme: BASBUG OTOMOTIV - Bellek kullanımı - 109 MB
+    sekme: BAŞARAN OTOMOTİV SAN. VE TİC. A.Ş B2B - Bellek kullanımı - 49,5 MB
+    sekme: CARPAR B2B Sistemine Hoş Geldiniz - Bellek kullanımı - 50,7 MB
+    sekme: ÇITAK YEDEK PARÇA İTHALAT İHRACAT NAKLİYAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ B2B - Bellek kullanımı - 53,3 MB
+    sekme: DE-GA B4B - Bellek kullanımı - 61,6 MB
+    sekme: Dinamik Otomotiv - Bellek kullanımı - 118 MB
+    sekme: EKİCİ OTOMOTİV - Otomotiv Yedek Parça - Bellek kullanımı - 134 MB
+    sekme: Ergin Otomotiv B2B
+    sekme: GloPar-B2B - Bellek kullanımı - 59,6 MB
+    sekme: Kolaş Motor A.Ş. - Bellek kullanımı - 100,0 MB
+    sekme: Grup Işık - Bellek kullanımı - 82,3 MB
+    sekme: Login - Güneybağlılar - Bellek kullanımı - 44,0 MB
+    sekme: HİS-KA OTOMOTİV - Bellek kullanımı - 44,8 MB
+    sekme: HYK Automotive | Otomobil Yedek Parçaları - Bellek kullanımı - 52,2 MB
+    sekme: İlsem Otomotiv - Bellek kullanımı - 68,1 MB
+    sekme: İNTUR OTOMOTİV VE TAŞIMACILIK SAN. VE TİC. LTD. ŞTİ - Bellek kullanımı - 191 MB
+    sekme: ioto B4B - İntermobil - Bellek kullanımı - 130 MB
+    sekme: JETPAR TURBO - Bellek kullanımı - 78,5 MB
+    sekme: Karakaş Toptan Oto Yedek Parça Turizm İnş Taş San ve Tic Ltd Şti. B2B - Bellek kullanımı - 68,3 MB
+    sekme: Karpart Otomotiv
+    sekme: KOREA OTOMOTİV SAN. TİC.LTD.ŞTİ B2B
+    sekme: Kortaş Otomotiv B2B
+    sekme: KRAW | B2B - Bellek kullanımı - 182 MB
+    sekme: Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ B2B - Bellek kullanımı - 66,3 MB
+    sekme: Martaş Otomotiv - Bellek kullanımı - 120 MB
+    sekme: Merkez Oto Yedek Parça
+    sekme: METE OTOMOTİV B2B - Bellek kullanımı - 52,9 MB
+    sekme: Arama - MEYDAN IO - Bellek kullanımı - 70,3 MB
+    sekme: Motor Aşin B2B - Bellek kullanımı - 296 MB
+    sekme: MURAT OTOMOTİV - Bellek kullanımı - 119 MB
+    sekme: Mydpar OTOMOTİV
+    sekme: NES OTO PARÇALARI ÜRETİM İMALAT DEPOLAMA İTH.İHR. VE TİC.LTD.ŞTİ. B2B - Bellek kullanımı - 52,7 MB
+    sekme: Orient Ekspres Ltd. Şti. - Bellek kullanımı - 44,9 MB
+    sekme: Oto Rulman - Ege B2B - Bellek kullanımı - 63,8 MB
+    sekme: Rotas Otomotiv - Bellek kullanımı - 114 MB
+    sekme: ŞAHİNOĞLU OTOMOTIV B2B - Bellek kullanımı - 54,7 MB
+    sekme: SAYILI OTOMOTIV B2B - Bellek kullanımı - 60,6 MB
+    sekme: Sayıner Otomotiv B2B - Bellek kullanımı - 64,9 MB
+    sekme: Sayim Rulman - Bellek kullanımı - 108 MB
+    sekme: siparis.fcs.com.tr - Bellek kullanımı - 63,7 MB
+    sekme: Şahinler Bayi Girişi - Bellek kullanımı - 42,3 MB
+    sekme: Şenbay Otomotiv - Bellek kullanımı - 46,6 MB
+    sekme: Teknopar Otomotiv - Bellek kullanımı - 67,4 MB
+    sekme: TOK OTOMOTİV SAN. VE TİCARET A.Ş B2B
+    sekme: UNIVERSAL OTOMOTİV B2B - Bellek kullanımı - 75,9 MB
+    sekme: b4b.vahdettiryakioglu.com.tr/Home - Bellek kullanımı - 149 MB
+    sekme: Waha Otomotiv - Bellek kullanımı - 68,1 MB
+    sekme: YEDEKÇİ OTOMOTİV B2B - Bellek kullanımı - 49,3 MB
+    sekme: Yeni Alka Otomotiv San. Tic. Ltd. Şti. B2B - Bellek kullanımı - 53,0 MB
+PENCERE: Claude | sinif=Chrome_WidgetWin_1 | 0,0 0x0
+PENCERE: Yak Oto B2B | sinif=Window | 760,291 400x450
+PENCERE: UZAKDOĞU MOTOR B2B Erişimi | sinif=WindowsForms10.Window.8.app.0.141b42a_r6_ad1 | 545,141 830x750
+PENCERE: TAYPAR A.Ş. — Mozilla Firefox | sinif=MozillaWindowClass | 0,0 1920x1032
+    sekme: Altay Taşıt ve Otomotiv Yedek Parça San. Tic. AŞ.
+    sekme: Hamle Otomotiv San. ve Tic. AŞ
+    sekme: MEGA-TEK OTOMOTİV
+    sekme: RULMAN DÜNYASI OTOMOTİV SANAYİ VE DIŞ TİCARET A.Ş
+    sekme: TAYPAR A.Ş.
+PENCERE: ÖZAŞ OTOMOTİV B2B | sinif=Afx:00D20000:0 | 0,0 1920x1032
+PENCERE: OTO SEN | sinif=Chrome_WidgetWin_1 | 10,10 945x1012
+PENCERE: Mest Otomotiv Bayi Paneli - Desiss Bayi Paneli | sinif=Chrome_WidgetWin_1 | -8,-8 1936x1048
+PENCERE: Kuzey Oto Bayi Yönetim Sistemi | sinif=Chrome_WidgetWin_1 | 10,10 945x1012
+PENCERE: İleri Otomotiv B2B | sinif=Afx:00D20000:0 | 0,0 1920x1032
+PENCERE: İlkemB2B | sinif=Chrome_WidgetWin_1 | 10,10 945x1012
+PENCERE: DOĞAN OTOMOTİV DIŞ TİC.LTD.ŞTİ. | sinif=Chrome_WidgetWin_1 | 10,10 945x1012
+PENCERE: BURSA NİSA OTOMOTİV SAN.TİC.LTD.ŞTİ - Otomasyon | sinif=Chrome_WidgetWin_1 | 10,10 945x1012
+PENCERE: Bayar Oto | sinif=Chrome_WidgetWin_1 | -8,-8 1936x1048
+PENCERE: Başdaş Dış Ticaret B2B | sinif=Window | 600,279 720x474
+PENCERE: Arena Otomotiv B2B | sinif=Chrome_WidgetWin_1 | 10,10 945x1012
+PENCERE: Berqnet Connect | sinif=Chrome_WidgetWin_1 | 0,0 0x0
+PENCERE: ayarlar.csv - Excel | sinif=XLMAIN | 0,0 0x0
+PENCERE: Spotify Premium | sinif=Chrome_WidgetWin_1 | 0,0 0x0
+PENCERE: Program Manager | sinif=Progman | 0,0 1920x1080

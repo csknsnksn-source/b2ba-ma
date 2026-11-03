@@ -1,0 +1,2 @@
+2026-10-25 13:29:12.223 eryaz_ui.py[131] ara -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}
+2026-10-25 14:23:58.623 eryaz_ui.py[178] ara -> Can not move cursor. EditControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: EditControl}

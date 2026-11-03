@@ -1,0 +1,103 @@
+=== rotas / 'Rotas Otomotiv' / parca=2091042 ===
+Arama kutusu: '' #searchInput
+      [HyperlinkControl] Arama Arama
+        [ButtonControl] Arama Arama
+          [ImageControl] Arama
+          [TextControl] Arama
+      [HyperlinkControl] Araç Araç
+        [ButtonControl] Araç Araç
+          [ImageControl] Araç
+          [TextControl] Araç
+      [HyperlinkControl] Sepet Sepet 13
+        [ButtonControl] Sepet Sepet 13
+          [ImageControl] Sepet
+          [TextControl] Sepet
+          [TextControl] 13
+      [HyperlinkControl] Bakiye Bakiye
+        [ButtonControl] Bakiye Bakiye
+          [ImageControl] Bakiye
+          [TextControl] Bakiye
+      [HyperlinkControl] Siparis Sipariş
+        [ButtonControl] Siparis Sipariş
+          [ImageControl] Siparis
+          [TextControl] Sipariş
+      [HyperlinkControl] Oem OEM
+        [ButtonControl] Oem OEM
+          [ImageControl] Oem
+          [TextControl] OEM
+      [HyperlinkControl] Hesap Hesap
+        [ButtonControl] Hesap Hesap
+          [ImageControl] Hesap
+          [TextControl] Hesap
+      [ButtonControl] Pos POS
+        [ImageControl] Pos
+        [TextControl] POS
+      [HyperlinkControl] Katalog Katalog
+        [ButtonControl] Katalog Katalog
+          [ImageControl] Katalog
+          [TextControl] Katalog
+      [HyperlinkControl] Oneri Öneri
+        [ButtonControl] Oneri Öneri
+          [ImageControl] Oneri
+          [TextControl] Öneri
+        [ButtonControl] Katalog Diğer
+          [ImageControl] Katalog
+          [TextControl] Diğer
+          [EditControl] Üretici yazınız...  #uretici
+          [EditControl] Araç yazınız...
+          [EditControl] Parça yazınız...
+      [EditControl]   #searchInput
+        [TextControl] 18:55
+        [TextControl] 25-10-2026
+      [GroupControl]   #8
+        [ImageControl] Advertisement Offer  #bannerImg
+  [ButtonControl] Arama Sonucu
+    [TextControl] Arama Sonucu
+    [ButtonControl] Eşdeğer Ürünler
+    [ButtonControl] Oem
+    [ButtonControl] Çapraz Kodlar
+    [ButtonControl] Araçlar
+    [ButtonControl] Stok Geçmişi
+    [ButtonControl] Aldıklarım
+    [TextControl] Tablo Görünümü
+      [TextControl] Tüm Ürünler
+      [TextControl] Stokta Olanlar
+            [DataItemControl] Stok Kodu
+                [TextControl] Stok Kodu
+            [DataItemControl] Ref. No
+                [TextControl] Ref. No
+            [DataItemControl] Marka
+                [TextControl] Marka
+            [DataItemControl] Ürün Adı
+              [GroupControl]   #product-name-column-header
+                [TextControl] Ürün Adı
+            [DataItemControl] ROTAŞ
+                [TextControl] ROTAŞ
+            [DataItemControl] GÜMRÜK DEPO
+                [TextControl] GÜMRÜK DEPO
+            [DataItemControl] G-2 DEPO
+                [TextControl] G-2 DEPO
+            [DataItemControl] YOLDA
+                [TextControl] YOLDA
+            [DataItemControl] Br.
+              [TextControl] Br.
+            [DataItemControl] Liste Fiyatı
+                [TextControl] Liste Fiyatı
+            [DataItemControl] KDV'siz Maliyet
+                [TextControl] KDV'siz Maliyet
+            [DataItemControl] KDV'li Maliyet
+                [TextControl] KDV'li Maliyet
+    [GroupControl]   #noResultText
+      [TextControl] Sonuç bulunamadı
+      [TextControl] Yetkili Bilgileri
+      [ImageControl] company
+      [TextControl] Rotas Otomotiv
+      [ImageControl] business_man_blue
+      [TextControl] OTOŞEN BURSA
+      [TextControl] 120.16.1247
+      [TextControl] OTOŞEN BURSA OTOMOTİV SANAYİ VE TİCARET LİMİTED ŞİRKETİ
+      [TextControl] €:
+      [TextControl] 55.9
+      [TextControl] $:
+      [TextControl] 49.85
+        [TextControl] Kullanıcı adınız ile başka bir bilgisayardan giriş yapılmış olabilir! Lütfen biraz bekleyip tekrar deneyiniz...

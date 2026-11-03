@@ -1,0 +1,13 @@
+=== UI kaynak deneme 6 13:17 ===
+kaynak uzunlugu: 139413 karakter
+'KDV Hariç': 0 kez
+'KDV Dahil': 0 kez
+'NET FİYAT': 0 kez
+'2.373,75': 0 kez
+'548,89': 0 kez
+'2091042': 0 kez
+'MHR-22778': 0 kez
+'NGK-77286': 0 kez
+'MND-DN2091042D00': 0 kez
+'₺': 0 kez
+kaynak sekmesi kapatildi

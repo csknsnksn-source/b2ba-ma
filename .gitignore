@@ -1,0 +1,34 @@
+# --- Hassas veriler: şifreler, oturum/giriş bilgileri ---
+ayarlar.csv
+*.giris
+giris_*.txt
+giris_*.html
+B2B_Sifreler.xlsx
+**/sifreler/
+**/B2B_Sifreler*
+**/*.pfx
+**/*.key
+**/.env
+
+# --- Tarayıcı profilleri, çerez ve önbellekler ---
+**/profil/
+**/profil_*/
+**/profil_firefox/
+**/Cookies
+**/Cookies-journal
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+**/*.sqlite-journal
+
+# --- Kısayollar, paketler, loglar ---
+*.lnk
+*.appref-ms
+*.zip
+desktop.ini
+log/
+**/log/
+
+# --- Eklenti imzalama anahtarı (özel anahtar) ---
+**/*.pem
+**/*.crx

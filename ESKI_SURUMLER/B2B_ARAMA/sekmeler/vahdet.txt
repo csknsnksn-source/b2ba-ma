@@ -1,0 +1,145 @@
+=== vahdet / 'vahdettiryakioglu' / parca=2091042 ===
+Arama kutusu: 'Aramak İstediğiniz Ürün' #quick-kelime
+[GroupControl]   #Site1
+  [GroupControl]   #form1
+    [GroupControl]   #header
+        [HyperlinkControl] Eksik resim açıklamalarını almak için içerik menüsünü açın.
+          [ImageControl] Eksik resim açıklamalarını almak için içerik menüsünü açın.
+            [TextControl] Tel: 0212 480 06 44
+            [TextControl] Cep: 0530 413 53 10
+                  [HyperlinkControl] SEPET
+                    [TextControl] SEPET
+                  [GroupControl]   #sepetUrunTutari
+                    [TextControl] 0,00 TL
+                [GroupControl]   #sepetUrunAdetiMain
+                  [TextControl] 0
+                      [TextControl] DESTEK
+                      [ImageControl]   #_Header_image
+                    [TextControl] MÜŞTERİ TEMSİLCİNİZ:
+                    [TextControl] TELEFON:
+                    [TextControl] FİRMA:
+                    [TextControl] OTO ŞEN BURSA OTO.SAN TİC LTD ŞTİ
+        [ListItemControl] ANASAYFA
+          [HyperlinkControl]  ANASAYFA
+                  [TextControl] 
+                [TextControl] ANASAYFA
+        [ListItemControl] ARAMA
+          [HyperlinkControl]  ARAMA
+                  [TextControl] 
+                [TextControl] ARAMA
+        [ListItemControl] SİPARİŞLER
+          [HyperlinkControl]  SİPARİŞLER
+                  [TextControl] 
+                [TextControl] SİPARİŞLER
+        [ListItemControl] CARİ HESAP
+          [HyperlinkControl]  CARİ HESAP
+                  [TextControl] 
+                [TextControl] CARİ HESAP
+        [ListItemControl] YENİ ÜRÜNLER
+          [HyperlinkControl]  YENİ ÜRÜNLER
+                  [TextControl] 
+                [TextControl] YENİ ÜRÜNLER
+        [ListItemControl] ONLİNE ÖDEME
+          [HyperlinkControl]  ONLİNE ÖDEME
+                  [TextControl] 
+                [TextControl] ONLİNE ÖDEME
+        [ListItemControl] BANKA DETAYLARI
+          [HyperlinkControl]  BANKA DETAYLARI
+                  [TextControl] 
+                [TextControl] BANKA DETAYLARI
+        [ListItemControl] TEKLİFLER
+          [HyperlinkControl] TEKLİFLER
+                [TextControl] TEKLİFLER
+        [ListItemControl] KATALOGLAR
+          [HyperlinkControl]  KATALOGLAR
+                  [TextControl] 
+                [TextControl] KATALOGLAR
+        [ListItemControl] DİĞER
+          [HyperlinkControl]  DİĞER
+                  [TextControl] 
+                [TextControl] DİĞER
+    [GroupControl]   #news
+          [TextControl] DUYURU
+        [ListControl]   #newsList
+          [ListItemControl] Vade Günümüz 15 Gündür. - Kampanyalı Fiyatlar İçin Temsilcinizden Teklif Alınız. - Hayırlı, Bereketli ve Bol Kazançlı Al
+                [TextControl] Vade Günümüz 15 Gündür. - Kampanyalı Fiyatlar İçin Temsilcinizden Teklif Alınız. - Hayırlı, Bereketli ve Bol Kazançlı Al
+        [GroupControl]   #_Header_pnlKur
+            [ListItemControl] USD: 49,6540 TL
+              [TextControl] USD:
+              [GroupControl]   #_Header_lblDolarKuru
+                [TextControl] 49,6540
+              [TextControl] TL
+            [ListItemControl] EUR: 55,5997 TL
+              [TextControl] EUR:
+              [GroupControl]   #_Header_lblEuroKuru
+                [TextControl] 55,5997
+              [TextControl] TL
+          [DataItemControl] Üretici Tipine Göre
+            [TextControl] Üretici Tipine Göre
+          [DataItemControl] Hepsi
+            [ComboBoxControl]   #quick-uretici2
+          [DataItemControl] Kategori
+            [TextControl] Kategori
+          [DataItemControl] Hepsi
+            [ComboBoxControl]   #quick-arac-modelleri2
+          [DataItemControl] Stokta Olanlar
+            [CheckBoxControl] Stokta Olanlar  #MevcutUrunler
+          [DataItemControl] Kampanyalı Ürünler
+            [CheckBoxControl] Kampanyalı Ürünler  #chKampanya
+          [DataItemControl] Yeni Ürünler
+            [CheckBoxControl] Yeni Ürünler  #chYeniUrun
+      [GroupControl]   #myCarousel
+        [ButtonControl] Previous
+        [ButtonControl] Next
+    [GroupControl]   #home
+            [EditControl] Aramak İstediğiniz Ürün  #quick-kelime
+          [ButtonControl] Ara  #urunAra
+          [ButtonControl]   #secondaryButton
+            [ImageControl]   #secondaryImg
+          [ButtonControl] F3
+    [GroupControl]   #searchoption
+        [ListControl]   #options
+          [ListItemControl] ARAMA EKRANI  #search-space
+            [GroupControl]   #search_monitor_tab
+              [TextControl] ARAMA EKRANI
+          [ListItemControl] Uyumlu Araçlar
+            [TextControl] Uyumlu Araçlar
+          [ListItemControl] Önceki Alımlar
+            [TextControl] Önceki Alımlar
+          [ListItemControl] Tam Ekran
+            [TextControl] Tam Ekran
+    [GroupControl]   #searchresults
+      [GroupControl]   #aramaekrani
+          [ImageControl] Var
+            [TextControl] Var
+          [ImageControl] Var
+            [TextControl] Yok
+    [GroupControl]   #btnPaket
+    [GroupControl]   #footer
+            [ListControl]   #footermenu
+              [ListItemControl] İade Şartları
+                [HyperlinkControl] İade Şartları
+                  [TextControl] İade Şartları
+              [ListItemControl] Gizlilik Politikası
+                [HyperlinkControl] Gizlilik Politikası
+                  [TextControl] Gizlilik Politikası
+              [ListItemControl] Hakkımızda
+                [HyperlinkControl] Hakkımızda
+                  [TextControl] Hakkımızda
+              [ListItemControl] Satış Sözleşmesi
+                [HyperlinkControl] Satış Sözleşmesi
+                  [TextControl] Satış Sözleşmesi
+              [TextControl] COPYRIGHT ©
+              [HyperlinkControl] SADECEB2B
+                [TextControl] SADECEB2B
+              [TextControl] -
+              [HyperlinkControl] C1Soft
+                [TextControl] C1Soft
+              [TextControl] -
+              [HyperlinkControl] Yüce Yazılım
+                [TextControl] Yüce Yazılım
+              [TextControl] - 2018
+              [TextControl] -TÜM HAKLARI SAKLIDIR.
+            [TextControl] ÇAĞRI MERKEZİ
+            [TextControl] 02124800644
+    [GroupControl]   #tdpopover

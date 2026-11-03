@@ -1,0 +1,10 @@
+=== Toplu inceleme 18:54 parca=2091042 - 8 site ===
+basbug         OK  kutu=#searchInput - 345 satir yapi
+martas         OK  kutu=#searchInput - 323 satir yapi
+dinamik        OK  kutu=#searchInput - 364 satir yapi
+rotas          OK  kutu=#searchInput - 101 satir yapi
+sayim          OK  kutu=#searchInput - 89 satir yapi
+intermobil     SEKME YOK
+vahdet         OK  kutu=#quick-kelime - 143 satir yapi
+mest           SEKME YOK
+=== bitti ===

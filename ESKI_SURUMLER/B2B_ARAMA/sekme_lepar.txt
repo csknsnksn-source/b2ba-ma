@@ -1,0 +1,363 @@
+=== Sekme inceleme 17:47 anahtar=lepar parca=2091042 ===
+Sekme: Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ B2B - Bellek kullanımı - 69,0 MB
+Pencere basligi (secimden sonra): Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ B2B - Google Chrome
+Penceredeki belgeler: İlsem Otomotiv | ? | Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ B2B | ? | ? | ? | ?
+Sayfa: Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ B2B
+Arama kutusu: '' id=tbGeneralSearch
+arama gonderildi, 8 sn bekleniyor
+Penceredeki belgeler: İlsem Otomotiv | ? | Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ B2B | ? | ? | ? | ?
+Sonuc sayfasi: Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ B2B
+--- SAYFA YAPISI (614 oge) ---
+  [GroupControl]   #formMain
+          [HyperlinkControl] Lepar Otomotiv - Logo
+            [ImageControl] Lepar Otomotiv - Logo
+          [GroupControl]   #lblHelloText
+            [TextControl] Merhaba,
+          [GroupControl]   #lnkCustName
+            [TextControl] 120.2845 - OTO ŞEN BURSA OTOM SAN.TİC.LTD.ŞTİ
+          [TextControl] |
+          [HyperlinkControl] Çıkış  #HyperLink1
+            [TextControl] Çıkış
+              [ImageControl] Müşteri Simgesi  #imgSalesman
+            [GroupControl]   #lblSalesmanInfoText
+              [TextControl] Temsilci Bilgileri
+              [ImageControl] Kullanıcı Simgesi
+              [GroupControl]   #lbSalesmanName
+                [TextControl] VELİ BAL
+              [ImageControl] Telefon Simgesi
+              [GroupControl]   #lbSalesmanTel
+                [TextControl] 544 891 47 00
+              [ImageControl] E-Posta Simgesi
+              [HyperlinkControl] veli.bal@lepar.co...  #mailtoSalesman
+                [GroupControl]   #lbSalesmanEmail
+                  [TextControl] veli.bal@lepar.co...
+        [HyperlinkControl] Sepetim: (3) Ürün
+          [GroupControl]   #uptCartCount
+              [TextControl] Sepetim:
+                [GroupControl]   #lblMyCartText
+                  [TextControl] Sepetim:
+              [TextControl] (3) Ürün
+                [GroupControl]   #lbCartCount
+                  [TextControl] (3) Ürün
+            [ImageControl] Automechanika Sanal Tur
+            [TextControl] Bugün ki sipariş tutarınız:
+            [GroupControl]   #toDaySaleTotal
+              [TextControl] 0.00
+            [GroupControl]   #toDayOrderTotal
+              [TextControl] 0.00 TL
+            [ComboBoxControl]   #drpLang
+            [ImageControl] USD
+            [GroupControl]   #lblCurrencyUSD
+              [TextControl] 49,6540
+            [ImageControl] EU. Eksik resim açıklamalarını almak için içerik menüsünü açın.
+            [GroupControl]   #lblCurrencyEU
+              [TextControl] 55,5997
+          [ImageControl] Phone İcon
+          [TextControl] +90 (212) 671 71 72
+          [ImageControl] Whatsapp İcon
+          [TextControl] Muhasebe : 0537 268 77 42
+      [GroupControl]   #cssmenu
+          [ListItemControl] Ana Sayfa
+            [HyperlinkControl] Ana Sayfa
+              [GroupControl]   #lblMenuMainText
+                [TextControl] Ana Sayfa
+          [ListItemControl] Ürün Arama
+            [HyperlinkControl] Ürün Arama
+              [GroupControl]   #lblMenuSearch1Text
+                [TextControl] Ürün Arama
+          [ListItemControl] Sepet
+            [HyperlinkControl] Sepet
+              [GroupControl]   #lblMenCartText
+                [TextControl] Sepet
+          [ListItemControl] Siparişler
+            [HyperlinkControl] Siparişler
+              [GroupControl]   #lblMenuOrdersText
+                [TextControl] Siparişler
+          [ListItemControl] İade  #Li2
+            [HyperlinkControl] İade
+              [GroupControl]   #Label36
+                [TextControl] İade
+          [ListItemControl] Cari Hesap
+            [HyperlinkControl] Cari Hesap
+              [GroupControl]   #lblMenuFinanceText
+                [TextControl] Cari Hesap
+          [ListItemControl] Online Ödeme  #lnkPayment
+            [HyperlinkControl] Online Ödeme
+              [GroupControl]   #lblMenuPaymentText
+                [TextControl] Online Ödeme
+          [ListItemControl] Katalog
+            [HyperlinkControl] Katalog
+              [GroupControl]   #lblMenuCatalogText
+                [TextControl] Katalog
+          [ListItemControl] Diğer Bilgiler
+            [HyperlinkControl] Diğer Bilgiler
+              [GroupControl]   #lblMenuOthersText
+                [TextControl] Diğer Bilgiler
+          [ListItemControl] Dosyalar  #lnkDownloadPage2
+            [HyperlinkControl] Dosyalar
+              [GroupControl]   #lblMenuDownloadPage
+                [TextControl] Dosyalar
+            [ImageControl] Arama Simgesi
+            [GroupControl]   #ContentPlaceHolder1_lblProductSearchText
+              [TextControl] Ürün Arama
+        [GroupControl]   #searchPanel
+                  [GroupControl]   #ContentPlaceHolder1_lblManufacturerText
+                    [TextControl] Üretici
+                  [ComboBoxControl]   #comboManufacturer
+                  [GroupControl]   #ContentPlaceHolder1_lblVehicleBrandText
+                    [TextControl] Araç Marka
+                  [ComboBoxControl]   #comboVehicleBrand
+                  [GroupControl]   #ContentPlaceHolder1_lblVehicleModelText
+                    [TextControl] Araç Model
+                  [ComboBoxControl]   #comboVehicleModel
+            [GroupControl]   #divGroup
+                  [GroupControl]   #ContentPlaceHolder1_lblProductGroup1Text
+                    [TextControl] Ana Grup
+                  [ComboBoxControl]   #comboProductGroup1
+                  [GroupControl]   #ContentPlaceHolder1_lblProductGroup2Text
+                    [TextControl] Alt Grup 1
+                  [ComboBoxControl]   #comboProductGroup2
+                  [GroupControl]   #ContentPlaceHolder1_lblProductGroup3Text
+                    [TextControl] Alt Grup 2
+                  [ComboBoxControl]   #comboProductGroup3
+            [GroupControl]   #divCampaign
+                  [GroupControl]   #ContentPlaceHolder1_lblCampaign
+                    [TextControl] Kampanya
+                  [ComboBoxControl]   #comboCampaignTitle
+              [HyperlinkControl] Silindir Kapakları  #lnkSpecialSearch
+                [TextControl] Silindir Kapakları
+                [HyperlinkControl] Yeni Ürün Talebi
+                  [TextControl] Yeni Ürün Talebi
+              [CheckBoxControl] Yeni Gelenler  #chkArrivalsToday
+              [CheckBoxControl] Yeni Ürün  #chkNew
+              [CheckBoxControl] Stokta Olanlar  #chkQtyAvaible
+              [CheckBoxControl] Yolda Olanlar  #chkOnWay
+              [CheckBoxControl] Fırsat Ürünler  #chkOutlet
+              [GroupControl]   #ContentPlaceHolder1_lblGeneralSearchText
+                [TextControl] Genel Arama
+              [EditControl]   #tbGeneralSearch
+                [HyperlinkControl] Ara  #btnSearch
+                  [TextControl] Ara
+                [HyperlinkControl] Temizle  #btnClear
+                  [TextControl] Temizle
+              [GroupControl]   #divSearchBanner
+            [HyperlinkControl]   #BannerLeft
+            [HyperlinkControl]   #BannerRight
+        [GroupControl]   #searchReaultPanel
+              [GroupControl] Kodu
+                  [GroupControl]   #ContentPlaceHolder1_lblSearchCodeText
+                    [TextControl] Kodu
+              [GroupControl] Üretici Kodu  #ContentPlaceHolder1_divManufacturerCode2
+                  [GroupControl]   #ContentPlaceHolder1_lblSearchManufacturerCode2Text
+                    [TextControl] Üretici Kodu
+              [GroupControl] Araç Tipi  #div3
+                  [GroupControl]   #ContentPlaceHolder1_lblNotes3Text
+                    [TextControl] Araç Tipi
+              [GroupControl] Adı
+                  [GroupControl]   #ContentPlaceHolder1_lblSearchNameText
+                    [TextControl] Adı
+              [GroupControl] Menşei Üretici  #div2
+                  [GroupControl]   #ContentPlaceHolder1_lblMenseiNotes1Text
+                    [TextControl] Menşei
+                    [TextControl] Üretici
+              [GroupControl] Drm
+                  [GroupControl]   #ContentPlaceHolder1_Label3
+                    [TextControl] Drm
+              [GroupControl] Altr.
+                  [GroupControl]   #ContentPlaceHolder1_Label2
+                    [TextControl] Altr.
+              [GroupControl] Resim
+                  [ImageControl] Resim
+              [GroupControl] Liste Fiyatı
+                  [GroupControl]   #ContentPlaceHolder1_lblSearchPriceListText
+                    [TextControl] Liste Fiyatı
+              [GroupControl] İsk.  #ContentPlaceHolder1_divDiscountHeader
+                  [GroupControl]   #ContentPlaceHolder1_lblSearchDiscText
+                    [TextControl] İsk.
+              [GroupControl] Adet
+                [GroupControl]   #ContentPlaceHolder1_lblSearchQty
+                  [TextControl] Adet
+            [GroupControl]   #gvResult
+                [GroupControl] Kampanyalı Ürün
+                  [ImageControl] Kampanyalı Ürün
+                [GroupControl] 02.24.12A.081.14
+                    [TextControl] 02.24.12A.081.14
+                [GroupControl] 20910-42A00 / MD 997249
+                    [TextControl] 20910-42A00 / MD 997249
+                [GroupControl] H100 / L300 / 4D55 / 4D56
+                    [TextControl] H100 / L300 / 4D55 / 4D56
+                [GroupControl] TAKIM CONTA GRAFİTLİ
+                    [TextControl] TAKIM CONTA GRAFİTLİ
+                [GroupControl] MISSUBA
+                    [TextControl] MISSUBA
+                [GroupControl] Var
+                    [TextControl] Var
+                [GroupControl] Resim
+                  [HyperlinkControl] Resim
+                    [ImageControl] Resim
+                [GroupControl] 1.292,30 TL
+                    [TextControl] 1.292,30 TL
+                [GroupControl] %5
+                    [TextControl] %5
+                  [EditControl]   #qty4602
+                [GroupControl] Sepete Ekle
+                  [ButtonControl] Sepete Ekle
+                [GroupControl] Detay
+                  [ButtonControl] Detay
+                [GroupControl] Detay
+                    [HyperlinkControl] Detay
+                [GroupControl] Kampanyalı Ürün
+                  [ImageControl] Kampanyalı Ürün
+                [GroupControl] 02.24.12A.081.16
+                    [TextControl] 02.24.12A.081.16
+                [GroupControl] 20910-42D00 /
+                    [TextControl] 20910-42D00 /
+                [GroupControl] H100- L300
+                    [TextControl] H100- L300
+                [GroupControl] TAKIM CONTA ( SİLİNDİR KAPAK CONTASIZ )
+                    [TextControl] TAKIM CONTA ( SİLİNDİR KAPAK CONTASIZ )
+                [GroupControl] MISSUBA
+                    [TextControl] MISSUBA
+                [GroupControl] Var
+                    [TextControl] Var
+                [GroupControl] Resim
+                  [HyperlinkControl] Resim
+                    [ImageControl] Resim
+                [GroupControl] 807,68 TL
+                    [TextControl] 807,68 TL
+                [GroupControl] %5
+                    [TextControl] %5
+                  [EditControl]   #qty29544
+                [GroupControl] Sepete Ekle
+                  [ButtonControl] Sepete Ekle
+                [GroupControl] Detay
+                  [ButtonControl] Detay
+                [GroupControl] Detay
+                    [HyperlinkControl] Detay
+            [ImageControl] Var
+            [GroupControl]   #ContentPlaceHolder1_lblCurrencyUSD
+              [TextControl] Var
+            [ImageControl] Var
+            [GroupControl]   #ContentPlaceHolder1_Label4
+              [TextControl] Az Var
+            [ImageControl] Var
+            [GroupControl]   #ContentPlaceHolder1_Label5
+              [TextControl] Yok
+            [ImageControl] Var
+            [GroupControl]   #ContentPlaceHolder1_Label6
+              [TextControl] Yolda
+            [ImageControl] Var
+            [GroupControl]   #ContentPlaceHolder1_Label8
+              [TextControl] Sipariş Üzerine
+          [GroupControl]   #divCampaignButton
+            [HyperlinkControl] Kampanya  #ContentPlaceHolder1_btnCampaign
+              [TextControl] Kampanya
+            [HyperlinkControl] Yeni Ürün  #ContentPlaceHolder1_btnArrivalsToday
+              [TextControl] Yeni Ürün
+            [HyperlinkControl] Yolda Olanlar  #ContentPlaceHolder1_btnOnWay
+              [TextControl] Yolda Olanlar
+            [HyperlinkControl] Yeni Gelenler  #ContentPlaceHolder1_btnNewStockEntry
+              [TextControl] Yeni Gelenler
+          [GroupControl]   #ContentPlaceHolder1_lblProductQuantityText
+            [TextControl] Ürün sayısı:
+          [GroupControl]   #ContentPlaceHolder1_txtSearchCount
+            [TextControl] 2
+            [GroupControl]   #LblNewsText
+              [TextControl] HABERLER
+              [ListItemControl] MISSUBA MARKA BUJİ KABLOLARI VE TERMOSTAT GRUBU STOKLARIMIZDADIR.
+                [TextControl] MISSUBA MARKA BUJİ KABLOLARI VE TERMOSTAT GRUBU STOKLARIMIZDADIR.
+            [GroupControl]   #brandsMain
+                [ImageControl] YENMAK
+                [ImageControl] XECCEL
+                [ImageControl] GOETZE
+                [ImageControl] GROS
+                [ImageControl] HKT
+                [ImageControl] İBRAŞ
+                [ImageControl] İMPERİAL
+                [ImageControl] MİSSUBA
+                [ImageControl] MOBIS
+                [ImageControl] ONKYO
+                [ImageControl] POVERPLAST
+                [ImageControl] SEIWA
+                [ImageControl] SEM
+                [ImageControl] SMY
+                [ImageControl] SOİKON
+                [ImageControl] ASAHİ
+                [ImageControl] CCR
+                [ImageControl] DENSO
+                [ImageControl] DAİDO
+                [ImageControl] BANDO
+                [ImageControl] THAYO
+                [ImageControl] MOBİS
+                [ImageControl] AYD
+                [ImageControl] YEC
+                [ImageControl] TURTEL
+                [ImageControl] TİK
+                [ImageControl] TBK
+                [ImageControl] TCIC
+                [ImageControl] THAYO
+                [ImageControl] SURPASS
+                [ImageControl] SVAC
+                [ImageControl] NGK
+                [ImageControl] GENMOT
+                [ImageControl] GMB
+                [ImageControl] FITORI
+                [ImageControl] DEVRAN
+                [ImageControl] ERISTIC
+                [ImageControl] YENMAK
+                [ImageControl] XECCEL
+                [ImageControl] GOETZE
+                [ImageControl] GROS
+                [ImageControl] HKT
+                [ImageControl] İBRAŞ
+                [ImageControl] İMPERİAL
+                [ImageControl] MİSSUBA
+                [ImageControl] MOBIS
+                [ImageControl] ONKYO
+                [ImageControl] POVERPLAST
+                [ImageControl] SEIWA
+                [ImageControl] SEM
+                [ImageControl] SMY
+                [ImageControl] SOİKON
+                [ImageControl] ASAHİ
+                [ImageControl] CCR
+                [ImageControl] DENSO
+                [ImageControl] DAİDO
+                [ImageControl] BANDO
+                [ImageControl] THAYO
+                [ImageControl] MOBİS
+                [ImageControl] AYD
+                [ImageControl] YEC
+                [ImageControl] TURTEL
+                [ImageControl] TİK
+                [ImageControl] TBK
+                [ImageControl] TCIC
+                [ImageControl] THAYO
+                [ImageControl] SURPASS
+        [GroupControl]   #lblCompanyName
+          [TextControl] Lepar Otomotiv Sanayi ve Ticaret LTD.ŞTİ
+        [TextControl] © 2026
+        [HyperlinkControl] İade ve Teslimat
+          [TextControl] İade ve Teslimat
+        [HyperlinkControl] Gizlilik Politikamız
+          [TextControl] Gizlilik Politikamız
+        [HyperlinkControl] Kullanım Koşulları
+          [TextControl] Kullanım Koşulları
+        [HyperlinkControl] Satış Sözleşmesi
+          [TextControl] Satış Sözleşmesi
+      [TextControl] HAFTANIN   ÜRÜNLERİ
+        [TextControl] HAFTANIN ÜRÜNLERİ
+      [GroupControl]   #pnlProductOfDayContent
+            [TextControl] Açıklama
+            [TextControl] YENMAK SIVI CONTA 80 ML 24 LÜ KUTU
+          [HyperlinkControl] Ürün Adı
+            [ImageControl] Ürün Adı
+              [TextControl] Kodu
+              [TextControl] 09.90.17A.183.58
+              [TextControl] Fiyatı
+              [TextControl] 82.5 TL
+              [TextControl] Tarih
+              [TextControl] 28.10.2026
+              [EditControl] Min: 24  #txtQuantityPOD1296
+            [HyperlinkControl] Sipariş Ver
+              [TextControl] Sipariş Ver

@@ -1,0 +1,203 @@
+=== UI deneme 4 12:53 - parca=2091042 ===
+Pencere: Altay Taşıt ve Otomotiv Yedek Parça San. Tic. AŞ. — Mozilla Firefox
+'Ara..' kutusu bulundu
+arama gonderildi, sonuc bekleniyor...
+bekleme: 3 sn
+DataItem sayisi: 196, satir sayisi: 13
+--- HAM DATAITEM ---
+
+
+
+Kodu
+Adı
+Üretici
+Üretici kodu
+Birim
+
+Liste Fiyat
+Kocaeli
+Diğer Stoklar
+Sip.Mik
+
+
+Campaign Product +
+
+STN-JFS-30163-R
+TAKIM CONTA H-100 94-06 / KMY 94-08 / L-300 90-08 4D56 / STAREX 97-08 100HP
+STONE
+20910-42C10
+AD
+-
+4.538,89 
+ Var
+ Var
+1 
+
+
++
+
+NGK-77286
+SENSÖR EGZOZ BASINÇ GOLF7 / CRAFTER / A4 / JETTA / PASSAT 08=> CAGA-CAHA-CKUB-CLHA-CLHB-CRKB 1.6 TDI-2.0 TDI (EPD3-D006)
+NGK
+03L906051B
+AD
+-
+2.527,56 
+ Yolda
+ Var
+1 
+
+
+Campaign Product +
+
+MND-DN2091042A00
+TAKIM CONTA H-100 94-06 / KMY 94-08 / L-300 90-08 4D56 / STAREX 97-08 100HP
+MANDO
+20910-42C10
+AD
+
+2.084,47 
+ Var
+ Var
+1 
+
+
++
+
+MND-DN2091042D00
+TAKIM CONTA STAREX 02-08 / PREGIO 02=> / BONGO K2500 TCI / 100HP D4BH
+MANDO
+20910-42E00
+AD
+
+2.597,90 
+ Yok
+ Var
+1 
+
+
+Campaign Product +
+
+MHR-22778
+SENSÖR EGZOZ BASINÇ GOLF7 / CRAFTER / A4 / JETTA / PASSAT 08=> CAGA-CAHA-CKUB-CLHA-CLHB-CRKB 1.6 TDİ-2.0 TDİ
+MAHER
+03L906051B
+AD
+
+911,15 
+ Var
+ Var
+1 
+
+
++
+
+BSH-0986280715
+SENSÖR EGZOZ BASINÇ GOLF7 / CRAFTER / A4 / JETTA / PASSAT 08=> CAGA-CAHA-CKUB-CLHA-CLHB-CRKB 1.6 TDI-2.0 TDI
+BOSCH
+03L906051B
+AD
+
+3.201,99 
+ Az Var
+ Var
+1 
+
+
+Campaign Product +
+
+DEL-DPS00020
+SENSOR EGZOZ BASINÇ GOLF7 / CRAFTER / A4 / JETTA / PASSAT 08=> CAGA-CAHA-CKUB-CLHA-CLHB-CRKB 1.6 TDI-2.0 TDI
+DELPHI
+03L906051B
+AD
+
+3.090,12 
+ Az Var
+ Yok
+1 
+
+
++
+
+MHR-03277
+TAKIM CONTA H-100 94-06 / KMY 94-08 / L-300 90-08 4D56 / STAREX 97-08 100HP GRAFİTLİ
+MAHER
+20910-42C10
+AD
+
+1.215,53 
+ Yok
+ Var
+1 
+
+
++
+
+MHR-18670
+TAKIM CONTA H-100 94-06 / KMY 94-08 / L-300 90-08 4D56 / STAREX 97-08 100HP GRAFİTLİ (SİLİNDİR CONTASIZ)
+MAHER
+20910-42C10
+AD
+
+1.044,22 
+ Yok
+ Var
+1 
+
+
+Campaign Product +
+
+FAE-16115
+SENSÖR EGZOZ BASINÇ GOLF7 / CRAFTER / A4 / JETTA / PASSAT 08=> CAGA-CAHA-CKUB-CLHA-CLHB-CRKB 1.6 TDİ-2.0 TDİ
+FAE
+03L906051B
+AD
+
+2.503,10 
+ Yok
+ Az Var
+1 
+
+
+New Product Campaign Product +
+
+HEL-6PP009409-161
+EGZOS GAZI BASİNC SENSORU AUDİ-VW-SKODA-SEAT 3 KUTUPLU
+HELLA
+6PP 009 409-161
+AD
+-
+3.489,44 
+ Yok
+ Az Var
+1 
+
+
++
+
+MHR-18674 
+TAKIM CONTA STAREX 02-08 / PREGIO 02=> / BONGO K2500 TCI / 100HP D4BH (SİLİNDİR CONTASIZ)
+MAHER
+20910-42E00
+AD
+-
+1.218,51 
+ Yok
+ Yok
+1 
+
+
++
+
+MHR-03311 
+TAKIM CONTA STAREX 02-08 / PREGIO 02=> / BONGO K2500 TCI / 100HP D4BH
+MAHER
+20910-42E00
+AD
+
+1.462,31 
+ Yok
+ Yok
+1 
+

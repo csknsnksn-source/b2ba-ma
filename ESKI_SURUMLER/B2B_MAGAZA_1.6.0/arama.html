@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>B2B Ortak Arama</title>
+<style>
+  :root { --mavi:#1f4e79; --acik:#eef3f8; --cizgi:#dde5ee; --yesil:#1e7b34; --gri:#8a96a3; --turuncu:#f5a623; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.4 "Segoe UI", Arial, sans-serif; color:#1d2733; background:#f7f9fb; }
+  header { background:var(--mavi); color:#fff; padding:14px 20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; position:sticky; top:0; z-index:5; }
+  header h1 { font-size:18px; margin:0 12px 0 0; font-weight:600; }
+  #parca { width:320px; padding:9px 12px; font-size:16px; border:0; border-radius:4px; }
+  button { font:inherit; cursor:pointer; border-radius:4px; padding:8px 14px; border:1px solid transparent; }
+  #ara { background:var(--turuncu); color:#1d2733; font-weight:600; }
+  .ikincil { background:transparent; color:#fff; border-color:#ffffff88; }
+  label.sec { display:flex; gap:6px; align-items:center; }
+  #durumlar { display:none; }
+  #durumKutulari { display:flex; gap:8px; align-items:center; }
+  .dkutu { position:relative; }
+  .dkutu > button { background:#fff; color:#1d2733; font-weight:600; min-width:74px; }
+  .dkutu > button b { display:inline-block; min-width:22px; padding:0 6px; margin-left:4px; border-radius:10px; color:#fff; }
+  .dkutu.k-var > button b { background:var(--yesil); }
+  .dkutu.k-yok > button b { background:#6b7785; }
+  .dkutu.k-hata > button b { background:#c62828; }
+  .dkutu.bos > button { opacity:.6; }
+  .dkutu.sabit > button { outline:3px solid var(--turuncu); }
+  .dpano { display:none; position:absolute; top:calc(100% + 6px); right:0; z-index:30; width:min(720px, calc(100vw - 32px)); max-height:60vh; overflow:auto;
+           background:#fff; color:#1d2733; border:1px solid var(--cizgi); border-radius:8px; box-shadow:0 10px 30px #0003; padding:10px;
+           flex-wrap:wrap; gap:6px; align-items:center; }
+  .dkutu:hover .dpano, .dkutu.sabit .dpano { display:flex; }
+  .dkutu .dpano::before { content:""; position:absolute; top:-8px; left:0; right:0; height:8px; }
+  .bos-yazi { color:#5b6672; font-size:13px; }
+  #alimGecmisi { margin:12px 20px 0; background:#fffaf0; border:1px solid #f0d9a8; border-radius:8px; padding:8px 12px; }
+  #alimGecmisi[hidden] { display:none; }
+  .alim-ust { display:flex; gap:12px; align-items:center; font-size:13px; color:#5b4a1f; }
+  .alim-ust button.incele { margin:0; font-weight:700; color:#8a5a00; border-color:#f0d9a8; }
+  .alim-durum { color:#8a96a3; }
+  table.alim-tablo { width:100%; margin:8px 0 4px; min-width:0; border-color:#f0d9a8; }
+  table.alim-tablo th { position:static; background:#fbefd5; font-size:12px; }
+  table.alim-tablo td { font-size:12.5px; padding:4px 8px; }
+  td.evrak { color:#6b7785; font-family:Consolas, monospace; font-size:12px; }
+  .no-alim { display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; padding:0 4px; border-radius:12px;
+             border:2px solid #e65100; color:#e65100; font-weight:800; font-size:12.5px; }
+  #alimPopup { position:fixed; display:none; z-index:40; background:#fff; border:1px solid #f0d9a8; border-radius:8px; box-shadow:0 10px 30px #0003;
+               padding:8px 10px; max-width:640px; pointer-events:none; font-size:12.5px; }
+  #alimPopup table { width:auto; min-width:0; margin:6px 0 0; border-color:#f0d9a8; }
+  #alimPopup th { position:static; background:#fbefd5; font-size:12px; padding:3px 8px; }
+  #alimPopup td { padding:3px 8px; }
+  #alimPopup small { color:#8a96a3; }
+  .pop-bas { color:#5b4a1f; }
+  .pop-kmp { color:#e65100; font-weight:700; margin-bottom:4px; }
+  .pop-not { color:#8a96a3; font-size:11.5px; margin-top:4px; }
+  .art { color:#c62828; font-weight:700; font-size:11.5px; }
+  .dus { color:var(--yesil); font-weight:700; font-size:11.5px; }
+  .ikincil.secili { background:#ffffff26; border-color:#fff; }
+  #pano { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; padding:14px 20px 4px; }
+  #pano[hidden] { display:none; }
+  .pkart { background:#fff; border:1px solid var(--cizgi); border-radius:8px; padding:12px 14px; }
+  .pkart h3 { margin:0 0 8px; font-size:13px; color:var(--mavi); text-transform:uppercase; letter-spacing:.3px; }
+  .kurlar { display:flex; gap:18px; }
+  .kurlar div { display:flex; flex-direction:column; }
+  .kurlar .kad { font-size:12px; color:#5b6672; }
+  .kurlar b { font-size:22px; color:#1d2733; }
+  .kurlar small { font-size:11px; color:#8a96a3; }
+  .pnot { font-size:12px; color:#5b6672; margin-top:6px; }
+  .pbos { font-size:13px; color:#8a96a3; }
+  .sonq { font-size:20px; font-weight:700; color:#1d2733; }
+  .ucuz { margin-top:6px; font-size:13px; color:var(--yesil); }
+  .pliste { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; max-height:150px; overflow:auto; }
+  .pq { background:#eef3f8; border-radius:12px; padding:3px 10px; font-size:12.5px; }
+  .pq i { font-style:normal; color:#8a96a3; margin-left:2px; }
+  .tik { cursor:pointer; }
+  .pq.tik:hover, .sonq.tik:hover { text-decoration:underline; }
+  .ptablo { border:0; width:100%; margin:0; min-width:0; }
+  .ptablo td { border:0; border-bottom:1px solid #eef2f6; padding:4px 2px; font-size:13px; }
+  .aranan { color:#fff; font-size:13px; opacity:.9; }
+
+  .cip { padding:4px 10px; border-radius:14px; font-size:13px; background:#e5ecf3; }
+  .cip.ok { background:#e3f3e6; color:var(--yesil); }
+  .cip.giris, .cip.yok { background:#fff3dc; color:#8a5a00; }
+  .cip.hata { background:#fde5e5; color:#a12020; }
+  .cip.bekle { background:#eef0f3; color:#5b6672; }
+  .cip.tik { cursor:pointer; text-decoration:underline dotted; }
+  #filtreler { padding:10px 20px 0; display:flex; flex-direction:column; gap:6px; }
+  .satir-f { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .satir-f b { width:52px; }
+  .f { padding:3px 10px; border:1px solid var(--cizgi); border-radius:14px; background:#fff; font-size:13px; }
+  .f.secili { background:var(--mavi); color:#fff; border-color:var(--mavi); }
+  #bilgi { padding:10px 20px; color:#5b6672; font-size:13px; }
+  /* Tablo: sutun genislikleri icerige gore (en genis degere gore) ayarlanir, hucreler arasi ayrac cizgileri */
+  /* Tablo ekrana sigar: uzun yazilar sutunu degil satiri buyutur (alt satira gecer) */
+  table { border-collapse:collapse; width:calc(100% - 40px); margin:0 20px 40px; background:#fff; border:1px solid #c9d4e0; }
+  th, td { padding:6px 10px; border:1px solid #d5dee8; text-align:left; vertical-align:middle; }
+  td.sayi, th.sayi, td.foto { white-space:nowrap; }
+  td.stok { max-width:130px; overflow-wrap:anywhere; }
+  td.oem { max-width:190px; overflow-wrap:anywhere; font-size:12.5px; }
+  td.kmp { width:1%; white-space:nowrap; text-align:center; }
+  thead th { border-bottom:2px solid #9fb2c6; }
+  th { background:var(--acik); position:sticky; top:62px; font-weight:600; }
+  td.sayi, th.sayi { text-align:right; white-space:nowrap; }
+  tr:hover td { background:#f3f8fd; }
+  tr.g1 td { background:#e4f5e8; }
+  tr.g1:hover td { background:#d3eedb; }
+  tr.g2 td { background:#fff6d6; }
+  tr.g2:hover td { background:#fdeeb8; }
+  tr.grup-baslik td { font-weight:700; font-size:13px; padding:7px 10px; border-bottom:2px solid var(--cizgi); }
+  tr.grup-baslik.g1 td { background:#bfe5c9; color:#14532d; }
+  tr.grup-baslik.g2 td { background:#fbe7a1; color:#6b4b00; }
+  tr.grup-baslik.g3 td { background:#e5ecf3; color:#3c4a57; }
+  tr.grup-baslik span { font-weight:400; }
+  tr { cursor:default; }
+  td.var { color:var(--yesil); font-weight:700; }
+  td.yok { color:#c62828; font-weight:700; }
+  td.az { color:#7b1fa2; font-weight:700; }
+  .kmp-rozet { display:inline-block; background:#e65100; color:#fff; font-weight:700; font-size:11.5px; padding:2px 8px; border-radius:10px; cursor:help; }
+  td .eski { font-size:11.5px; color:#8a96a3; text-decoration:line-through; font-weight:400; }
+  td.ad { font-size:12.5px; color:#3c4a57; min-width:220px; }
+  td.foto img { width:48px; height:48px; object-fit:contain; border-radius:3px; background:#f0f3f6; }
+  td.foto .bos { width:48px; height:48px; background:#f0f3f6; border-radius:3px; display:inline-block; }
+  #onizleme { position:fixed; display:none; z-index:20; background:#fff; border:1px solid var(--cizgi); box-shadow:0 6px 24px #0003; padding:6px; }
+  #onizleme img { max-width:360px; max-height:360px; display:block; }
+  .bos-sonuc { padding:40px 20px; color:#5b6672; }
+  button.incele { padding:2px 8px; font-size:12px; border:1px solid var(--cizgi); background:#fff; color:#5b6672; border-radius:10px; margin-left:-4px; }
+  #izinBandi { margin:12px 20px 0; padding:10px 14px; background:#fff3dc; color:#7a4f00; border-radius:6px; display:flex; gap:12px; align-items:center; }
+  #izinBandi[hidden] { display:none; }
+  #izinBandi button { background:var(--turuncu); }
+  #incelePanel { margin:12px 20px; background:#fff; border:1px solid var(--cizgi); border-radius:6px; padding:10px; }
+  #incelePanel textarea { width:100%; height:220px; font:12px Consolas, monospace; }
+  #incelePanel .ust { display:flex; gap:8px; align-items:center; margin-bottom:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>B2B Ortak Arama</h1>
+  <input id="parca" placeholder="Parça no, OEM kodu..." autofocus>
+  <button id="ara">Ara</button>
+  <label class="sec"><input type="checkbox" id="stoktakiler"> Sadece stokta olanlar</label>
+  <button id="disaAktar" class="ikincil">Excel'e aktar</button>
+  <button id="kontrol" class="ikincil" title="Hangi B2B sekmeleri açık?">Sekmeleri kontrol et</button>
+  <button id="panoDugme" class="ikincil" title="Kurlar, son aramalar, bugün arananlar">Pano</button>
+  <button id="kapalilariAc" class="ikincil" title="Açık olmayan B2B'leri açar (adresi olanlar yeni sekmede, diğerleri masaüstü kısayolundan)">Kapalıları aç</button>
+  <button id="kisayolTara" class="ikincil" title="Kısayol klasörünü tarar, eşleşmeleri kisayol_listesi.txt dosyasına yazar">Kısayolları tara</button>
+  <div id="durumKutulari"></div>
+</header>
+<div id="izinBandi" hidden>Eklentinin <b id="izinSayi"></b> yeni B2B sitesine erişim izni yok.
+  <button id="izinVer">İzin ver</button></div>
+<div id="durumlar"></div>
+<section id="pano" hidden></section>
+<div id="incelePanel" hidden>
+  <div class="ust"><b>Sayfa yapısı</b> — bu metni kopyalayıp Claude'a gönderin
+    <button id="inceleKopyala">Kopyala</button><button id="inceleKapat">Kapat</button></div>
+  <textarea id="inceleMetin" readonly></textarea>
+</div>
+<div id="filtreler"></div>
+<section id="alimGecmisi" hidden></section>
+<div id="bilgi"></div>
+<table id="tablo" hidden>
+  <thead><tr>
+    <th>#</th><th>Foto</th><th>B2B</th><th>Parça No</th><th>Marka</th><th>Ürün Adı</th>
+    <th class="sayi">Net Fiyat (KDV hariç)</th><th class="sayi">KDV dahil</th><th>Stok</th><th>Kampanya</th><th>OEM Kodu</th>
+  </tr></thead>
+  <tbody></tbody>
+</table>
+<div id="onizleme"><img alt=""></div>
+<div id="alimPopup"></div>
+<script src="siteler.js"></script>
+<script src="okuyucular.js"></script>
+<script src="arama.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+B2B ORTAK ARAMA - KURULUM NOTU
+==============================
+
+1) ZIP'İ AÇ
+   B2B_Arama_Kurulum.zip dosyasına sağ tık > "Tümünü ayıkla" (Extract All).
+   Ayıkladığın klasörde B2B_ARAMA adlı bir klasör çıkar. Onu istediğin yere koy
+   (örnek: Masaüstü).
+
+2) KURULUMU ÇALIŞTIR
+   B2B_ARAMA klasörü içindeki KURULUM.bat dosyasına çift tıkla.
+   - Python yoksa kendisi kurar.
+   - Gerekli paketleri (playwright, openpyxl, cryptography, uiautomation) kurar.
+   - Masaüstüne "B2B Arama" kısayolu koyar.
+   Bitince "Programı şimdi açmak ister misiniz?" sorusuna E yaz.
+   Hata çıkarsa ekrandaki yazıyı kaydet.
+
+3) ŞİFRELERİ GİR
+   Program ilk açılışta Ayarlar ekranını açar. Şifreler bu bilgisayara kayıtlı
+   değildir, yeniden girilmesi gerekir:
+   - Ayarlar > "Excel şablonunu aç" > sarı hücrelere kullanıcı adı ve şifre yaz
+     > kaydet, kapat > "Excel'den içe aktar".
+   - Ya da tabloda her satıra tek tek yazıp "Kaydet" de.
+   Eski bilgisayardaki B2B_Yedek.b2bk dosyası varsa, ana şifreyle
+   "Yedekten yükle" de kullanabilirsin.
+
+4) CHROME'DA SİTELERİ AÇ (Lepar, Başaran ve benzeri siteler için)
+   Bu siteler senin Chrome'unda açık ve giriş yapılmış sekmeleri kullanır.
+   Programı açmadan önce Chrome'da ilgili B2B sitesini aç ve giriş yap.
+   Program kendi şifresini bu sitelere girmez.
+
+5) SORUN OLURSA
+   - Program açılmıyorsa: B2B_ARAMA klasöründeki B2B_Ara.bat dosyasını çalıştır.
+     Siyah pencerede hata yazar.
+   - Bir B2B sonuç vermiyorsa: log klasöründeki o günün hata_ dosyasına bak.
+   - Chrome okuyucusu "sekme açık değil" diyorsa: Chrome'da o siteyi aç ve
+     giriş yap, sonra aramayı tekrar dene.
+
+6) CHROME EKLENTİSİ (B2B Ortak Arama - sürüm 1.4.7)
+   Bu, Python programından ayrı bir Chrome eklentisidir. Kurulum paketi:
+   PROGRAM OLANLAR klasöründeki B2B_KURULUM_1.4.7.zip dosyasıdır.
+   - Zip'i B2B kısayollarının olduğu klasöre çıkar (örnek: Masaüstü\PROGRAM OLANLAR).
+   - Klasördeki KURULUM.bat dosyasına çift tıkla. Chrome'un Uzantılar sayfasını açar.
+   - Uzantılar sayfasında Geliştirici modu'nu aç, "Paketlenmemiş öğe yükle"ye bas,
+     B2B_EKLENTI klasörünü seç.
+   - Eklentiyi, B2B sitelerine giriş yaptığın Chrome profiline kur.
+   Ayrıntılar B2B_EKLENTI\KURULUM.md dosyasında.
+
+ÖNEMLİ: Python programı (B2B Arama) ile eklenti AYNI ANDA AÇIK OLMAMALI.
+İkisi aynı B2B hesaplarında kendi oturumunu açar, birbirini bozar.
+Birini kullanırken diğerini kapat.
+
+NOT: Bu bilgisayarda Python 3.9 veya üstü ve Google Chrome olması gerekir.
+Chrome yoksa Microsoft Edge kullanılır.

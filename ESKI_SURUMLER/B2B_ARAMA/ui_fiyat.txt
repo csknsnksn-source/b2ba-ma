@@ -1,0 +1,76 @@
+=== UI fiyat deneme 5 13:12 - parca=2091042 ===
+arama yapildi
+fiyat hucresi sayisi: 13
+ekran: 1920x1080
+satir 1 rect: L=1226 T=663 R=1276 B=677
+--- satir 1 fiyat=4.538,89 ---
+[DataItemControl] KDV Hariç Fiyat
+[TextControl] KDV Hariç Fiyat
+[DataItemControl] KDV Dahil Fiyat
+[TextControl] KDV Dahil Fiyat
+[DataItemControl] NET FİYAT
+[TextControl] NET FİYAT
+[DataItemControl] 2.373,75 ₺
+[TextControl] 2.373,75 ₺
+[DataItemControl] 2.848,50 ₺
+[TextControl] 2.848,50 ₺
+satir 2 rect: L=1226 T=714 R=1276 B=728
+--- satir 2 fiyat=2.527,56 ---
+[DataItemControl] 1.335,21 ₺
+[TextControl] 1.335,21 ₺
+[DataItemControl] 1.602,25 ₺
+[TextControl] 1.602,25 ₺
+satir 3 rect: L=1226 T=766 R=1276 B=780
+--- satir 3 fiyat=2.084,47 ---
+[DataItemControl] 1.046,09 ₺
+[TextControl] 1.046,09 ₺
+[DataItemControl] 1.255,31 ₺
+[TextControl] 1.255,31 ₺
+satir 4 rect: L=1226 T=810 R=1276 B=824
+--- satir 4 fiyat=2.597,90 ---
+[DataItemControl] 1.372,37 ₺
+[TextControl] 1.372,37 ₺
+[DataItemControl] 1.646,84 ₺
+[TextControl] 1.646,84 ₺
+satir 5 rect: L=1229 T=861 R=1268 B=875
+--- satir 5 fiyat=911,15 ---
+[DataItemControl] 457,41 ₺
+[TextControl] 457,41 ₺
+[DataItemControl] 548,89 ₺
+[TextControl] 548,89 ₺
+satir 6 rect: L=1226 T=896 R=1276 B=910
+--- satir 6 fiyat=3.201,99 ---
+[DataItemControl] 1.691,49 ₺
+[TextControl] 1.691,49 ₺
+[DataItemControl] 2.029,79 ₺
+[TextControl] 2.029,79 ₺
+satir 7 rect: L=1226 T=940 R=1276 B=954
+--- satir 7 fiyat=3.090,12 ---
+[DataItemControl] 1.583,43 ₺
+[TextControl] 1.583,43 ₺
+[DataItemControl] 1.900,12 ₺
+[TextControl] 1.900,12 ₺
+satir 8 rect: L=1226 T=983 R=1276 B=997
+--- satir 8 fiyat=1.215,53 ---
+[ButtonControl] Saat 13:14
+‎25.‎10.‎2026
+[TextControl] 13∶14
+[DataItemControl] 622,67 ₺
+[TextControl] 622,67 ₺
+[DataItemControl] 747,20 ₺
+[TextControl] 747,20 ₺
+satir 9 rect: L=1226 T=1026 R=1276 B=1040
+  kaydirma sonrasi rect: L=1226 T=1026 R=1276 B=1040
+  hucre hala gorunur alanda degil, atlandi
+satir 10 rect: L=1226 T=1069 R=1276 B=1083
+  kaydirma sonrasi rect: L=1226 T=1069 R=1276 B=1083
+  hucre hala gorunur alanda degil, atlandi
+satir 11 rect: L=1226 T=1113 R=1276 B=1127
+  kaydirma sonrasi rect: L=1226 T=1113 R=1276 B=1127
+  hucre hala gorunur alanda degil, atlandi
+satir 12 rect: L=1226 T=1156 R=1276 B=1170
+  kaydirma sonrasi rect: L=1226 T=1156 R=1276 B=1170
+  hucre hala gorunur alanda degil, atlandi
+satir 13 rect: L=1226 T=1199 R=1276 B=1213
+  kaydirma sonrasi rect: L=1226 T=1199 R=1276 B=1213
+  hucre hala gorunur alanda degil, atlandi

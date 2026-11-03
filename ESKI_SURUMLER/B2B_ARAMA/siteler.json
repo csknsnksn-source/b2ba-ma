@@ -1,0 +1,119 @@
+[
+  {
+    "ad": "Başbuğ",
+    "tip": "A",
+    "url": "https://b2bbasbug.com/web/b2b/search",
+    "aktif": true,
+    "kisayol": "BASBUG OTOMOTIV",
+    "kdv": 20
+  },
+  {
+    "ad": "Martaş",
+    "tip": "A",
+    "url": "https://online.martas.com.tr/web/b2b/search",
+    "aktif": true,
+    "kisayol": "Martaş Otomotiv",
+    "kdv": 20
+  },
+  {
+    "ad": "Dinamik",
+    "tip": "A",
+    "url": "https://bayi.adaoto.com.tr/web/b2b/search",
+    "aktif": true,
+    "kisayol": "Dinamik Otomotiv",
+    "kdv": 20
+  },
+  {
+    "ad": "Rotas",
+    "tip": "A",
+    "url": "https://b2b.rotas.com.tr/web/b2b/search",
+    "aktif": true,
+    "kisayol": "Rotas Otomotiv",
+    "kdv": 20
+  },
+  {
+    "ad": "Sayım Rulman",
+    "tip": "A",
+    "url": "https://bayi.sayimrulman.com/web/b2b/search",
+    "aktif": true,
+    "kisayol": "Sayim Rulman",
+    "kdv": 20
+  },
+  {
+    "ad": "İntermobil",
+    "tip": "ERYAZ_WEB",
+    "url": "https://b4b.intermobil.com.tr/tr/search",
+    "aktif": true,
+    "kisayol": "ioto B4B - İntermobil"
+  },
+  {
+    "ad": "Vahdet Tiryakioğlu",
+    "tip": "ERYAZ_V4",
+    "url": "https://b4b.vahdettiryakioglu.com.tr/Search",
+    "aktif": true,
+    "kisayol": "vahdettiryakioglu.com.tr"
+  },
+  {
+    "ad": "Mest",
+    "tip": "DESISS",
+    "url": "https://siparis.mestoto.com.tr/urunler",
+    "aktif": true,
+    "kisayol": "Mest Otomotiv Bayi Paneli"
+  },
+  {
+    "ad": "Lepar",
+    "tip": "CHROME_UI",
+    "url": "https://web.lepar.com.tr/Default.aspx",
+    "aktif": true,
+    "ui_anahtar": "Lepar",
+    "okuyucu": "eryaz_b2b",
+    "iskonto_carpani": 0.665,
+    "kdv": 20,
+    "kisayol": "Lepar Otomotiv"
+  },
+  {
+    "ad": "Başaran",
+    "tip": "CHROME_UI",
+    "url": "https://b2b.basaran-otomotiv.com.tr/Default.aspx",
+    "aktif": true,
+    "ui_anahtar": "BAŞARAN OTOMOTİV",
+    "okuyucu": "eryaz_b2b",
+    "kdv": 20,
+    "kisayol": "Başaran Otomotiv"
+  },
+  {
+    "ad": "Altay",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.altayoto.com/Search",
+    "aktif": false,
+    "kisayol": "Altay Otomotiv A.Ş."
+  },
+  {
+    "ad": "Taypar",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.taypar.com/Search",
+    "aktif": false,
+    "kisayol": "Taypar A.Ş."
+  },
+  {
+    "ad": "Hamle",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.hamlesiparis.com/Search",
+    "aktif": false,
+    "kisayol": "Hamle Otomotiv"
+  },
+  {
+    "ad": "Mega-Tek",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.megatekotomotiv.com/Search",
+    "aktif": false,
+    "kisayol": "MEGA-TEK Otomotiv Makina Yedek Parça Ltd.Şti."
+  },
+  {
+    "ad": "Rulman Dünyası",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.rulman.com.tr/Search",
+    "aktif": false,
+    "kisayol": "Rulman Dünyası"
+  }
+]

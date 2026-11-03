@@ -1,0 +1,40 @@
+HATA:
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Masaüstü\PROGRAM OLANLAR\B2B_ARAMA\lepar_test.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\HP\OneDrive\Masaüstü\PROGRAM OLANLAR\B2B_ARAMA\lepar_test.py", line 47, in main
+    page.wait_for_url(lambda u: "login" not in u.lower(), timeout=300000)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\sync_api\_generated.py", line 21446, in wait_for_url
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_url(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_page.py", line 592, in wait_for_url
+    return await self._main_frame.wait_for_url(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_frame.py", line 289, in wait_for_url
+    async with self.expect_navigation(
+               ~~~~~~~~~~~~~~~~~~~~~~^
+        url=url, waitUntil=waitUntil, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_event_context_manager.py", line 33, in __aexit__
+    await self._future
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_frame.py", line 265, in continuation
+    event = await waiter.result()
+            ^^^^^^^^^^^^^^^^^^^^^
+playwright._impl._errors.Error: Target page, context or browser has been closed
+=========================== logs ===========================
+waiting for navigation to "<function ImplToApiMapping.wrap_handler.<locals>.wrapper_func at 0x000001B8DF054670>" until 'load'
+============================================================

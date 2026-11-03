@@ -1,0 +1,9 @@
+URL: https://web.lepar.com.tr/login.aspx
+Baslik: LEPAR B2B | Giriş
+
+{"tag": "INPUT", "id": "__EVENTTARGET", "name": "__EVENTTARGET", "type": "hidden", "placeholder": "", "text": "", "visible": false}
+{"tag": "INPUT", "id": "__EVENTARGUMENT", "name": "__EVENTARGUMENT", "type": "hidden", "placeholder": "", "text": "", "visible": false}
+{"tag": "INPUT", "id": "__VIEWSTATE", "name": "__VIEWSTATE", "type": "hidden", "placeholder": "", "text": "upA2MpZlz/0eh/UmTxwDSyjAYEHcxP1VMi050cNh", "visible": false}
+{"tag": "INPUT", "id": "__VIEWSTATEGENERATOR", "name": "__VIEWSTATEGENERATOR", "type": "hidden", "placeholder": "", "text": "C2EE9ABB", "visible": false}
+{"tag": "INPUT", "id": "__EVENTVALIDATION", "name": "__EVENTVALIDATION", "type": "hidden", "placeholder": "", "text": "M3+Blf7AYPmKdGS1L99WSbuI2diUJtojbAUzDGyh", "visible": false}
+{"tag": "INPUT", "id": "tbB2bCode", "name": "tbB2bCode", "type": "text", "placeholder": "Kullanıcı Kodu", "text": "120.2845", "visible": true}

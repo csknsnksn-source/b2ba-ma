@@ -1,0 +1,5 @@
+C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\uiautomation\uiautomation.py:26: FutureWarning: You are running 'comtypes' on Python 3.15, where the behavior of enum types (such as IntFlag) may differ from Python <= 3.14.
+It is recommended to use a version compatible with Python 3.15.
+See: https://github.com/enthought/comtypes/issues/894
+  import comtypes  # need 'pip install comtypes'
+{"tamam": true, "satirlar": [{"kod": "02.24.12A.081.14", "oem": "20910-42A00 / MD 997249", "arac": "H100 / L300 / 4D55 / 4D56", "ad": "TAKIM CONTA GRAFİTLİ", "marka": "MISSUBA", "stok": "Var", "liste": 1292.3, "isk": 5.0, "id": "4602"}, {"kod": "02.24.12A.081.16", "oem": "20910-42D00 /", "arac": "H100- L300", "ad": "TAKIM CONTA ( SİLİNDİR KAPAK CONTASIZ )", "marka": "MISSUBA", "stok": "Var", "liste": 807.68, "isk": 5.0, "id": "29544"}]}

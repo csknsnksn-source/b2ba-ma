@@ -1,0 +1,86 @@
+﻿B2B KISAYOL TARAMASI - 30.10.2026 17:21
+Klasor: C:\Users\HP\OneDrive\Masaüstü\PROGRAM OLANLAR
+
+SITE                 ->  KLASORDEKI KISAYOL
+Başbuğ               ->  BASBUG OTOMOTIV (coşkun)
+Martaş               ->  Martaş Otomotiv
+Dinamik              ->  Dinamik Otomotiv (coşkun)
+Rotas                ->  Rotas Otomotiv (coşkun)
+Sayım Rulman         ->  Sayim Rulman (coşkun)
+İntermobil           ->  ioto B4B - İntermobil (coşkun)
+Lepar                ->  Lepar Otomotiv
+Başaran              ->  Başaran Otomotiv
+Askar                ->  Askar Otomotiv 01.16.0051
+Akay                 ->  AkayOto
+Akkar                ->  Akkar Motor LTD. ŞTİ.
+Aşin                 ->  Aşin Otomotiv
+Başdaş               ->  Başdaş Dış Ticaret
+Kortaş               ->  KORTAS OTOMOTİV
+Karakaş              ->  Karakaş Otomotiv
+Korea                ->  Korea Otomotiv
+NES                  ->  NES Oto Parçaları
+Sayılı               ->  SAYILI OTOMOTİV
+Sayıner              ->  SAYINER
+Şahinoğlu            ->  Sahinoglu Motor LTD. ŞTİ.
+Yedekçi              ->  YEDEKCİ OTOMOTİV
+Yeni Alka            ->  Yeni Alka Otomotiv
+Çıtak                ->  Çıtak Yedek Parça Ltd.
+İlsem                ->  İLSEM OTOMOTİV
+Ergin                ->  Ergin Otomotiv Yeni
+Teknopar             ->  Teknopar Otomotiv
+Universal            ->  Universal Otomotiv
+Karpart              ->  KARPART OTOMOTİV
+Arkaş                ->  ARKAŞ OTOMOTİV
+Mydpar               ->  Mydpar OTOMOTİV
+Waha                 ->  WAHA OTOMOTİV
+Merkez Oto           ->  Merkez Oto Yedek Parça (coşkun)
+Altay                ->  Altay Otomotiv A.Ş.
+Taypar               ->  Taypar A.Ş.
+Hamle                ->  Hamle Otomotiv
+Vahdet               ->  vahdettiryakioglu.com.tr
+Rulman Dünyası       ->  Rulman Dünyası
+Mega-Tek             ->  MEGA-TEK Otomotiv Makina Yedek Parça Ltd.Şti.
+Aslan Kardeşler      ->  ASLAN KARDEŞLER ONLINE - 1 
+Doğan                ->  Doğan Otomotiv B4B
+GMW                  ->  GMW
+Murat                ->  MURAT OTOMOTİV
+Grup Işık            ->  Grup Işık
+Mest                 ->  Mest Otomotiv Bayi Paneli
+Balkan Radyatör      ->  BALKAN RADYATÖR B2B (coşkun)
+Mete                 ->  METE OTOMOTİV B2B (coşkun)
+FCS                  ->  siparis.fcs.com.tr Home (coşkun)
+Güneybağlılar        ->  Güneybağlılar (coşkun)
+DE-GA                ->  DE-GA B4B (coşkun)
+Şenbay               ->  Şenbay Otomotiv- Ege B2B (coşkun)
+GloPar               ->  GloPar-B2B (coşkun)
+KRAW                 ->  KRAW   B2B (coşkun)
+Bursa Nisa           ->  BURSA NİSA OTOMOTİV SAN.TİC.LTD.ŞTİ - Otomasyon
+İlkem                ->  İlkem Otomotiv B2b
+Kuzey Oto            ->  Kuzey Oto B2b
+ABS                  ->  ABS OTOMOTİV - VS B2B (coşkun)
+Carpar               ->  CARPAR B2B Sistemine Hoş Geldiniz (coşkun)
+Ekici                ->  EKİCİ OTOMOTİV - Otomotiv Yedek Parça (coşkun)
+HİS-KA               ->  HİS-KA OTOMOTİV (coşkun)
+HYK                  ->  HYK Automotive   Otomobil Yedek Parçaları (coşkun)
+İntur                ->  İNTUR OTOMOTİV VE TAŞIMACILIK SAN. VE TİC. LTD. ŞTİ (coşkun)
+Motor Aşin           ->  Motor Aşin B2B (coşkun)
+Orient               ->  Orient Ekspres Ltd. Şti. (coşkun)
+Şahinler             ->  Şahinler   Şahinler Motorlu Araçlar San.ve Tic. A.Ş (coşkun)
+
+Klasorde olup hicbir siteye eslesmeyen kisayollar:
+  Akbilya B2B
+  AlaaAlbik B2b
+  Arena Oto B2b
+  Arsan Motor
+  Bayar Oto
+  JETPAR TURBO
+  Mertpar Otomotiv Ltd. Şti.
+  Meydan.IO
+  OTO SEN
+  OtorulmanWeb
+  Tok Otomotiv A.Ş.
+  UZAKDOĞU MOTOR - Kısayol
+  Yak Otomotiv
+  Özaş Otomotiv
+  İlpar
+  İzmir Bilya San. ve Tic.Ltd. Şti.

@@ -1,0 +1,325 @@
+=== martas / 'Martaş Otomotiv' / parca=2091042 ===
+Arama kutusu: '' #searchInput
+    [ImageControl] logo
+      [HyperlinkControl] Arama Arama
+        [ButtonControl] Arama Arama
+          [ImageControl] Arama
+          [TextControl] Arama
+      [HyperlinkControl] Araç Araç
+        [ButtonControl] Araç Araç
+          [ImageControl] Araç
+          [TextControl] Araç
+      [HyperlinkControl] Sepet Sepet 26
+        [ButtonControl] Sepet Sepet 26
+          [ImageControl] Sepet
+          [TextControl] Sepet
+          [TextControl] 26
+      [HyperlinkControl] Bakiye Bakiye
+        [ButtonControl] Bakiye Bakiye
+          [ImageControl] Bakiye
+          [TextControl] Bakiye
+      [HyperlinkControl] Siparis Sipariş
+        [ButtonControl] Siparis Sipariş
+          [ImageControl] Siparis
+          [TextControl] Sipariş
+      [HyperlinkControl] Oem OEM
+        [ButtonControl] Oem OEM
+          [ImageControl] Oem
+          [TextControl] OEM
+      [HyperlinkControl] Hesap Hesap
+        [ButtonControl] Hesap Hesap
+          [ImageControl] Hesap
+          [TextControl] Hesap
+      [ButtonControl] Pos POS
+        [ImageControl] Pos
+        [TextControl] POS
+      [HyperlinkControl] Katalog Katalog
+        [ButtonControl] Katalog Katalog
+          [ImageControl] Katalog
+          [TextControl] Katalog
+      [HyperlinkControl] Oneri Öneri
+        [ButtonControl] Oneri Öneri
+          [ImageControl] Oneri
+          [TextControl] Öneri
+        [ButtonControl] Katalog Diğer
+          [ImageControl] Katalog
+          [TextControl] Diğer
+          [EditControl] Üretici yazınız...  #uretici
+          [EditControl] Araç yazınız...
+          [EditControl] Parça yazınız...
+      [EditControl]   #searchInput
+        [TextControl] 18:55
+        [TextControl] 25-10-2026
+      [GroupControl]   #511
+        [ImageControl] Advertisement Offer  #bannerImg
+  [ButtonControl] Arama Sonucu
+    [TextControl] Arama Sonucu
+  [ButtonControl] Özel Arama
+    [ButtonControl] Eşdeğer Ürünler
+    [ButtonControl] Oem
+    [ButtonControl] Araçlar
+    [ButtonControl] Stok Geçmişi
+    [ButtonControl] Aldıklarım (906)
+      [TextControl] Aldıklarım
+      [TextControl] (906)
+      [TextControl] T. Puan: 5.288
+    [TextControl] Tablo Görünümü
+      [TextControl] Tüm Ürünler
+      [TextControl] Stokta Olanlar
+            [DataItemControl] Stok Kodu
+                [TextControl] Stok Kodu
+            [DataItemControl] Ref. No
+                [TextControl] Ref. No
+            [DataItemControl] Marka
+                [TextControl] Marka
+            [DataItemControl] Ürün Adı
+              [GroupControl]   #product-name-column-header
+                [TextControl] Ürün Adı
+            [DataItemControl] Bursa
+                [TextControl] Bursa
+            [DataItemControl] İstanbul Anadolu
+                [TextControl] İstanbul Anadolu
+            [DataItemControl] İzmir
+                [TextControl] İzmir
+            [DataItemControl] Ankara
+                [TextControl] Ankara
+            [DataItemControl] İstanbul Avrupa
+                [TextControl] İstanbul Avrupa
+            [DataItemControl] Adana
+                [TextControl] Adana
+            [DataItemControl] Distrigo
+                [TextControl] Distrigo
+            [DataItemControl] Tedarik Depo
+                [TextControl] Tedarik Depo
+            [DataItemControl] Br.
+              [TextControl] Br.
+            [DataItemControl] gift
+              [ImageControl] gift
+            [DataItemControl] Liste Fiyatı
+                [TextControl] Liste Fiyatı
+            [DataItemControl] Liste Fiyatı ₺
+                [TextControl] Liste Fiyatı ₺
+            [DataItemControl] KDV'li Maliyet
+                [TextControl] KDV'li Maliyet
+            [DataItemControl] YENİ
+              [TextControl] YENİ
+                [DataItemControl] ROY-T332002PR
+                    [TextControl] ROY-T332002PR
+                    [GroupControl]   #purch-ROY-T332002PR
+                [DataItemControl] MD997249 MD997249
+                    [TextControl] MD997249 MD997249
+                [DataItemControl] ROYAL
+                    [TextControl] ROYAL
+                [DataItemControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                      [TextControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                [DataItemControl] 1
+                      [TextControl] 1
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 2.578,03 ₺
+                    [GroupControl]   #ROY-T332002PR
+                        [TextControl] 2.578,03 ₺
+                [DataItemControl] 2.578,03 ₺
+                  [TextControl] 2.578,03 ₺
+                [DataItemControl] 1.614,88 ₺
+                    [TextControl] 1.614,88 ₺
+                [DataItemControl] 2099.34 ₺
+                  [TextControl] 2099.34 ₺
+                [DataItemControl] SUS-S0080036
+                    [TextControl] SUS-S0080036
+                    [GroupControl]   #purch-SUS-S0080036
+                [DataItemControl] S0080036 2091042A10
+                    [TextControl] S0080036 2091042A10
+                [DataItemControl] SUPSAN
+                    [TextControl] SUPSAN
+                [DataItemControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                      [TextControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                    [GroupControl]   #pin-SUS-S0080036
+                [DataItemControl] 1
+                      [TextControl] 1
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 2.561,13 ₺
+                    [GroupControl]   #SUS-S0080036
+                        [TextControl] 2.561,13 ₺
+                [DataItemControl] 2.561,13 ₺
+                  [TextControl] 2.561,13 ₺
+                [DataItemControl] 1.604,29 ₺
+                    [TextControl] 1.604,29 ₺
+                [DataItemControl] 2085.58 ₺
+                  [TextControl] 2085.58 ₺
+                [DataItemControl] ROY-T244002
+                    [TextControl] ROY-T244002
+                    [GroupControl]   #purch-ROY-T244002
+                [DataItemControl] 244002 2091042A10
+                    [TextControl] 244002 2091042A10
+                [DataItemControl] ROYAL
+                    [TextControl] ROYAL
+                [DataItemControl] TAKIM CONTA (KECESIZ) HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                      [TextControl] TAKIM CONTA (KECESIZ) HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                [DataItemControl] 1
+                      [TextControl] 1
+                [DataItemControl] 3
+                      [TextControl] 3
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 2.016,37 ₺
+                    [GroupControl]   #ROY-T244002
+                        [TextControl] 2.016,37 ₺
+                [DataItemControl] 2.016,37 ₺
+                  [TextControl] 2.016,37 ₺
+                [DataItemControl] 1.263,05 ₺
+                    [TextControl] 1.263,05 ₺
+                [DataItemControl] 1641.97 ₺
+                  [TextControl] 1641.97 ₺
+                [DataItemControl] OTC-41450002
+                    [TextControl] OTC-41450002
+                    [GroupControl]   #purch-OTC-41450002
+                [DataItemControl] 41450002 2091042A10
+                    [TextControl] 41450002 2091042A10
+                [DataItemControl] OTO CONTA
+                    [TextControl] OTO CONTA
+                [DataItemControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP KAMPANYALI
+                      [TextControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                    [TextControl] KAMPANYALI
+                [DataItemControl] 1
+                      [TextControl] 1
+                [DataItemControl] 2
+                      [TextControl] 2
+                [DataItemControl] 2
+                      [TextControl] 2
+                [DataItemControl] 2
+                      [TextControl] 2
+                [DataItemControl] 1
+                      [TextControl] 1
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 3.245,44 ₺
+                    [GroupControl]   #OTC-41450002
+                        [TextControl] 3.245,44 ₺
+                [DataItemControl] 3.245,44 ₺
+                  [TextControl] 3.245,44 ₺
+                [DataItemControl] 1.890,64 ₺
+                    [TextControl] 1.890,64 ₺
+                [DataItemControl] 2457.83 ₺
+                  [TextControl] 2457.83 ₺
+                [DataItemControl] SUS-S0080072
+                    [TextControl] SUS-S0080072
+                    [GroupControl]   #purch-SUS-S0080072
+                [DataItemControl] S00 80072 2091042A10
+                    [TextControl] S00 80072 2091042A10
+                [DataItemControl] SUPSAN
+                    [TextControl] SUPSAN
+                [DataItemControl] TAKIM CONTA (KECESIZ) HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                      [TextControl] TAKIM CONTA (KECESIZ) HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 2.992,14 ₺
+                    [GroupControl]   #SUS-S0080072
+                        [TextControl] 2.992,14 ₺
+                [DataItemControl] 2.992,14 ₺
+                  [TextControl] 2.992,14 ₺
+                [DataItemControl] 1.874,28 ₺
+                    [TextControl] 1.874,28 ₺
+                [DataItemControl] 2436.56 ₺
+                  [TextControl] 2436.56 ₺
+                [DataItemControl] RNZ-01-52252-03
+                    [TextControl] RNZ-01-52252-03
+                    [GroupControl]   #purch-RNZ-01-52252-03
+                [DataItemControl] 1000A901
+                    [TextControl] 1000A901
+                [DataItemControl] VICTOR REINZ
+                    [TextControl] VICTOR REINZ
+                [DataItemControl] TAKIM CONTA (SKC YOK) HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                      [TextControl] TAKIM CONTA (SKC YOK) HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                    [GroupControl]   #pin-RNZ-01-52252-03
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 63,63 €
+                    [GroupControl]   #RNZ-01-52252-03
+                        [TextControl] 63,63 €
+                [DataItemControl] 3.537,81 ₺
+                  [TextControl] 3.537,81 ₺
+                [DataItemControl] 2.216,08 ₺
+                    [TextControl] 2.216,08 ₺
+                [DataItemControl] 2880.91 ₺
+                  [TextControl] 2880.91 ₺
+                [DataItemControl] ELR-752.968
+                    [TextControl] ELR-752.968
+                    [GroupControl]   #purch-ELR-752.968
+                [DataItemControl] MD997249
+                    [TextControl] MD997249
+                [DataItemControl] ELRING
+                    [TextControl] ELRING
+                [DataItemControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                      [TextControl] TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                    [GroupControl]   #pin-ELR-752.968
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 108,92 €
+                    [GroupControl]   #ELR-752.968
+                        [TextControl] 108,92 €
+                [DataItemControl] 6.055,92 ₺
+                  [TextControl] 6.055,92 ₺
+                [DataItemControl] 3.793,43 ₺
+                    [TextControl] 3.793,43 ₺
+                [DataItemControl] 4931.46 ₺
+                  [TextControl] 4931.46 ₺
+                [DataItemControl] RNZ-02-52252-03
+                    [TextControl] RNZ-02-52252-03
+                    [GroupControl]   #purch-RNZ-02-52252-03
+                [DataItemControl] 1000A915
+                    [TextControl] 1000A915
+                [DataItemControl] VICTOR REINZ
+                    [TextControl] VICTOR REINZ
+                [DataItemControl] UST TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                      [TextControl] UST TAKIM CONTA HYUNDAI H100 94-06 / KMY 94-08 / L300 90-08 4D56 / STAREX 97-08 100HP
+                    [GroupControl]   #pin-RNZ-02-52252-03
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 53,43 €
+                    [GroupControl]   #RNZ-02-52252-03
+                        [TextControl] 53,43 €
+                [DataItemControl] 2.970,69 ₺
+                  [TextControl] 2.970,69 ₺
+                [DataItemControl] 1.860,84 ₺
+                    [TextControl] 1.860,84 ₺
+                [DataItemControl] 2419.09 ₺
+                  [TextControl] 2419.09 ₺
+                [DataItemControl] SUS-S0080036-01
+                    [TextControl] SUS-S0080036-01
+                    [GroupControl]   #purch-SUS-S0080036-01
+                [DataItemControl] S0080036-01 20910-42A10
+                    [TextControl] S0080036-01 20910-42A10
+                [DataItemControl] SUPSAN
+                    [TextControl] SUPSAN
+                [DataItemControl] MOTOR TAKIM CONTASI (KECELI) SILINDIR KAPAKLI-(HYUNDAI H100/MITSUBISHI L300 )
+                      [TextControl] MOTOR TAKIM CONTASI (KECELI) SILINDIR KAPAKLI-(HYUNDAI H100/MITSUBISHI L300 )
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 3.849,69 ₺
+                    [GroupControl]   #SUS-S0080036-01
+                        [TextControl] 3.849,69 ₺
+                [DataItemControl] 3.849,69 ₺
+                  [TextControl] 3.849,69 ₺
+                [DataItemControl] 2.411,45 ₺
+                    [TextControl] 2.411,45 ₺
+                [DataItemControl] 3134.88 ₺
+                  [TextControl] 3134.88 ₺
+      [TextControl] Yetkili Bilgileri
+      [ImageControl] company
+      [TextControl] Martaş Otomotiv
+      [ImageControl] business_man_blue
+      [TextControl] Coskun Sen
+      [TextControl] B155805
+      [TextControl] OTOSEN BURSA OTOMOTIV SAN. VE LTD.S
+      [TextControl] €:
+      [TextControl] 55.5997
+      [TextControl] $:
+      [TextControl] 49.654
+        [TextControl] Kullanıcı adınız ile başka bir bilgisayardan giriş yapılmış olabilir! Lütfen biraz bekleyip tekrar deneyiniz...
+      [DocumentControl] Bize Yazin  #AloChatIframe
+        [DocumentControl] Not Found  #RootWebArea
+          [TextControl] Not Found
+            [TextControl] Not Found
+            [TextControl] The requested resource was not found on this server.

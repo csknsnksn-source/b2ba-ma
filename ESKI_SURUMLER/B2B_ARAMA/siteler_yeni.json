@@ -1,0 +1,86 @@
+[
+  {
+    "ad": "Başbuğ",
+    "tip": "A",
+    "url": "https://b2bbasbug.com/web/b2b/search",
+    "aktif": true
+  },
+  {
+    "ad": "Martaş",
+    "tip": "A",
+    "url": "https://online.martas.com.tr/web/b2b/search",
+    "aktif": true
+  },
+  {
+    "ad": "Dinamik",
+    "tip": "A",
+    "url": "https://bayi.adaoto.com.tr/web/b2b/search",
+    "aktif": true
+  },
+  {
+    "ad": "Rotas",
+    "tip": "A",
+    "url": "https://b2b.rotas.com.tr/web/b2b/search",
+    "aktif": true
+  },
+  {
+    "ad": "Sayım Rulman",
+    "tip": "A",
+    "url": "https://bayi.sayimrulman.com/web/b2b/search",
+    "aktif": true
+  },
+  {
+    "ad": "İntermobil",
+    "tip": "ERYAZ_WEB",
+    "url": "https://b4b.intermobil.com.tr/tr/search",
+    "aktif": true
+  },
+  {
+    "ad": "Vahdet Tiryakioğlu",
+    "tip": "ERYAZ_V4",
+    "url": "https://b4b.vahdettiryakioglu.com.tr/Search",
+    "aktif": true
+  },
+  {
+    "ad": "Mest",
+    "tip": "DESISS",
+    "url": "https://siparis.mestoto.com.tr/urunler",
+    "aktif": true
+  },
+  {
+    "ad": "Lepar",
+    "tip": "LEPAR",
+    "url": "https://web.lepar.com.tr/Default.aspx",
+    "aktif": true
+  },
+  {
+    "ad": "Altay",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.altayoto.com/Search",
+    "aktif": false
+  },
+  {
+    "ad": "Taypar",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.taypar.com/Search",
+    "aktif": false
+  },
+  {
+    "ad": "Hamle",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.hamlesiparis.com/Search",
+    "aktif": false
+  },
+  {
+    "ad": "Mega-Tek",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.megatekotomotiv.com/Search",
+    "aktif": false
+  },
+  {
+    "ad": "Rulman Dünyası",
+    "tip": "ERYAZ_SOAP",
+    "url": "https://b4b.rulman.com.tr/Search",
+    "aktif": false
+  }
+]

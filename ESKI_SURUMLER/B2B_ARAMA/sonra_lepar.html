@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="shortcut icon" href="images/favicon.ico"><link href="images/favicon.ico"><link rel="icon" type="image/gif" href="images/favicon.ico"><title>
+	LEPAR B2B | Giriş
+</title><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><link rel="stylesheet" type="text/css" href="Styles/NewLogin.css">
+    <script type="text/javascript" src="Scripts/BrowserDetect.js"></script>
+    <script type="text/javascript">
+        //
+        //setTimeout("location.href='slogin.aspx'", 1);
+        //        var browser = BrowserDetect.browser;
+        ////        if (!(browser === "Chrome" || browser === "Firefox")) {
+        //        if (browser === "Explorer") {
+        //            //alert(browser + " tarayıcısı kullandığınız tespit edildi.\n" + "Uygulamanın en iyi verimlilikte çalışması için Google Chrome ya da Firefox Mozilla tarayıcısı kullanmanız önerilir.");
+        //            location.href = 'http://eryazsoftware.com.tr/explorer.html';
+        //        }
+
+        if (document.location.toString().indexOf('localhost') == -1) {
+            if (document.location.pathname.toLowerCase() === "/originalpricepage.aspx") {
+                if (document.location.protocol != "http:")
+                    document.location.href = "http://" + window.location.hostname + document.location.pathname;
+            }
+            else {
+                if (document.location.protocol != "https:") {
+                    document.location.href = "https://" + window.location.hostname + document.location.pathname;
+                }
+            };
+        }
+
+        function closeWinChangePassword() {
+            $find("popupChangePassword").hide();
+        }
+
+        // TextBoxlardaki Enter key i için eklendi.
+        function keyPressedLogin(e) {
+            var key;
+            if (window.event)
+                key = window.event.keyCode;     //IE
+            else
+                key = e.which;     //firefox
+
+            if (key == 13) {
+                var btn = document.getElementById("btnLogin");
+                if (btn != null) {
+                    btn.click();
+                    e.preventDefault();
+                }
+            }
+        }
+
+        // TextBoxlardaki Enter key i için eklendi.
+        function keyPressedChangePassword(e) {
+            var key;
+            if (window.event)
+                key = window.event.keyCode;     //IE
+            else
+                key = e.which;     //firefox
+
+            if (key == 13) {
+                var btn = document.getElementById("btnChangePassword");
+
+                if (btn != null) {
+                    btn.click();
+                    e.preventDefault();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="./login.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="upA2MpZlz/0eh/UmTxwDSyjAYEHcxP1VMi050cNhFgozrqjH08/2tIlvheBFsL7Kxu2qoV2Tzs2JZBuFgsBKc4oGhls8TyVORdSDhsiHIOSLZnRp5+BV9FfulrEDCKNCg193qLSfS9Pgr4rgsocpYquN3Wk9fcwpTJME1ZG3iDXEBf/rD9afnTWauve0lTGVqPDzyi6nkx5tr4sHhhj66g==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZCKbj6Mc3RMb-ue7BQJTFTzIcKOHjP_CsPZNxauXBu4i7Sy92cRU69B3CTWBJWO7_g2&amp;t=637551331563651045" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=yeSNAJTOPtPimTGCAo3LldERCRQWywu22VRjyAzJmfQtXQu3MEGjWcS506PP5sAzCCQDDL7cDcx88FyM1vQcT0iV3Esb8LZnF7GdcbZCRB7K41oicUxw6ADo0NNQ5lWf0&amp;t=23c9c237" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax istemci tarafı çerçevesi yüklenemedi.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=DT3YJR8QaqV61-teuz0hgmIqpYOF4S0p828CsKtagITjZ_LkWrNfTYj2wCcAoDICD9f16NI3_BrOm2LV70PzYuzAsm9b1aL9AC37_M6jgDTYxJhw4kGCRdP1wHszGMpmOjOX3RunvOm2FXKxdk8yOg2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=HmPHS4c8DJOsyehLgTYT9NGs3zrEI7o25grEV56ecayH4QofO97Xi6R4_WPxbbvm-wr0Ogmc6Mon3iOaL7j517YcLeuofjQj7B1LwYGyiU_V2Or5Z5vJlQ5uUAJQunKL0&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=xKipoi53UBYp4I7hUd8TGUmQdL_-GYiyE85gGr0jmWg1xQ5AFhDCnAr4j40NC46DjgKR14CsubDe3GocJUwLRoV69Hygov24XN_UaVTC9-mZ7EhznxTpwzjdAtIQjJIsdtj8Y6Y6exbArOZTmO1Hdw2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Xb7KSyiKEiKe0cQgtciu8tyjmpt3fYHLlDWr35cpRspqEtifBGT0k70X_3dl9kUVs81plz1_JQvNjbCKs_lF3_z2e8QIWlGZISBkhduOUhwEVwbcdrVexy5Pf2Y44hd_bIr5T5U0D6f_AFJsY3bNMrKwplkkoT7_4myoW0TUaOU1&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=NoZa34-nMS7-Xc6gGOLpOoDCFZ0zfltBmfs10i2PdFtikFH-KjuN5J7I3_M0KFauvNuuiwvTFUBioDnRlMzzmqyJSUDQqqFTLvFN2AUZhP6cC6F_KYGcK7goyumYcU1LHRtP-u8HNj5p-E4QI3JJCA2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=bVeQ_6BvdZp4dyuizlgXHQdr6Jto1Y4xqxuqFGxg7w-jTZVSTUQlxOL0aU-_aOTo-JkRDfLCm435LPDKheZ6UUXOmtaSSnNEk7m5fDqF72CbEkACkFi89XzUVXZSYauoK4AcO2_CWhHw-no8LbjywA2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=5wXllp0R9IGmTo_t5PpL_1NOgudc0nkTSWgL_z4LwxAVkSQxi9Aa7wTKE5BKfGntcSmVncIOy7a3tP_U5BqnOiSwA3sj1eBHdhiC-G6zNvOY_5-6iZGW_opCyI3XnZBpYXSraxGS965TT6uI_eQZXQ2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=GIDUvP_Wj4GjkKB3ra3W__Jn5Tae8HXOc4zwFTtwFQp56rh5lvW-rzFlV7gPYr02rA-bzh9nGxN6vkMFy2lfTwxPvIMO1GBmdmZVjF7zBXO79kCFN1uVQxFvjEgUv4ItO3qQT24R6FIQtBWP4tAHIA2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=jEItNninvr4u22-LzR10ewqx2WBLYxNQYEZI_jy4TRXuJQ-LrnypXAGyfGC_gkh_ZfhHtPP1QgJLeBVjTxfbpHmkdCv3YZ1hfc0pu7BiohNehEWaquS3y8cw9QtKPPpzvGc8LVS-vUKg2tMiIm9WsQ2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=AnCYfyY1ZFu_laXqUokOu4FgnGHLW1VzRJBAcCTkc2YcbZ6WDhiYqrz-DG5yFvwPYrSMorulG5tismQvEkt3HS_ieNDTCM4AQaIrCRoBHvGUQvxtCzsCyXZTPvxbbERIehPg2PnkL25oH4NWhi_Xkg2&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=1AHLgR4ySIBARuX2YJ3Tn7aLhUrxl3sRb2DUr6MYrjfvFL4_DJMyA-zH6i_ajmbSjXs_33mVgcz-Cz_oahXtRVXm0qMCm-vYLaTf_58Ae2-xAyqb4xN-IA71d97Uqo5a6WX4ZAjcpZiJEsbbc3Yd6pHL-G6f0lwWEBCf7DIYMMU1&amp;t=23c9c237" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=nIvSuEKRnCvHD44ZZHjxbJUT2_8PvuGipdqcmH-FoCjaVQWqEGbhO-KPi-15fqFAzeXzDCj1G-weYI0XU2dMLTtrIY_1ZdfSj2BV7KMBRNjjHePJ_w0Ma5-HPyVYfUR1Mmo5FL2Ts-OUwowbLOs5Mw2&amp;t=23c9c237" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="M3+Blf7AYPmKdGS1L99WSbuI2diUJtojbAUzDGyhKXIVg70IyniWbjc+UKtSic8UKZ/z9Q481hegTp9a4EBwat5APbMmlgQiOzI6F5REiTyWTI5/1qks+YT/MyCVsozOZMx3vZnHjEAl/DKk8Js2AMyrjYPvVVRBzL0uqFeDU1Ay3ccG9hAmYWc+C9xe5zpwj9SJnTYuQypOfnGtwrSfj3oJSohRiyhtKLdN/jFpsF/TwO6SkavlKsteQxNzafnZGsPXIjL8MRZlVHby79nwQw==">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tupdatePanelChangePassword','updatePanelChangePassword'], [], [], 90, '');
+//]]>
+</script>
+
+        <div class="LoginMain">
+            <div class="LoginHeader">
+                <img alt="Logo" src="images/logo.png">
+            </div>
+            <div id="pnlError">
+	
+                <div class="error">
+                    <span id="lblError">Yanlış kullanıcı adı / parola!</span>
+                </div>
+            
+</div>
+            <div class="TextBoxUsername">
+                <input name="tbB2bCode" type="text" value="120.2845" id="tbB2bCode" placeholder="Kullanıcı Kodu" style="border-width:0px;border-style:None;width:240px;">
+            </div>
+            <div class="TextBoxPassword">
+                <input name="tbPassword" type="password" id="tbPassword" x="" placeholder="Parola" onkeypress="return keyPressedLogin(event); return false;" style="border-width:0px;border-style:None;width:240px;">
+            </div>
+            <div class="LoginGeneral">
+                
+                <div class="btnLogin">
+                    <a id="btnLogin" href="javascript:__doPostBack('btnLogin','')">Giriş Yap</a>
+                </div>
+            </div>
+        </div>
+        <!-- Change Password -->
+        
+        <a id="btnShowPopupChangePassword" href="javascript:__doPostBack('btnShowPopupChangePassword','')" style="display: none">Shouldn't see this button</a>
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"PopupControlID":"panelChangePassword","dynamicServicePath":"/login.aspx","id":"popupChangePassword"}, null, null, $get("btnShowPopupChangePassword"));
+});
+//]]>
+</script>
+<div id="popupChangePassword_foregroundElement" style="display: none; position: fixed; z-index: 100001;"><div id="panelChangePassword" class="pnlBackGround" style="display: none">
+	
+            <div id="updatePanelChangePassword">
+		
+                    <div class="popup" style="width: 320px; height: 100%;">
+                        <div class="popupHeader">
+                            <div style="text-align: center;">
+                                <span id="lblChangePasswordText">Şifre Değiştirme</span>
+                            </div>
+                        </div>
+                        <br>
+                        <table style="width: 300px">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblNewPasswordText">Yeni Şifre</span>
+                                </td>
+                                <td>
+                                    <input name="tbNewPassword" type="password" id="tbNewPassword" onkeypress="return keyPressedChangePassword(event); return false;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span id="lblNewPasswordRepeatText">Yeni Şifre Tekrar</span>
+                                </td>
+                                <td>
+                                    <input name="tbNewPasswordRepeat" type="password" id="tbNewPasswordRepeat" onkeypress="return keyPressedChangePassword(event); return false;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div style="text-align: center;">
+                                        <span id="lblErrorChangePassword" style="color: Red; font-weight: bold"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a id="btnChangePassword" href="javascript:__doPostBack('btnChangePassword','')">Tamam</a>
+                                    <a id="btnNo" autopostback="false" onclientclicked="closeWinChangePassword" href="javascript:__doPostBack('btnNo','')">Hayır</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                
+	</div>
+        
+</div></div><div id="popupChangePassword_backgroundElement" class="modalBackground" style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div></form>
+
+
+</body></html>

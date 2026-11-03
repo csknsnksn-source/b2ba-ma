@@ -1,0 +1,91 @@
+=== sayim / 'Sayim Rulman' / parca=2091042 ===
+Arama kutusu: '' #searchInput
+      [HyperlinkControl] Arama Arama
+        [ButtonControl] Arama Arama
+          [ImageControl] Arama
+          [TextControl] Arama
+      [HyperlinkControl] Araç Araç
+        [ButtonControl] Araç Araç
+          [ImageControl] Araç
+          [TextControl] Araç
+      [HyperlinkControl] Sepet Sepet 1
+        [ButtonControl] Sepet Sepet 1
+          [ImageControl] Sepet
+          [TextControl] Sepet
+          [TextControl] 1
+      [HyperlinkControl] Bakiye Bakiye
+        [ButtonControl] Bakiye Bakiye
+          [ImageControl] Bakiye
+          [TextControl] Bakiye
+      [HyperlinkControl] Siparis Sipariş
+        [ButtonControl] Siparis Sipariş
+          [ImageControl] Siparis
+          [TextControl] Sipariş
+      [HyperlinkControl] Oem OEM
+        [ButtonControl] Oem OEM
+          [ImageControl] Oem
+          [TextControl] OEM
+      [HyperlinkControl] Hesap Hesap
+        [ButtonControl] Hesap Hesap
+          [ImageControl] Hesap
+          [TextControl] Hesap
+      [ButtonControl] Pos POS
+        [ImageControl] Pos
+        [TextControl] POS
+      [HyperlinkControl] Katalog Katalog
+        [ButtonControl] Katalog Katalog
+          [ImageControl] Katalog
+          [TextControl] Katalog
+      [HyperlinkControl] Oneri Öneri
+        [ButtonControl] Oneri Öneri
+          [ImageControl] Oneri
+          [TextControl] Öneri
+        [ButtonControl] Katalog Diğer
+          [ImageControl] Katalog
+          [TextControl] Diğer
+          [EditControl] Üretici yazınız...  #uretici
+          [EditControl] Araç yazınız...
+          [EditControl] Parça yazınız...
+      [EditControl]   #searchInput
+        [TextControl] 18:56
+        [TextControl] 25-10-2026
+      [GroupControl]   #141
+        [ImageControl] Advertisement Offer  #bannerImg
+  [ButtonControl] Arama Sonucu
+    [TextControl] Arama Sonucu
+    [ButtonControl] Eşdeğer Ürünler
+    [ButtonControl] Oem
+    [ButtonControl] Araçlar
+    [ButtonControl] Stok Geçmişi
+    [ButtonControl] Aldıklarım (54)
+      [TextControl] Aldıklarım
+      [TextControl] (54)
+    [TextControl] Tablo Görünümü
+      [TextControl] Tüm Ürünler
+      [TextControl] Stokta Olanlar
+            [DataItemControl] Stok Kodu
+                [TextControl] Stok Kodu
+            [DataItemControl] Ref. No
+                [TextControl] Ref. No
+            [DataItemControl] Marka
+                [TextControl] Marka
+            [DataItemControl] Ürün Adı
+              [GroupControl]   #product-name-column-header
+                [TextControl] Ürün Adı
+            [DataItemControl] Merkez
+                [TextControl] Merkez
+            [DataItemControl] Depo
+                [TextControl] Depo
+            [DataItemControl] Br.
+              [TextControl] Br.
+            [DataItemControl] KDV'siz Maliyet
+                [TextControl] KDV'siz Maliyet
+            [DataItemControl] KDV'li Maliyet
+                [TextControl] KDV'li Maliyet
+    [GroupControl]   #noResultText
+      [TextControl] Sonuç bulunamadı
+      [TextControl] Yetkili Bilgileri
+      [ImageControl] business_man_blue
+      [TextControl] COŞKUN COŞKUN
+      [TextControl] AL5187
+      [TextControl] OTOŞEN BURSA OTOMOTİV SAN VE TİC LTD ŞTİ

@@ -1,0 +1,347 @@
+=== basbug / 'BASBUG OTOMOTIV' / parca=2091042 ===
+Arama kutusu: '' #searchInput
+    [ImageControl] logo
+          [EditControl] Üretici yazınız...  #uretici
+          [EditControl] Araç yazınız...
+          [EditControl] Parça yazınız...
+    [HyperlinkControl] Arama Arama
+      [ButtonControl] Arama Arama
+        [ImageControl] Arama
+        [TextControl] Arama
+    [HyperlinkControl] Araç Araç
+      [ButtonControl] Araç Araç
+        [ImageControl] Araç
+        [TextControl] Araç
+    [HyperlinkControl] Sepet Sepet 60
+      [ButtonControl] Sepet Sepet 60
+        [ImageControl] Sepet
+        [TextControl] Sepet
+        [TextControl] 60
+    [HyperlinkControl] Bakiye Bakiye
+      [ButtonControl] Bakiye Bakiye
+        [ImageControl] Bakiye
+        [TextControl] Bakiye
+    [HyperlinkControl] Siparis Sipariş
+      [ButtonControl] Siparis Sipariş
+        [ImageControl] Siparis
+        [TextControl] Sipariş
+    [HyperlinkControl] Hesap Hesap
+      [ButtonControl] Hesap Hesap
+        [ImageControl] Hesap
+        [TextControl] Hesap
+      [ButtonControl] Pos POS
+        [ImageControl] Pos
+        [TextControl] POS
+    [HyperlinkControl] Katalog Katalog
+      [ButtonControl] Katalog Katalog
+        [ImageControl] Katalog
+        [TextControl] Katalog
+    [HyperlinkControl] Oneri Öneri
+      [ButtonControl] Oneri Öneri
+        [ImageControl] Oneri
+        [TextControl] Öneri
+      [ButtonControl] Katalog Diğer
+        [ImageControl] Katalog
+        [TextControl] Diğer
+      [EditControl]   #searchInput
+        [TextControl] 18:55
+        [TextControl] 25-10-2026
+      [GroupControl]   #1
+        [ImageControl] Advertisement Offer  #bannerImg
+  [ButtonControl] Arama Sonucu
+    [TextControl] Arama Sonucu
+    [ButtonControl] Eşdeğer Ürünler
+    [ButtonControl] Oem
+    [ButtonControl] Çapraz Kodlar
+    [ButtonControl] Araçlar
+    [ButtonControl] Stok Geçmişi
+    [ButtonControl] Aldıklarım (986)
+      [TextControl] Aldıklarım
+      [TextControl] (986)
+    [TextControl] Tablo Görünümü
+      [TextControl] Tüm Ürünler
+      [TextControl] Stokta Olanlar
+            [DataItemControl] Stok Kodu
+                [TextControl] Stok Kodu
+            [DataItemControl] Ref. No
+                [TextControl] Ref. No
+            [DataItemControl] Marka
+                [TextControl] Marka
+            [DataItemControl] Ürün Adı
+              [GroupControl]   #product-name-column-header
+                [TextControl] Ürün Adı
+            [DataItemControl] BRS
+                [TextControl] BRS
+            [DataItemControl] MRK
+                [TextControl] MRK
+            [DataItemControl] IZM
+                [TextControl] IZM
+            [DataItemControl] IAN
+                [TextControl] IAN
+            [DataItemControl] KYS
+                [TextControl] KYS
+            [DataItemControl] YOL
+                [TextControl] YOL
+            [DataItemControl] Br.
+              [TextControl] Br.
+            [DataItemControl] Liste Fiyatı ₺
+                [TextControl] Liste Fiyatı ₺
+            [DataItemControl] KDV'siz Maliyet
+                [TextControl] KDV'siz Maliyet
+            [DataItemControl] KDV'li Maliyet
+                [TextControl] KDV'li Maliyet
+            [DataItemControl] İskonto
+                [TextControl] İskonto
+                [DataItemControl] 2091042D00
+                    [TextControl] 2091042D00
+                    [GroupControl]   #purch-2091042D00
+                [DataItemControl] 2091042D00
+                    [TextControl] 2091042D00
+                [DataItemControl] OE-HYU
+                    [TextControl] OE-HYU
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 6.485,00 ₺
+                  [TextControl] 6.485,00 ₺
+                [DataItemControl] 4.817,71 ₺
+                  [TextControl] 4.817,71 ₺
+                [DataItemControl] 5.781,25 ₺
+                    [TextControl] 5.781,25 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] MND DN2091042D00
+                    [TextControl] MND DN2091042D00
+                    [GroupControl]   #purch-MND DN2091042D00
+                [DataItemControl] 2091042D00
+                    [TextControl] 2091042D00
+                [DataItemControl] MANDO
+                    [TextControl] MANDO
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                    [GroupControl]   #pin-MND DN2091042D00
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.862,37 ₺
+                  [TextControl] 1.862,37 ₺
+                [DataItemControl] 1.383,56 ₺
+                  [TextControl] 1.383,56 ₺
+                [DataItemControl] 1.660,27 ₺
+                    [TextControl] 1.660,27 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] MND DN2091042C10
+                    [TextControl] MND DN2091042C10
+                    [GroupControl]   #purch-MND DN2091042C10
+                [DataItemControl] 2091042C10
+                    [TextControl] 2091042C10
+                [DataItemControl] MANDO
+                    [TextControl] MANDO
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.719,38 ₺
+                  [TextControl] 1.719,38 ₺
+                [DataItemControl] 1.277,33 ₺
+                  [TextControl] 1.277,33 ₺
+                [DataItemControl] 1.532,79 ₺
+                    [TextControl] 1.532,79 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] MND DN2091042B00
+                    [TextControl] MND DN2091042B00
+                    [GroupControl]   #purch-MND DN2091042B00
+                [DataItemControl] 2091042B00
+                    [TextControl] 2091042B00
+                [DataItemControl] MANDO
+                    [TextControl] MANDO
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                    [GroupControl]   #pin-MND DN2091042B00
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.659,30 ₺
+                  [TextControl] 1.659,30 ₺
+                [DataItemControl] 1.232,70 ₺
+                  [TextControl] 1.232,70 ₺
+                [DataItemControl] 1.479,24 ₺
+                    [TextControl] 1.479,24 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] MND DN2091042A10 Favori Ürün
+                    [TextControl] MND DN2091042A10
+                    [GroupControl]   #purch-MND DN2091042A10
+                      [ImageControl] Favori Ürün
+                [DataItemControl] 2091042A10
+                    [TextControl] 2091042A10
+                [DataItemControl] MANDO
+                    [TextControl] MANDO
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                    [GroupControl]   #pin-MND DN2091042A10
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.381,76 ₺
+                  [TextControl] 1.381,76 ₺
+                [DataItemControl] 1.026,51 ₺
+                  [TextControl] 1.026,51 ₺
+                [DataItemControl] 1.231,81 ₺
+                    [TextControl] 1.231,81 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] MND DN2091042A00A
+                    [TextControl] MND DN2091042A00A
+                    [GroupControl]   #purch-MND DN2091042A00A
+                [DataItemControl] 2091042A00A
+                    [TextControl] 2091042A00A
+                [DataItemControl] MANDO
+                    [TextControl] MANDO
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                    [GroupControl]   #pin-MND DN2091042A00A
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.441,84 ₺
+                  [TextControl] 1.441,84 ₺
+                [DataItemControl] 1.071,14 ₺
+                  [TextControl] 1.071,14 ₺
+                [DataItemControl] 1.285,37 ₺
+                    [TextControl] 1.285,37 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] MND DN2091042A00
+                    [TextControl] MND DN2091042A00
+                    [GroupControl]   #purch-MND DN2091042A00
+                [DataItemControl] 2091042A00A
+                    [TextControl] 2091042A00A
+                [DataItemControl] MANDO
+                    [TextControl] MANDO
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                    [GroupControl]   #pin-MND DN2091042A00
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.381,76 ₺
+                  [TextControl] 1.381,76 ₺
+                [DataItemControl] 1.026,51 ₺
+                  [TextControl] 1.026,51 ₺
+                [DataItemControl] 1.231,81 ₺
+                    [TextControl] 1.231,81 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] BSG 40-115-002
+                    [TextControl] BSG 40-115-002
+                    [GroupControl]   #purch-BSG 40-115-002
+                [DataItemControl] 2091042A00A
+                    [TextControl] 2091042A00A
+                [DataItemControl] BSG
+                    [TextControl] BSG
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10 SKC SIZ
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10 SKC SIZ
+                    [GroupControl]   #pin-BSG 40-115-002
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.265,47 ₺
+                  [TextControl] 1.265,47 ₺
+                [DataItemControl] 940,12 ₺
+                  [TextControl] 940,12 ₺
+                [DataItemControl] 1.128,14 ₺
+                    [TextControl] 1.128,14 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] BSG 40-115-001
+                    [TextControl] BSG 40-115-001
+                    [GroupControl]   #purch-BSG 40-115-001
+                [DataItemControl] 2091042A00A
+                    [TextControl] 2091042A00A
+                [DataItemControl] BSG
+                    [TextControl] BSG
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10 SKT'LI VE SIVI CONTALI
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10 SKT'LI VE SIVI CONTALI
+                    [GroupControl]   #pin-BSG 40-115-001
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.649,55 ₺
+                  [TextControl] 2.649,55 ₺
+                [DataItemControl] 1.968,35 ₺
+                  [TextControl] 1.968,35 ₺
+                [DataItemControl] 2.362,02 ₺
+                    [TextControl] 2.362,02 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] R T244003PR
+                    [TextControl] R T244003PR
+                    [GroupControl]   #purch-R T244003PR
+                [DataItemControl] 2091042A00A
+                    [TextControl] 2091042A00A
+                [DataItemControl] ROYAL
+                    [TextControl] ROYAL
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.306,69 ₺
+                  [TextControl] 1.306,69 ₺
+                [DataItemControl] 970,74 ₺
+                  [TextControl] 970,74 ₺
+                [DataItemControl] 1.164,89 ₺
+                    [TextControl] 1.164,89 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] STO JFS-30163-R-FCS1
+                    [TextControl] STO JFS-30163-R-FCS1
+                    [GroupControl]   #purch-STO JFS-30163-R-FCS1
+                [DataItemControl] 2091042E00
+                    [TextControl] 2091042E00
+                [DataItemControl] STONE
+                    [TextControl] STONE
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10 ( JAPON MALI )
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10 ( JAPON MALI )
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.817,64 ₺
+                  [TextControl] 2.817,64 ₺
+                [DataItemControl] 2.093,22 ₺
+                  [TextControl] 2.093,22 ₺
+                [DataItemControl] 2.511,87 ₺
+                    [TextControl] 2.511,87 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+                [DataItemControl] R T618000
+                    [TextControl] R T618000
+                    [GroupControl]   #purch-R T618000
+                [DataItemControl] 2091042E00
+                    [TextControl] 2091042E00
+                [DataItemControl] ROYAL
+                    [TextControl] ROYAL
+                [DataItemControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                      [TextControl] TAKIM CONTA H100 L300 MINIBUS 97-08 H100 KMY 97-12 STAREX TCI 01 -> BONGO TCI 03-10
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.457,61 ₺
+                  [TextControl] 2.457,61 ₺
+                [DataItemControl] 1.825,76 ₺
+                  [TextControl] 1.825,76 ₺
+                [DataItemControl] 2.190,91 ₺
+                    [TextControl] 2.190,91 ₺
+                [DataItemControl] %8+19.25
+                  [TextControl] %8+19.25
+      [TextControl] Yetkili Bilgileri
+      [ImageControl] company
+      [TextControl] BASBUG OTOMOTIV
+      [ImageControl] business_man_blue
+      [TextControl] COŞKUN ŞENKESEN
+      [TextControl] M01.07.0414
+      [TextControl] OTOŞEN BURSA OTOMOTİV SANAYİ VE TİCARET LİMİTED ŞİRKETİ
+      [TextControl] €:
+      [TextControl] 55.6
+      [TextControl] $:
+      [TextControl] 49.65
+        [TextControl] Kullanıcı adınız ile başka bir bilgisayardan giriş yapılmış olabilir! Lütfen biraz bekleyip tekrar deneyiniz...
+      [DocumentControl] Canlı Destek  #AloChatIframe
+        [DocumentControl] Not Found  #RootWebArea
+          [TextControl] Not Found
+            [TextControl] Not Found
+            [TextControl] The requested resource was not found on this server.

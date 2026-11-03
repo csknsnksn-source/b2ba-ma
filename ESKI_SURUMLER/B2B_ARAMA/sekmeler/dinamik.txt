@@ -1,0 +1,366 @@
+=== dinamik / 'Dinamik Otomotiv' / parca=2091042 ===
+Arama kutusu: '' #searchInput
+    [ImageControl] logo
+      [HyperlinkControl] Arama Arama
+        [ButtonControl] Arama Arama
+          [ImageControl] Arama
+          [TextControl] Arama
+      [HyperlinkControl] Sepet Sepet 16
+        [ButtonControl] Sepet Sepet 16
+          [ImageControl] Sepet
+          [TextControl] Sepet
+          [TextControl] 16
+      [HyperlinkControl] Bakiye Bakiye
+        [ButtonControl] Bakiye Bakiye
+          [ImageControl] Bakiye
+          [TextControl] Bakiye
+      [HyperlinkControl] Siparis Sipariş
+        [ButtonControl] Siparis Sipariş
+          [ImageControl] Siparis
+          [TextControl] Sipariş
+      [HyperlinkControl] Oem OEM
+        [ButtonControl] Oem OEM
+          [ImageControl] Oem
+          [TextControl] OEM
+      [HyperlinkControl] Hesap Hesap
+        [ButtonControl] Hesap Hesap
+          [ImageControl] Hesap
+          [TextControl] Hesap
+      [ButtonControl] Pos POS
+        [ImageControl] Pos
+        [TextControl] POS
+      [HyperlinkControl] Katalog Katalog
+        [ButtonControl] Katalog Katalog
+          [ImageControl] Katalog
+          [TextControl] Katalog
+      [HyperlinkControl] Oneri Öneri
+        [ButtonControl] Oneri Öneri
+          [ImageControl] Oneri
+          [TextControl] Öneri
+      [HyperlinkControl] Maestro
+        [ButtonControl] Maestro
+          [TextControl] Maestro
+        [ButtonControl] Katalog Diğer
+          [ImageControl] Katalog
+          [TextControl] Diğer
+          [EditControl] Üretici yazınız...  #uretici
+          [EditControl] Araç yazınız...
+          [EditControl] Parça yazınız...
+      [EditControl]   #searchInput
+        [TextControl] 18:55
+        [TextControl] 25-10-2026
+      [GroupControl]   #872
+        [ImageControl] Advertisement Offer  #bannerImg
+  [ButtonControl] Arama Sonucu
+    [TextControl] Arama Sonucu
+    [ButtonControl] Eşdeğer Ürünler
+    [ButtonControl] Oem
+    [ButtonControl] Araçlar
+    [ButtonControl] Stok Geçmişi
+    [ButtonControl] Aldıklarım (611)
+      [TextControl] Aldıklarım
+      [TextControl] (611)
+  [ButtonControl] Fırsat Depo  #button634
+  [ButtonControl] Açık Depo  #button823
+      [TextControl] T. Puan: 4.768.891
+    [TextControl] Tablo Görünümü
+      [TextControl] Tüm Ürünler
+      [TextControl] Stokta Olanlar
+            [DataItemControl] Stok Kodu
+                [TextControl] Stok Kodu
+            [DataItemControl] Ref. No
+                [TextControl] Ref. No
+            [DataItemControl] Ürün Adı
+              [GroupControl]   #product-name-column-header
+                [TextControl] Ürün Adı
+            [DataItemControl] Ölçü
+                [TextControl] Ölçü
+            [DataItemControl] 16 BDM
+                [TextControl] 16 BDM
+            [DataItemControl] 06 ADM
+                [TextControl] 06 ADM
+            [DataItemControl] 38 ADM
+                [TextControl] 38 ADM
+            [DataItemControl] Kaporta
+                [TextControl] Kaporta
+            [DataItemControl] Açık Depo
+                [TextControl] Açık Depo
+            [DataItemControl] Fırsat
+                [TextControl] Fırsat
+            [DataItemControl] Tedarik
+                [TextControl] Tedarik
+            [DataItemControl] Br.
+              [TextControl] Br.
+            [DataItemControl] gift
+              [ImageControl] gift
+            [DataItemControl] Liste Fiyatı
+                [TextControl] Liste Fiyatı
+            [DataItemControl] KDV'siz Maliyet
+                [TextControl] KDV'siz Maliyet
+            [DataItemControl] KDV'li Maliyet
+                [TextControl] KDV'li Maliyet
+            [DataItemControl] İskonto
+                [TextControl] İskonto
+                [DataItemControl] MANDO DN2091042A10
+                    [TextControl] MANDO DN2091042A10
+                    [GroupControl]   #purch-MANDO DN2091042A10
+                [DataItemControl] 2091042A10
+                    [TextControl] 2091042A10
+                [DataItemControl] MOTOR TAKIM CONTASI H100 - L300 MINIBUS1997 -> H100 KAMYONET 97 -> STAREX TCI 2002 -> H100 KAMYONET
+                      [TextControl] MOTOR TAKIM CONTASI H100 - L300 MINIBUS1997 -> H100 KAMYONET 97 -> STAREX TCI 2002 -> H100 KAMYONET
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 1.612,22 ₺
+                  [GroupControl]   #MANDO DN2091042A10
+                      [TextControl] 1.612,22 ₺
+                [DataItemControl] 774,11 ₺
+                  [TextControl] 774,11 ₺
+                [DataItemControl] 928,93 ₺
+                    [TextControl] 928,93 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] KRAFTVOLL 12010069
+                    [TextControl] KRAFTVOLL 12010069
+                    [GroupControl]   #purch-KRAFTVOLL 12010069
+                [DataItemControl] 2091042C10
+                    [TextControl] 2091042C10
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                        [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                      [TextControl] KAMPANYALI
+                          [TextControl] PROMOSYONLU
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] gift
+                  [ImageControl] gift
+                [DataItemControl] 2.515,46 ₺
+                  [GroupControl]   #KRAFTVOLL 12010069
+                      [TextControl] 2.515,46 ₺
+                [DataItemControl] 1.147,41 ₺
+                  [TextControl] 1.147,41 ₺
+                [DataItemControl] 1.376,89 ₺
+                    [TextControl] 1.376,89 ₺
+                [DataItemControl] % 5 +3
+                  [TextControl] %
+                  [TextControl] 5
+                  [TextControl] +3
+                [DataItemControl] MANDO DN2091042D00
+                    [TextControl] MANDO DN2091042D00
+                    [GroupControl]   #purch-MANDO DN2091042D00
+                [DataItemControl] 2091042D00
+                    [TextControl] 2091042D00
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.491,47 ₺
+                  [GroupControl]   #MANDO DN2091042D00
+                      [TextControl] 2.491,47 ₺
+                [DataItemControl] 1.196,28 ₺
+                  [TextControl] 1.196,28 ₺
+                [DataItemControl] 1.435,54 ₺
+                    [TextControl] 1.435,54 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] OC 41470002
+                    [TextControl] OC 41470002
+                    [GroupControl]   #purch-OC 41470002
+                [DataItemControl] 100A901 1000A903
+                    [TextControl] 100A901 1000A903
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                    [GroupControl]   #pin-OC 41470002
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 3.231,42 ₺
+                  [GroupControl]   #OC 41470002
+                      [TextControl] 3.231,42 ₺
+                [DataItemControl] 1.551,57 ₺
+                  [TextControl] 1.551,57 ₺
+                [DataItemControl] 1.861,88 ₺
+                    [TextControl] 1.861,88 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] OC 41450002
+                    [TextControl] OC 41450002
+                    [GroupControl]   #purch-OC 41450002
+                [DataItemControl] MD997023
+                    [TextControl] MD997023
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                    [TextControl] KAMPANYALI
+                    [GroupControl]   #pin-OC 41450002
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 3.448,28 ₺
+                  [GroupControl]   #OC 41450002
+                      [TextControl] 3.448,28 ₺
+                [DataItemControl] 1.589,46 ₺
+                  [TextControl] 1.589,46 ₺
+                [DataItemControl] 1.907,36 ₺
+                    [TextControl] 1.907,36 ₺
+                [DataItemControl] % 4 +3
+                  [TextControl] %
+                  [TextControl] 4
+                  [TextControl] +3
+                [DataItemControl] STONE JFS-30163-R-FCS
+                    [TextControl] STONE JFS-30163-R-FCS
+                    [GroupControl]   #purch-STONE JFS-30163-R-FCS
+                [DataItemControl] 20910-42C10
+                    [TextControl] 20910-42C10
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 5.465,91 ₺
+                  [GroupControl]   #STONE JFS-30163-R-FCS
+                      [TextControl] 5.465,91 ₺
+                [DataItemControl] 2.624,46 ₺
+                  [TextControl] 2.624,46 ₺
+                [DataItemControl] 3.149,35 ₺
+                    [TextControl] 3.149,35 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] ROYAL T244003PR
+                    [TextControl] ROYAL T244003PR
+                    [GroupControl]   #purch-ROYAL T244003PR
+                [DataItemControl] 2091042A00
+                    [TextControl] 2091042A00
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                    [TextControl] KAMPANYALI
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.063,19 ₺
+                  [GroupControl]   #ROYAL T244003PR
+                      [TextControl] 2.063,19 ₺
+                [DataItemControl] 960,92 ₺
+                  [TextControl] 960,92 ₺
+                [DataItemControl] 1.153,11 ₺
+                    [TextControl] 1.153,11 ₺
+                [DataItemControl] % 3 +3
+                  [TextControl] %
+                  [TextControl] 3
+                  [TextControl] +3
+                [DataItemControl] MANDO EGONH00130K
+                    [TextControl] MANDO EGONH00130K
+                    [GroupControl]   #purch-MANDO EGONH00130K
+                [DataItemControl] 2091042C10
+                    [TextControl] 2091042C10
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                    [GroupControl]   #pin-MANDO EGONH00130K
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.474,44 ₺
+                  [GroupControl]   #MANDO EGONH00130K
+                      [TextControl] 2.474,44 ₺
+                [DataItemControl] 1.188,10 ₺
+                  [TextControl] 1.188,10 ₺
+                [DataItemControl] 1.425,72 ₺
+                    [TextControl] 1.425,72 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] SUPSAN S0080072
+                    [TextControl] SUPSAN S0080072
+                    [GroupControl]   #purch-SUPSAN S0080072
+                [DataItemControl] 2091042A10 2091042C00 2091042C10
+                      [TextControl] 2091042A10 2091042C00 2091042C10
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                    [GroupControl]   #pin-SUPSAN S0080072
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.897,45 ₺
+                  [GroupControl]   #SUPSAN S0080072
+                      [TextControl] 2.897,45 ₺
+                [DataItemControl] 1.391,21 ₺
+                  [TextControl] 1.391,21 ₺
+                [DataItemControl] 1.669,45 ₺
+                    [TextControl] 1.669,45 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] SUPSAN S0080036-01
+                    [TextControl] SUPSAN S0080036-01
+                    [GroupControl]   #purch-SUPSAN S0080036-01
+                [DataItemControl] 2091042A10 2091042C00 2091042C10
+                      [TextControl] 2091042A10 2091042C00 2091042C10
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                    [GroupControl]   #pin-SUPSAN S0080036-01
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 3.727,86 ₺
+                  [GroupControl]   #SUPSAN S0080036-01
+                      [TextControl] 3.727,86 ₺
+                [DataItemControl] 1.789,93 ₺
+                  [TextControl] 1.789,93 ₺
+                [DataItemControl] 2.147,92 ₺
+                    [TextControl] 2.147,92 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] SUPSAN S0080036
+                    [TextControl] SUPSAN S0080036
+                    [GroupControl]   #purch-SUPSAN S0080036
+                [DataItemControl] 2091042A10 2091042C00 2091042C10
+                      [TextControl] 2091042A10 2091042C00 2091042C10
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                    [GroupControl]   #pin-SUPSAN S0080036
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.480,08 ₺
+                  [GroupControl]   #SUPSAN S0080036
+                      [TextControl] 2.480,08 ₺
+                [DataItemControl] 1.190,81 ₺
+                  [TextControl] 1.190,81 ₺
+                [DataItemControl] 1.428,97 ₺
+                    [TextControl] 1.428,97 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+                [DataItemControl] ROYAL T244000PR
+                    [TextControl] ROYAL T244000PR
+                    [GroupControl]   #purch-ROYAL T244000PR
+                [DataItemControl] 20910-42A10 2091042D00
+                    [TextControl] 20910-42A10 2091042D00
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012
+                    [TextControl] KAMPANYALI
+                    [GroupControl]   #pin-ROYAL T244000PR
+                [DataItemControl] ad.
+                  [TextControl] ad.
+                [DataItemControl] 2.657,39 ₺
+                  [GroupControl]   #ROYAL T244000PR
+                      [TextControl] 2.657,39 ₺
+                [DataItemControl] 1.237,67 ₺
+                  [TextControl] 1.237,67 ₺
+                [DataItemControl] 1.485,20 ₺
+                    [TextControl] 1.485,20 ₺
+                [DataItemControl] % 3 +3
+                  [TextControl] %
+                  [TextControl] 3
+                  [TextControl] +3
+                [DataItemControl] ERISTIC EF2386
+                    [TextControl] ERISTIC EF2386
+                    [GroupControl]   #purch-ERISTIC EF2386
+                [DataItemControl] 20910-42E00
+                    [TextControl] 20910-42E00
+                [DataItemControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                      [TextControl] MOTOR TAKIM CONTA H100 L300 MINIBUS 1997-2008 - H100 KAMYONET 1997-2004 - STAREX TCI 2001-> H100 KAMYONET TCI 2004-2012 
+                [DataItemControl] tk.
+                  [TextControl] tk.
+                [DataItemControl] 3.002,99 ₺
+                  [GroupControl]   #ERISTIC EF2386
+                      [TextControl] 3.002,99 ₺
+                [DataItemControl] 1.441,89 ₺
+                  [TextControl] 1.441,89 ₺
+                [DataItemControl] 1.730,26 ₺
+                    [TextControl] 1.730,26 ₺
+                [DataItemControl] %3
+                  [TextControl] %3
+      [TextControl] Yetkili Bilgileri
+      [ImageControl] company
+      [TextControl] Dinamik Otomotiv
+      [ImageControl] business_man_blue
+      [TextControl] Coşkun Şenkesen
+      [TextControl] DA161869
+      [TextControl] OTOSEN BURSA OTOMOTIV SAN VE TIC.LTD.STI.

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="AltayOtoB4B.exe" version="1.0.0.10" publicKeyToken="e9c65c4ce11da897" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="Images\logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="AltayOtoB4B" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="AltayOtoB4B.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AltayOtoB4B.exe" size="221320">
+      <assemblyIdentity name="AltayOtoB4B" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Sgp2ilcREpWtpn/aaOmuPLVRXBA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eryaz.Hardware.dll" size="11264">
+      <assemblyIdentity name="Eryaz.Hardware" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ShfsXPBOkRUM698EpylhWCM9O30=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UtilityLibrary.dll" size="29184">
+      <assemblyIdentity name="UtilityLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1Z8L+E2G1d6ew6umvmxna5oefCU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="AltayOtoB4B.exe.config" size="1691">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>II/6W9LPlQ/H1wl1EjYVJHYiBzk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\Eryaz.Hardware.dll" size="11264">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ShfsXPBOkRUM698EpylhWCM9O30=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dll\UtilityLibrary.dll" size="29184">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1Z8L+E2G1d6ew6umvmxna5oefCU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\UzakBaglanti.exe" size="1996424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QLZ1Atozo81UKAjXYo5ubDBWwSQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\wmi1.bat" size="188">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mqUp0fKpwW9MJC2/YISTeOvS3m4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Help\wmi2.bat" size="307">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>p9WklzdPX/BFGl10owoSiKwt5ZM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\logo.ico" size="32038">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lAtd3D81pcrel99Fg4ct2CT9eEM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=ERYAZ BİLGİ TEKNOLOJİLERİ ANONİM ŞİRKETİ, O=ERYAZ BİLGİ TEKNOLOJİLERİ ANONİM ŞİRKETİ, STREET=KÜÇÜKBAKKALKÖY MH. BEYAZIT SOK. NO.22/9, L=Ataşehir, S=İstanbul, C=TR, SERIALNUMBER=761173-0, OID.1.3.6.1.4.1.311.60.2.1.1=İstanbul, OID.1.3.6.1.4.1.311.60.2.1.2=İstanbul, OID.1.3.6.1.4.1.311.60.2.1.3=TR, OID.2.5.4.15=Private Organization" issuerKeyHash="ac57ca0816dc3fc5311c0a4ddbfbf1de99272d34" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Yp9VtQUN3SIsAunt/XGW+ORDYz4=</DigestValue></Reference></SignedInfo><SignatureValue>DMv4sPygaTSZTanhZlSdUYOGPaV6WieHaDoaLHTBm15zyRfbGJWVd9fEZG3wfPXweTDFVPeBnZbBP545gmctCi4uIyhs4O3Y2dtut0GF9fAFi0HdPxBcXFulcQYBLtAJGtQKwPKQhN7Inzn1auiAsKgUrU2ajtqgrWQtcWQ+8tKlDUOqDANZvhpgjNtwQzO/hET6JqDm5YmokNlcrd+K7s0KgevOLQNC6FN2NGW1WlOS6nbysmlne1kAkOZOPeDY+vomaFTUvibx1moDlsSfWmbM/DZHcGdKjGkfXAlfXZ7AYdWTAjMNVg5jUh/LiUO4xOtirbwBJ9GtiZEGdIbL43Dv0urvDaOQZ3CajGfxUfarn72KX7EPppnW2yrloTt7MfKAe2xLSJbVTedSzjDP9uKc0IrXynL7jCYgUg39pD0BLAsjzRY0VuGTJAz3EilNb2TE70lRXHb4ip570LPVVm3YFn0ouPXug7aWXVGmcY03qO8yELw2ct+2RV2F9mzF</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>trwN6Lz+0HVezw2P18OaFzDCBZByDx28iyLthyQ9P5uZTigySGzk8REMBtr+kPz1piek8yW5wemrZCwaVxM8QZDiBvEm8RvGV8KeLXB1rAeXvHbs7NIbHak2kFnpEvMHeZxgkriix+1V+iteruFkPUSi/kd7DxIrmlXF+X/wXLy3IAwMgvJGWotV62Vvh/aT4dht5AnhNHcHlj1rP+cuMVfcoAHZc1ahb/yDOMp74cctywvtaJ1ceK89vtCEkrJ0Tzir+9a3FW8QR1WBGNVFBHyywCzLXsho2+LVvxYqiWa+2b60B/1tXuml1Et18zi7P9mImtCckyKl3ENDUw0GE3Mt3RFRCdRHFqqMkRLIzUW+mDhj2MGl34Adrmvq72L5vouKplLqBrQwPYR4r8rjJN+QHh8hDwPnecDltqD78v0CDilvrctxDrdGwuER5R4Zmfv6MpdFHq7BX68tB4rMK/JdXi0mi2KbXVqbtYcricOc0SzuhgZW8TkmgN6jGvp9</Modulus><Exponent>AAEAAQ==</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3e6343e4f89671fdede9022c22dd0d05b5559f62" Description="" Url=""><as:assemblyIdentity name="AltayOtoB4B.exe" version="1.0.0.10" publicKeyToken="e9c65c4ce11da897" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ERYAZ BİLGİ TEKNOLOJİLERİ ANONİM ŞİRKETİ, O=ERYAZ BİLGİ TEKNOLOJİLERİ ANONİM ŞİRKETİ, STREET=KÜÇÜKBAKKALKÖY MH. BEYAZIT SOK. NO.22/9, L=Ataşehir, S=İstanbul, C=TR, SERIALNUMBER=761173-0, OID.1.3.6.1.4.1.311.60.2.1.1=İstanbul, OID.1.3.6.1.4.1.311.60.2.1.2=İstanbul, OID.1.3.6.1.4.1.311.60.2.1.3=TR, OID.2.5.4.15=Private Organization</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Og921GNF6HAgYpBA0pcIw4fRYgU=</DigestValue></Reference></SignedInfo><SignatureValue>j/D7CmicjdE6cNwEmI/nykPkwNaa78Bv+o8DSKGd9zktywkhcZfWaxHFkvgFBCXnAmSSCn9uyY1YbgXbVZdt3HZvk0+LEqvs3tkl2B3wWBrOXssNKkTYpLPYRK49wQAMQE6Fe4OOr+0ptjeYWmhBaMBNNdyn4BCqsVEq85gnvaR5jW4dehP3azJIgz0uOsSwCiHBDafhOp0fUlf70kihV+nZqTpqIURHsXl358E1Xpe5tOQTIx1d9jZwZEd+Uv9NZPFIc3JQ9vxUqoMdpcTxIqgage/TFa8JFlTWmjGRyJ1I4x6/fLhtS4l2ux+N+UVSqipRV74bHp4MPsRCRKYqr4MutRqv4zk0yI5/o0xe9hwjCmFakty40dS6+wXqwr3FXcOY7jbeoDK62tFgYYfDIJ3WIUpUjLSN194AQMnI7Rj/UUVfXZQQBNc+FUFy+Yis1WjxF2Hzqw5vhCFSGQjgMGDcjr1jM9OHxE8jAIPIqOaZCTj6fvQ6t69KGmhTc2b+</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>trwN6Lz+0HVezw2P18OaFzDCBZByDx28iyLthyQ9P5uZTigySGzk8REMBtr+kPz1piek8yW5wemrZCwaVxM8QZDiBvEm8RvGV8KeLXB1rAeXvHbs7NIbHak2kFnpEvMHeZxgkriix+1V+iteruFkPUSi/kd7DxIrmlXF+X/wXLy3IAwMgvJGWotV62Vvh/aT4dht5AnhNHcHlj1rP+cuMVfcoAHZc1ahb/yDOMp74cctywvtaJ1ceK89vtCEkrJ0Tzir+9a3FW8QR1WBGNVFBHyywCzLXsho2+LVvxYqiWa+2b60B/1tXuml1Et18zi7P9mImtCckyKl3ENDUw0GE3Mt3RFRCdRHFqqMkRLIzUW+mDhj2MGl34Adrmvq72L5vouKplLqBrQwPYR4r8rjJN+QHh8hDwPnecDltqD78v0CDilvrctxDrdGwuER5R4Zmfv6MpdFHq7BX68tB4rMK/JdXi0mi2KbXVqbtYcricOc0SzuhgZW8TkmgN6jGvp9</Modulus><Exponent>AAEAAQ==</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate></X509Data></KeyInfo><Object><as:Timestamp>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</as:Timestamp></Object></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

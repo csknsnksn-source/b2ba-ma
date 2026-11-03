@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--Buralar önceden dudluktu-->
+<!--[if !IE]><!-->
+<html ng-app="b2bApp" ng-cloak ng-controller="LayoutController">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate" />
+    <title ng-bind="CurrentSessions.CompanyInformation.Title">
+    </title>
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300' rel='stylesheet' id="googlefont">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="/bundles/jquery?v=fk_F6Qt3r-gbLvti3NKJtDRocNtFlm7WpDj8daOpRzs1"></script>
+
+    <link href="/bundles/css?v=J9L_OLZrrkjHGlud-nLi3khQqhcyAG7_2Y4R-xxgcqQ1" rel="stylesheet"/>
+
+    <link href="/Content/css/style.css?v=202609182020" type="text/css" rel="stylesheet" />
+    <script src="/bundles/modernizr?v=WEpBTLa2XeK6NyUJ6gvOMuL-t3H87g1_4Qf-we_ZFSI1"></script>
+
+    <script src="/Scripts/Repo/jquery.cookie.js"></script>
+    <script src="/bundles/angular?v=yoyCeV_aZibc4BYXDqKM464fqjtLuh2CNE5hPjb3DAc1"></script>
+
+
+    <script type="text/javascript" src="/Scripts/Repo/jquery.signalR-2.2.1.min.js"></script>
+    <script type="text/javascript" src="/signalr/hubs"></script>
+
+    <script src="/Scripts/Pages/jsActiveUser.js?v=202610042310"></script>
+
+    <script src="/Scripts/angularApp.js?v=202610042310"></script>
+    <script src="/Scripts/angularServices.js?v=202610042310"></script>
+
+    <link rel="stylesheet/less" type="text/css" href="/Content/css/colors.less" />
+    <link href="/Content/Admin/vendor/font-awesome-animation.min.css" rel="stylesheet" />
+    <link href="/Content/css/responsive.css" rel="stylesheet" />
+    
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style id="custom-style" type="text/css">
+        .label-phone {
+            margin: 9px 0;
+            color: #1b84c6;
+        }
+
+        .dropdown-menu {
+            z-index: 10000 !important;
+        }
+
+        .inline {
+            display: inline-block;
+        }
+
+        .margin {
+            margin: 10px 0 10px 10px;
+        }
+
+        .text-color {
+            color: #fff;
+        }
+
+        .gift-main {
+            background: #0a4999;
+        }
+
+        .cboxClose {
+            padding: 3px 10px 3px 10px;
+            margin: 0;
+            overflow: visible;
+            cursor: pointer;
+        }
+
+        .modal-footer {
+            padding: 10px 30px 10px 10px;
+        }
+
+        .modal-body {
+            padding: 30px 15px 0px 15px;
+        }
+
+        .header-box-multi > span {
+            color: white;
+            line-height: 24px;
+            padding-left: 5px;
+        }
+
+        .chart-main {
+            min-height: 196px;
+        }
+
+        .rotate-90 {
+            writing-mode: tb-rl;
+            -webkit-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .chart-row {
+            position: relative;
+        }
+
+        .chart-modal-close {
+            position: absolute;
+            top: 15px;
+            z-index: 10000;
+        }
+
+        .chart-header {
+            position: absolute;
+            display: flex;
+            float: left;
+            top: -15px;
+            left: 45%;
+            min-width: 80px;
+        }
+
+            .chart-header > .label {
+                position: absolute;
+                top: 27px;
+                left: -30%;
+            }
+
+        .chart-row > .chart-row-label {
+            position: absolute;
+            text-align: center;
+            left: -10px;
+            bottom: 36px;
+        }
+
+        .cartfiletext {
+            font-size: 19px;
+            margin-right: 4px;
+            color: black;
+        }
+
+        .b4b-info {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #cfcfcf;
+            background: #c5c5c5;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(90deg,#0000 33%,rgba(255,255,255,0.7) 50%,#0000 66%) #c5c5c5;
+            background-size: 300% 100%;
+            animation: shine 1.5s infinite;
+        }
+
+        .b4b-info-fix {
+            margin-bottom: -18px;
+        }
+
+        .b4b-info-text {
+            color: #000;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+            .b4b-info-text span {
+                color: #ED1C24;
+            }
+
+        @keyframes shine {
+            0% {
+                background-position: right;
+            }
+        }
+    </style>
+
+    <link href="/Content/Pages/customStylesB2B.css?v=202609182020" rel="stylesheet" />
+
+</head>
+<body id="formMain">
+    <div>
+        <div class="action-button bottom-right">
+            <p class="ab-link"><i class="fa fa-bell faa-ring animated fa-1x"></i></p>
+            <ul class="action-list">
+                <li ng-click="showRightPanel(0)">
+                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                    <span>{{'Common.Notifications' | translate}}</span>
+                </li>
+                <li ng-click="showLeftPanel(1)">
+                    <i class="fa fa-cube" aria-hidden="true"></i>
+                    <span>{{'Home.Layout.OpportunityProduct' | translate}}</span>
+                </li>
+            </ul>
+        </div>
+        <div id="fadeLeft" class="fade"></div>
+        <div id="leftContainer" class="menu_container_left">
+            <div class="product-of-day-header">
+                <h2>{{'Common.ProductOfDay' | translate}}</h2>
+            </div>
+            <div class="product-day-full">
+                <div class="product-day-main" ng-repeat="row in productOfDayList" on-finish-render="ngRepeatProductOfDayFinished">
+                    <div class="product-day-cols">
+                        <div class="product-day-image">
+                            <img ng-src="{{row.PicturePathShow}}" />
+                        </div>
+                        <div class="product-day-content">
+                            <div class="product-col">
+                                <span>{{row.Product.Code}}</span>
+                            </div>
+                            <div class="product-col">
+                                <span>{{row.Product.Name}}</span>
+                            </div>
+                            <div class="product-col price">
+                                <span>{{row.PriceStr}}</span>
+                            </div>
+                            <div class="product-col">
+                                <span>{{row.FinishDate | dateFilterErp  | date:'dd.MM.yyyy'}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-day-cols product-name">
+                        <span>{{row.Product.Name}}</span>
+                    </div>
+                    <div class="product-day-cols product-qty">
+                        <div class="qty">
+                            <input id="qty{{::row.Product.Id}}" type="text" placeholder="Min : {{row.MinOrder}}" ng-blur="changControl(row)" ng-model="row.Quantity" class="eryaz-numeric-input-onlynumber" />
+                        </div>
+                        <div class="add-btn">
+                            <a class="" ng-disabled="!row.SendDisabled"  ng-click="askAvailableProductOfDay(row.Product.Id,0,0,0);">{{'Home.Layout.ProductGiveOrder' | translate}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fadeRight" class="fade"></div>
+        <div id="rightContainer" class="menu_container-right">
+            <div class="notification-header">
+                <div class="notification-header-text">
+                    <h2>Takipteki Ürünler</h2>
+                </div>
+                <div class="notification-header-close-icon" id="RightMenuClose">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="notification-full">
+                <!-- end ngRepeat: row in notificationList -->
+                <div class="notification-main" ng-repeat="row in notificationList" on-finish-render="ngRepeatProductOfDayFinished2">
+                    <span class="close-icon" ng-click="closeNoti(row)"><i class="fa fa-times"></i></span>
+                    <div class="notification-content">
+                        <div class="notification-content-icon">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                        </div>
+                        <div class="notification-content-scroll">
+                            <p><span style="font-weight:bold">{{row.Header}}</span></p>
+                            <p>{{row.Message}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-comparison-full">
+                    <div class="product-comparison-main" ng-repeat="row in productComparisonList" on-finish-render="ngRepeatComparisonProductFinished">
+                        <div class="product-comparison-cols">
+                            <div class="product-day-image">
+                                <img ng-src="{{row.PicturePathShow}}" />
+                            </div>
+                            <div class="product-comparison-content">
+                                <div class="product-col">
+                                    <a href="/Search?text={{row.Product.Code}}"><strong class="text-active">{{row.Product.Code}} - {{row.Product.Name}}</strong></a>
+                                    <span>
+                                        {{'Home.Layout.ComparisonProduct' | translate}}
+                                    </span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="searchbox-full">
+        <div class="searchbox-main">
+            <span class="close-icons" id="CloseIcon"></span>
+            <div class="search-box-col">
+                <div class="searchboxs">
+                    <span class="searchbox-head">{{'Home.Layout.SearchWrite' | translate}}</span>
+                    <form class="searchboxs-form" role="form" action="Search" method="GET">
+                        <div class="searchbox-input">
+                            <input id="searchboxInput" type="text" name="text" placeholder="{{'Home.Layout.SearchWrite' | translate}}">
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="searchbox-btn">
+                            <button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="search-box-col">
+                <h3 class="searchbox-new-product-head">{{'Home.Layout.SuggetionProductsWrite' | translate}}</h3>
+
+                <div class="searchbox-new-product-main">
+                    <a class="searchbox-new-product-cols" href="javascirpt:;" ng-repeat="row in suggestionProductList | limitTo:6">
+                        <div class="searchbox-new-product-bg">
+                            <div class="product-image">
+                                <img ng-src="{{row.PicturePath}}" alt="{{row.Code}}" />
+                            </div>
+                            <div class="product-details">
+                                <span>{{row.Name}}</span>
+                                <span class="item-price" ng-bind-html="row.PriceListStr">
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper-outer">
+        <div id="wrapper">
+            <header id="header" style="background-color:white;">
+                <div id="header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 header-top-main">
+                                <div class="header-top-left">
+                                    <ul id="top-links" class="clearfix">
+                                        <li><a href="/Dashboard/Index"><i class="fa fa-external-link"></i>&nbsp;<span class="hide-for-xs">{{'Home.Layout.DashBoardIconWrite' | translate}} </span></a></li>
+                                        <li><a href="/Blog/Index"><i class="fa fa-pencil-square-o"></i>&nbsp;<span class="hide-for-xs">{{'Home.Layout.BlogIconWrite' | translate}}</span></a></li>
+                                        
+                                        <li><a href="/Comparison/Index"><i class="fa fa-compress"></i>&nbsp;<span class="hide-for-xs">{{'Home.Layout.Comparison' | translate}}</span></a></li>
+                                        <li><label class="label-phone">İzmir : 0 (232) 457 23 03</label></li>
+                                        <li><label class="label-phone">İstanbul : 0 (212) 671 71 35</label></li>
+                                        <li><label class="label-phone">Ankara : 0 (312) 802 09 59</label> </li>
+                                    </ul>
+                                </div><!-- End .header-top-left -->
+                                <div class="header-top-right">
+                                    <div class="header-top-dropdowns pull-right">
+                                        <div class="btn-group dropdown-money">
+                                            <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
+                                                <i class="fa fa-money" aria-hidden="true"></i>
+                                            </button>
+                                            <ul class="dropdown-menu pull-right" role="menu">
+                                                <li ng-repeat="row in currencyList | filter:{Type:'!TL'}:false"><a href="javascript:;"><i class="{{row.Icon}}" aria-hidden="true"></i><span class="ng-binding">{{row.Rate}}</span></a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- End .btn-group -->
+                                        <div class="btn-group dropdown-language hidden">
+                                            <button ng-repeat="item in CurrentSessions.LanguageList | filter:{ IsSelected:true }" type="button" ng-click="fireSetLanguageId(item.Id)" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
+                                                <span class="flag-icon {{item.FlagImageFileName}}"></span>
+                                            </button>
+                                            <ul class="dropdown-menu pull-right" role="menu">
+                                                <li ng-repeat="item in CurrentSessions.LanguageList | filter:{ IsSelected:false }"><a href="javascript:;" ng-click="fireSetLanguageId(item.Id)"><span class="flag-icon {{item.FlagImageFileName}}"></span></a></li>
+                                            </ul>
+                                        </div><!-- End .header-top-dropdowns -->
+                                    </div><!-- End .header-top-dropdowns -->
+
+                                    <div class="header-text-container pull-right">
+                                        <div class="dropdown dropdown-customer">
+                                            <button id="ddCustomer" type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="dropdown-customer-icon">
+                                                    <img ng-src="{{CurrentSessions.Customer.Users.AvatarPath}}" class="dropdown-customer-icon-img" />
+                                                </span>
+                                                <span>&nbsp;{{CurrentSessions.Customer.Code}} &nbsp;</span>
+                                                <span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="ddCustomer">
+                                                <li>
+                                                    <div class="dropdown-customer-icon-big">
+                                                        <img ng-src="{{CurrentSessions.Customer.Users.AvatarPath}}" class="dropdown-customer-icon-img-big" />
+                                                    </div>
+                                                    <div>{{CurrentSessions.Customer.Name}}</div>
+                                                </li>
+                                                <li><a href="/Account/Index"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;<span>{{'Home.Layout.AccountIconWrite' | translate}}</span></a></li>
+                                                
+                                                <li><a href="/Login/Logout" class="bg-danger"><i class="fa fa-sign-out" aria-hidden="true">&nbsp;</i><span>{{'Common.Exit' | translate}}</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- End .pull-right -->
+                                    <div ng-if="CurrentSessions.LoginType === 1" class="header-text-container pull-right mr-0"><a href="/Login/CustomerSelect" class="btn btn-custom-3"><i class="fa fa-dedent fa-lg" aria-hidden="true"></i></a></div>
+                                </div><!-- End .header-top-right -->
+                            </div><!-- End .col-md-12 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+
+                </div><!-- End #header-top -->
+
+                <div id="inner-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-12 col-xs-12 logo-container pr-0">
+                                <h1 class="logo clearfix">
+                                    <span>{{'Layout.SpanWrite' | translate}}</span>
+                                    <a href="/Home/Index" title="Logo"><img src="/Content/images/logo.png" alt="logo" height="76"></a>
+                                </h1>
+                            </div><!-- End .col-md-5 -->
+                            <div class="col-md-7 col-sm-4 col-xs-12 header-inner-right pl-0">
+                                <div class="header-box contact-phones pull-right clearfix">
+                                    <div class="header-box-only">
+                                        <div class="header-box-icon">
+                                            <img ng-if="CurrentSessions.SalesmanOfCustomer.length>0" ng-src="{{CurrentSessions.SalesmanOfCustomer[0].PicturePath}}" />
+                                            <i ng-if="CurrentSessions.SalesmanOfCustomer.length===0" class="fa fa-user fa-4x"></i>
+                                        </div>
+                                        <ul class="pull-left">
+                                            <li ng-if="CurrentSessions.SalesmanOfCustomer.length>0"><i class="fa fa-user"></i> <span>{{CurrentSessions.SalesmanOfCustomer[0].Name}}</span></li>
+                                            <li ng-if="CurrentSessions.SalesmanOfCustomer.length>0"><i class="fa fa-phone"></i> <span>{{CurrentSessions.SalesmanOfCustomer[0].Tel1}}</span></li>
+                                            <li ng-if="CurrentSessions.SalesmanOfCustomer.length>0"><i class="fa fa-envelope"></i> <span><a href="mailto:{{CurrentSessions.SalesmanOfCustomer[0].Email}}">{{CurrentSessions.SalesmanOfCustomer[0].Email}}</a></span></li>
+                                            <li ng-if="CurrentSessions.SalesmanOfCustomer.length===0"><i class="fa fa-user"></i> <span>&nbsp;</span></li>
+                                            <li ng-if="CurrentSessions.SalesmanOfCustomer.length===0"><i class="fa fa-phone"></i> <span>&nbsp;</span></li>
+                                            <li ng-if="CurrentSessions.SalesmanOfCustomer.length===0"><i class="fa fa-envelope"></i> <span><a href="mailto:">&nbsp;</a></span></li>
+                                        </ul>
+                                    </div>
+                                    <div ng-show="CurrentSessions.SalesmanOfCustomer.length > 1 || (CurrentSessions.CallCenterSalesmanOfCustomer && CurrentSessions.CallCenterSalesmanOfCustomer.length > 0)" class="header-box-multi">
+                                        <ul class="clearfix">
+                                            <li ng-repeat="item in CurrentSessions.SalesmanOfCustomer" ng-show="$index > 0">
+                                                <div class="header-box-icon">
+                                                    <img ng-src="{{item.PicturePath}}" />
+                                                </div>
+                                                <ul>
+                                                    <li><i class="fa fa-user"></i> <span>{{item.Name}}</span></li>
+                                                    <li><i class="fa fa-phone"></i> <span>{{item.Tel1}}</span></li>
+                                                    <li><i class="fa fa-envelope"></i> <span><a href="mailto:{{item.Email}}">{{item.Email}}</a></span></li>
+                                                </ul>
+                                            </li>
+                                            <li ng-repeat="item in CurrentSessions.CallCenterSalesmanOfCustomer">
+                                                <div class="header-box-icon">
+                                                    <img ng-src="{{item.PicturePath}}" />
+                                                </div>
+                                                <ul>
+                                                    <li><i class="fa fa-user"></i> <span>{{item.Name}}</span></li>
+                                                    <li><i class="fa fa-phone"></i> <span>{{item.Tel1}}</span></li>
+                                                    <li><i class="fa fa-envelope"></i> <span><a href="mailto:{{item.Email}}">{{item.Email}}</a></span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End .contact-phones -->
+                                <div class="header-basket pull-right clearfix" onclick="BasketBoxs()">
+                                    <div class="header-basket-main">
+                                        <div class="header-basket-row">
+                                            <div class="header-box-icon">
+                                                <i class="fa fa-shopping-basket"></i>
+
+                                                <div class="header-box-piece" id="layaoutBasketCountTotal">
+                                                    <span>0</span>
+                                                </div>
+                                            </div>
+                                            <div class="header-box-baskets" id="layoutBasketCountHead">
+                                                <span>[0] - [0]</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-searchbox pull-right" id="SearchBox">
+                                    <div class="header-search-main">
+                                        <div class="header-search-icon">
+                                            <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="header-search-text">
+                                            <span>{{'Home.Layout.SearchIcon' | translate}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-if="CurrentSessions.LoginType === 1" class="header-searchbox pull-right" id="ContainerBox">
+                                    <div class="header-search-main">
+                                        <a href="/Container">
+                                            <div class="header-search-icon">
+                                                <span><img src="/Content/images/container.png" style="width: 24px;height: 27px;" /></span>
+                                            </div>
+                                            <div class="header-search-text">
+                                                <span>KONTEYNER</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div ng-show="CurrentSessions.Customer.HasTarget" class="header-searchbox pull-right hidden" id="DashboardBox">
+                                    <div class="header-search-main">
+                                        <div ng-click="showDashboardModal()">
+                                            <div class="header-search-icon">
+                                                <span><i class="fa fa-dashboard" aria-hidden="true"></i></span>
+                                            </div>
+                                            <div class="header-search-text">
+                                                <span>HEDEF TAKİP</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div ng-show="CurrentSessions.Vehicle" class="header-searchbox pull-right" id="CurrentVehicle">
+                                    <div class="header-search-main">
+                                        <div class="header-search-icon">
+                                            <span><i class="fa fa-car" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="header-search-text">
+                                            <span ng-bind-html="CurrentSessions.Vehicle.VehicleName"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div><!-- End .col-md-7 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+
+                    <div id="main-nav-container" class="small-menu">
+                        <div class="container small-menu-main">
+                            <div class="menubar-full">
+                                <div class="menubar">
+                                    <nav id="main-nav">
+                                        <div id="responsive-nav">
+                                            <div id="responsive-nav-button">
+                                                {{'Layout.ResponsiveMenu' | translate}} <span id="responsive-nav-button-icon"></span>
+                                            </div><!-- responsive-nav-button -->
+                                        </div>
+                                        <ul class="menu clearfix">
+                                            <li ng-repeat="item in CurrentMenuList" ng-if="item.Url != '/ReturnProduct/Index' || CurrentSessions.Customer.AuthorityCustomer._ProductRestoration" on-finish-render="ngRepeatCurrentMenuListFinished">
+                                                <a ng-href="{{item.Url}}"><i class="fa fa-file-text-o fa-2x"></i><span>{{item.Content | translate}}</span></a>
+                                                <ul ng-if="item.SubMenu.length>0">
+                                                    <li ng-repeat="subMenu in item.SubMenu">
+                                                        <a ng-if="subMenu.Content=='Kvkk'" ng-href="{{subMenu.Url}}" target="_blank">{{subMenu.Content | translate}}</a>
+                                                        <a ng-if="subMenu.Content!='Kvkk'" ng-href="{{subMenu.Url}}">{{subMenu.Content | translate}}</a>
+                                                        <ul ng-if="subMenu.SubMenu.length>0">
+                                                            <li ng-repeat="subSubMenu in subMenu.SubMenu">
+                                                                <a ng-href="{{subSubMenu.Url}}">{{subSubMenu.Content | translate}}</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="input-group-mobile mobileHidden">
+                                        <div id="quick-access">
+                                            <form class="form-inline quick-search-form" role="form" action="/Search" method="GET">
+                                                
+                                                <div class="form-group mobileHidden" style="height: 34px;margin-top: 8px;">
+                                                    <input style="margin-top: -14px;" type="text" name="text" class="form-control" placeholder="Hızlı Arama">
+                                                </div><!-- End .form-inline -->
+                                                <button type="submit" id="quick-search" class="btn btn-custom"></button>
+                                                
+                                            </form>
+                                        </div><!-- End #quick-access -->
+                                    </div>
+
+                                    <!-- End .row -->
+                                </div><!-- End .col-md-8 -->
+                                <div class="menubar-customer-name">
+                                    <div class="customer-name-main">
+                                        <span>{{CurrentSessions.Customer.Name}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End .container -->
+
+                    </div><!-- End #nav -->
+
+                    <div class="b4b-info" ng-show="BaBsWarning.Statu && CurrentSessions.LoginType === 0">
+                        <a class="b4b-info-text" href="/Finance/AccountReconciliation">
+                            <span>{{BaBsWarning.Period}} dönemi mutabakat süreci başlamıştır. Carinizin işlemlere kapanmaması için {{BaBsWarning.Expiration}} tarihine kadar işlem yapılmalıdır.</span>
+                        </a>
+                    </div>
+
+                    <div ng-show="CurrentSessions.Customer.PointUse" class="gift-main" id="divPoint" runat="server" style="text-align: center;display:none;">
+                        <div class="gift-border">
+                            <span class="image inline margin">
+                                <img src="/Content/images/gift.png" style="width: 24px;height: 24px;" />
+                            </span>
+                            <p class="inline text-color">
+                                {{'Layout.Gift' | translate}} <span class="text-color" id="customerPoint"></span> {{'Layout.Gift.Points' | translate}}
+                                <a href="https://www.festivaltay.com" target="_blank" class="text-color">{{'Layout.Gift.Click' | translate}}</a>
+                                
+                                
+                            </p>
+
+                        </div>
+                    </div>
+                </div><!-- End #inner-header -->
+            </header>
+
+            
+<style>
+    .item-plus-container {
+        display: table;
+        text-align: center;
+        font: 700 16px/20px "Gudea", Arial, sans-serif;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: -7%;
+        left: -7%;
+        text-align: center;
+        border-radius: 500px;
+        z-index: 801;
+    }
+
+
+        .item-plus-container a {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 15px;
+            color: #ffffff;
+        }
+
+    #cboxContent {
+        height: 355px !important;
+    }
+
+    .allowance {
+        color: black;
+        float: right;
+        margin-right: 5px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .allowance-highlight {
+        color: #ff0000;
+    }
+
+    .coupon-button-highlight {
+        background-color: #0A4999 !important;
+    }
+
+    .damning-highlight {
+        background-color: #FF6B00 !important;
+    }
+
+    .btn-action {
+        color: #000000;
+        background-color: #69c469;
+        border-radius: 0px;
+        padding: 6px 12px;
+        width: 100%;
+    }
+
+    .color-IsOrder {
+        color: purple !important;
+    }
+
+    .copy-row {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    #copyButton {
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+        #copyButton i {
+            display: none;
+            font-size: 13px;
+        }
+
+            #copyButton i.active {
+                display: block;
+            }
+
+    .no-copy {
+        user-select: none; /* Kopyalamayı engeller */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE/Edge */
+    }
+</style>
+
+<link href="/Content/Pages/Search/search.css" rel="stylesheet" />
+
+<section ng-controller="IndexController">
+    <div class="md-margin"></div>
+    <div class="container" id="divSearch">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-md-5 pr-0">
+                        <div id="divsearchCriteriaHeader" class="col-md-12">
+                            <div id="divsearchCriteria" class="row">
+                                <div class="col-md-12 box">
+                                    <div class="col-md-12 shadowed">
+                                        <div class="panelLoading"></div>
+                                        <div class="row">
+                                            <div class="col-md-6 search-criteria-left">
+                                                <div class="row">
+                                                    <div class="input-group input-criteria padding-2">
+                                                        <span class="input-group-addon no-minwidth padding-5"><span>{{'Common.Manufacturer' | translate}}</span></span>
+                                                        <div class="normal-selectbox clearfix">
+                                                            <select id="manufacturer-select" name="manufacturer-select" multiple="multiple" ng-model="selectedManufacturer" class="customselect selectbox-manufacturer">
+                                                                <option ng-repeat="manufacturer in manufacturerList" on-finish-render="ngRepeatManufacturerFinished" ng-class="{'disabled': manufacturer.Name == {{'Search.Selected' | translate}} }" value="{{manufacturer.Name}}">{{manufacturer.Name}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="input-group input-criteria padding-2">
+                                                        <span class="input-group-addon no-minwidth padding-5"><span>{{'Common.ProductGroupOne' | translate}}</span></span>
+                                                        <div class="normal-selectbox clearfix">
+                                                            <select id="productGroup-select" name="productGroup-select" multiple="multiple"  ng-model="selectedProductGroup1" class="customselect selectbox-productgroup1 ">
+                                                                <option ng-repeat="productGroup1 in productGroup1List" on-finish-render="ngRepeatGroup1Finished" ng-class="{'disabled': productGroup1.Name == {{'Search.Selected' | translate}} }" value="{{productGroup1.Name}}">{{productGroup1.Name}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row hidden">
+                                                    <div class="input-group input-criteria padding-2">
+                                                        <span class="input-group-addon no-minwidth padding-5"><span>{{'Common.ProductGroupTwo' | translate}}</span></span>
+                                                        <div class="normal-selectbox clearfix">
+                                                            <select id="productGroup2-select" name="productGroup2-select" ng-change="selectProductGroup2Changed()" disabled="disabled" ng-model="selectedProductGroup2" style="width: 100%;" class="customselect selectbox-productgroup2 ">
+                                                                <option ng-repeat="productGroup2 in productGroup2List" on-finish-render="ngRepeatGroup2Finished" value="{{productGroup2.Name}}">{{productGroup2.Name}}</option>
+                                                            </select>
+                                                        </div><!-- End .large-selectbox-->
+                                                    </div><!-- End .input-group -->
+                                                </div>
+
+                                                <div class="row hidden">
+                                                    <div class="input-group input-criteria padding-2">
+                                                        <span class="input-group-addon no-minwidth padding-5"><span>{{'Common.ProductGroupThree' | translate}}</span></span>
+                                                        <div class="normal-selectbox clearfix">
+                                                            <select id="productGroup3-select" name="productGroup3-select" ng-change="selectProductGroup3Changed()" disabled="disabled" ng-model="selectedProductGroup3" style="width: 100%;" class="customselect selectbox-productgroup3">
+                                                                <option ng-repeat="productGroup3 in productGroup3List" on-finish-render="ngRepeatGroup3Finished" value="{{productGroup3.Name}}">{{productGroup3.Name}}</option>
+                                                            </select>
+                                                        </div><!-- End .large-selectbox-->
+                                                    </div><!-- End .input-group -->
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="input-group input-criteria padding-2">
+                                                        <span class="input-group-addon no-minwidth padding-5"><span>{{'Search.VehicleBrand' | translate}}</span></span>
+                                                        <div class="normal-selectbox clearfix">
+                                                            <select id="vehicleBrand-select" name="vehicleBrand-select" multiple="multiple"  ng-model="selectedvehicleBrand" style="width: 100%;" class="customselect selectbox-vehicleBrand">
+                                                                <option ng-repeat="vehicleBrand in vehicleBrandlList" on-finish-render="ngRepeatVehicleBrandFinished" ng-class="{'disabled': vehicleBrand.Brand == {{'Search.Selected' | translate}} }" value="{{vehicleBrand.Brand}}">{{vehicleBrand.Brand}}</option>
+                                                            </select>
+                                                        </div><!-- End .large-selectbox-->
+                                                    </div><!-- End .input-group -->
+                                                </div>
+
+                                                <div class="row hidden">
+                                                    <div class="input-group input-criteria padding-2">
+                                                        <span class="input-group-addon no-minwidth padding-5"><span>{{'Search.VehicleModel' | translate}}</span></span>
+                                                        <div class="normal-selectbox clearfix">
+                                                            <select id="vehicleModel-select" name="vehicleModel-select" disabled="disabled" ng-model="selectedvehicleModel" style="width: 100%;" class="customselect selectbox-vehicleModel">
+                                                                <option ng-repeat="vehicleModel in vehicleModelList" on-finish-render="ngRepeatVehicleModelFinished" value="{{vehicleModel.Model}}">{{vehicleModel.Model}}</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row hidden">
+                                                    <div class="input-group input-criteria padding-2">
+                                                        <span class="input-group-addon no-minwidth padding-5"><span>{{'Common.ProductGroupFour' | translate}}</span></span>
+                                                        <div class="normal-selectbox clearfix" style="width: 100%;">
+                                                            <select id="productGroup4-select" name="productGroup4-select" ng-change="selectProductGroup4Changed()" ng-model="selectedProductGroup4" style="width: 100%;" class="customselect selectbox-productgroup4">
+                                                                <option ng-repeat="productGroup4 in productGroup4List" on-finish-render="ngRepeatGroup4Finished" value="{{productGroup4.Name}}">{{productGroup4.Name}}</option>
+                                                            </select>
+                                                        </div><!-- End .large-selectbox-->
+                                                    </div><!-- End .input-group -->
+                                                </div>
+
+
+                                                <div class="row" style="height: 26px;">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkOnQuantity" id="chkOnQuantity" ng-model="chkOnQuantity" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox padding-2">
+                                                            <label for="chkOnQuantity" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Search.InStock' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" style="height: 26px;">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkIsPicture" id="chkIsPicture" ng-model="chkIsPicture" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox padding-2">
+                                                            <label for="chkIsPicture" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Search.HavePicture' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+
+                                            </div>
+                                            <div class="col-md-6 search-criteria-right">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkCampanign" id="chkCampanign" ng-model="chkCampanign" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox chk-yellow padding-2">
+                                                            <label for="chkCampanign" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Common.Campaign' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkNewProduct" id="chkNewProduct" ng-model="chkNewProduct" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox chk-green padding-2">
+                                                            <label for="chkNewProduct" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Common.NewProduct' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkOnWay" id="chkOnWay" ng-model="chkOnWay" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox padding-2">
+                                                            <label for="chkOnWay" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Search.OnTheRoad' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkIsDamning" id="chkIsDamning" ng-model="chkIsDamning" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox padding-2">
+                                                            <label for="chkIsDamning" class="btn btn-block btn-default btn-custom" id="lblIsDamning">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Search.Damping' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row hidden" ng-show="CurrentSessions.Customer.PointUse">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkIsGift" id="chkIsGift" ng-model="chkIsGift" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox padding-2">
+                                                            <label for="chkIsGift" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Search.GiftProduct' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkComparison" id="chkComparison" ng-model="chkComparison" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox padding-2">
+                                                            <label for="chkComparison" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">{{'Search.FollowProduct' | translate}}</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row" ng-if="CurrentSessions.LoginType === 1">
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="chkCoreStock" id="chkCoreStock" ng-model="chkCoreStock" autocomplete="off" checked />
+                                                        <div class="btn-group btn-group-full-width btn-checkbox padding-2">
+                                                            <label for="chkCoreStock" class="btn btn-block btn-default btn-custom">
+                                                                <span class="fa fa-check-square-o fa-lg"></span>
+                                                                <span class="fa fa-square-o fa-lg"></span>
+                                                                <span class="content">Core Stok</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div>
+                                                        <a href="/Contact/Suggest" class="btn btn-custom btn-action">{{'Search.NewProductRequest' | translate}}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div>
+                                                        <a id="coupon-button" href="javascript:;" ng-click="showCouponList()" class="btn btn-custom btn-action btn-blue">KAMPANYALAR</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-margin"></div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="input-group input-criteria">
+                                                        <span class="input-group-addon no-minwidth general-search"><span class="input-text">{{'Search.GenaralSearch' | translate}}</span></span>
+                                                        <input class="form-control" id="txtGeneralSearch" style="border: 1px solid #969998; " ng-model="txtGeneralSearchText" ng-blur="searchControl()" ng-keyup="keypressEvent($event)" placeholder="{{'Search.GeneralSearchPlaceHolder' | translate}}" type="text">
+                                                        <div class="input-group-btn">
+                                                            <a class="btn btn-custom" ng-click="search(1,false)"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                                            <a class="btn btn-danger" ng-click="clear()"><i class="fa fa-eraser" aria-hidden="true"></i></a>
+
+                                                        </div>
+                                                        <span class="input-group-addon switch-button">
+                                                            <div class="onoffswitch3">
+                                                                <input type="checkbox" name="onoffswitch3" ng-model="catalogCheckBox" ng-change="changeDisplaStyle()" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
+                                                                <label class="onoffswitch3-label" for="myonoffswitch3">
+                                                                    <span class="onoffswitch3-inner">
+                                                                        <span class="onoffswitch3-active"><span class="onoffswitch3-switch"><i class="fa fa-leanpub" aria-hidden="true"></i></span></span>
+                                                                        <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch"><i class="fa fa-list" aria-hidden="true"></i></span></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div id="divAnnouncementPictureHeader" class="col-md-12 pr-0 pl-0 search-banner" ng-show="CurrentSessions.Customer.AuthorityCustomer.ShowSlider">
+                            <div class="col-md-12 box">
+                                <!-- Taksit Bilgilendirmesi -->
+                                
+<div id="slider-rev-container" style="margin-top:0;">
+    <div id="slider-rev" style="height:272px !important;">
+        <ul>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="MHR-19764 DEV KMP" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="MHR-19764 DEV KMP" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/cb315b67-8d86-4d2d-9881-fcb64bc6ec22.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="skotec" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="skotec" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/c534d9b9-42ca-45d9-8fc4-46d42040c86c.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="TOPLU MAHER" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="TOPLU MAHER" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/961a04e0-0a88-445b-9288-2781d14a3d90.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="MHR 52924" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="MHR 52924" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/e3eefd85-736f-49f9-bc79-d636c05fa4b7.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="MHR-18857-Yatay" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="MHR-18857-Yatay" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/729ef5de-3b9f-44d9-b010-f2625c53176f.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="gmb altaydan alınır" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="gmb altaydan alınır" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/1662e02c-446b-4c48-bab7-d8c6ad5d0630.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="şahin motor yatakları" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="şahin motor yatakları" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/d295bbe5-a23a-43af-8f29-f586788da4aa.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="MHR-19066" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="MHR-19066" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/335d88e4-8a1f-452f-acd8-7eef4d552823.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="MAHER ANTİFRİZ" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="MAHER ANTİFRİZ" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/1daf3162-dd0a-4547-b931-ffde52df484c.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="GENEL" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="GENEL" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/ba75e60b-34bd-4d4c-88ad-dacb7f5a2a5e.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="KALE" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="KALE" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/03788b3a-8771-459b-a00d-c478cf18c41a.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="TWINS" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="TWINS" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/9267a98a-3c18-4291-b48d-47e6252740bd.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="SİLECEK - YENİ" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="SİLECEK - YENİ" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/1f6a8e34-1d76-4556-8254-cb8ffc5c450c.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="lemf&#246;rder" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="lemf&#246;rder" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/55c88f76-eb78-4792-936c-7e750cdead92.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="SUKOTEC" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="SUKOTEC" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/3b8afd08-6465-42bb-ad23-ea78d9494c1f.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="SEIWA" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="SEIWA" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/5e08e2d8-8835-49c4-b34c-0c34d6cd5e00.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="Tama-Seiwa-Stone" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="Tama-Seiwa-Stone" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/9aaa0dfd-25b5-4579-adf7-a99e56b8c07e.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="İADE DUYURU" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="İADE DUYURU" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/2d2fd29d-1432-4ce3-aab5-1622dc928775.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="CUT OFF SAATLERİ GENEL BANNER" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="CUT OFF SAATLERİ GENEL BANNER" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/d7dd311e-a567-41e9-89f8-cab690f3dbc2.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="ANTİFRİZ- GENEL" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="ANTİFRİZ- GENEL" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/e5c0f99d-b7d2-482e-a1fa-0dbfd805b518.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="MAHER AMORTİS&#214;R" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="MAHER AMORTİS&#214;R" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/af1af017-0206-4aa1-91a9-e2ba71cb9e90.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+                <li data-transition="fade" data-slotamount="15" data-masterspeed="400" data-saveperformance="on" data-title="BOSCH 100" onclick="angular.element(document.getElementById('divSearch')).scope().fireSliderBannerSearch('#', 0 );">
+
+                    <img src="/Content/images/revslider/dummy.png" alt="BOSCH 100" data-lazyload="https://cdn.altayoto.com/3EC8123B4BA26513//General/7be56b45-be58-4d77-aa79-916250969f7f.jpeg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" onerror="" this.onerror=null; this.src='Content/images/error.png' ;" />
+                </li>
+        </ul>
+    </div><!-- End #slider-rev -->
+</div><!-- End #slider-rev-container -->
+
+    <script>
+        $(document).ready(function () {
+
+            //if (!$('#slider-rev-container .slider-rev ul li').length > 0)
+            //$('#slider-rev-container').remove();
+
+            //Slider Revolution
+            jQuery('#slider-rev').revolution({
+                delay: 8000,
+                startwidth: 1170,
+                startheight: 272,
+                hideThumbs: 250,
+                navigationHAlign: "center",
+                navigationVAlign: "bottom",
+                navigationHOffset: 0,
+                navigationVOffset: 20,
+                soloArrowLeftHalign: "left",
+                soloArrowLeftValign: "center",
+                soloArrowLeftHOffset: 0,
+                soloArrowLeftVOffset: 0,
+                soloArrowRightHalign: "right",
+                soloArrowRightValign: "center",
+                soloArrowRightHOffset: 0,
+                soloArrowRightVOffset: 0,
+                touchenabled: "on",
+                stopAtSlide: -1,
+                stopAfterLoops: -1,
+                dottedOverlay: "none",
+                fullWidth: "on",
+                spinned: "spinner5",
+                shadow: 0,
+                hideTimerBar: "on"//,
+                //navigationStyle:"preview4"
+            });
+        });
+    </script>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12 box box-auto">
+                            <div class="col-md-12 btn-md text-left pd-0">
+                                
+                                <div ng-show="searchInformation!==''" style="color:red; float: right; padding: 0" class="btn-md text-right customer-box"><span>{{searchInformation}}</span></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-md-12" id="divSearchItems">
+
+                <div id="divSearchTable" ng-if="isTableDisplay" class="table-responsive-vertical shadow-z-1" ng-class="{'no-copy':!CurrentSessions.Customer.AuthorityCustomer._SearchCopy && CurrentSessions.LoginType===0}">
+                    <table id="pDataTable" ng-class="isFakeSearch ? 'opacity' : ''" class="new-table table-hover normal">
+                        <!---table-condensed table-striped table-hover-->
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th ng-show="CurrentSessions.Customer.AuthorityCustomer._IsTecdoc"></th>
+                                <th>{{'Common.Code' | translate}}</th>
+                                <th>{{'Common.Name' | translate}}</th>
+                                <th>{{'Common.Manufacturer' | translate}}</th>
+                                <th>{{'Common.ManufacturerCode' | translate}}</th>
+                                <th>{{'Common.Unit' | translate}}</th>
+                                
+                                <th class="text-center"><i class="fa fa-picture-o fa-lg"></i></th>
+                                <th class="text-center">{{'Common.PriceList' | translate}}</th>
+                                <th class="text-center" ng-if="customerPriceColumn.Name!=null">{{customerPriceColumn.Name}}</th>
+                                <th class="text-center">{{CurrentSessions.MainWarehouseName}}</th>
+                                <th class="text-center">{{'Common.OtherStocks' | translate}}</th>
+                                <th ng-show="CurrentSessions.Customer.Code == '6005969'" class="text-center">E.G.T</th>
+                                <th class="text-center">{{'Search.OrderQuantity' | translate}}</th>
+                                <th class="text-center" ng-show="CurrentSessions.LoginType === 1">{{'Search.Campaign.MinOrder' | translate}}</th>
+                                <th class="text-right"></th>
+
+                            </tr>
+                        </thead>
+                        <tbody style="font-weight:bold;" id="tbResult" class="context">
+
+                            <tr id="tr{{searchItem.Id}}" ng-repeat="searchItem in searchResult" on-finish-render="ngRepeatsearchResultFinished" ng-class="{'new-product': searchItem.NewProduct == true && searchItem.Campaign.Type < 1,'campaign-iscolor': searchItem.Campaign.IsColor == true ,'coming-soon': searchItem.IsComingSoon == true,'campaign': (searchItem.Campaign.Type > 0 || searchItem.HasVendorCampaign),'sipu': searchItem.IsOrder == true,'damp': searchItem.IsDamping == true} ">
+                                <td data-title="{{'Search.Table.Details.Text' | translate}}" ng-click="$event.stopPropagation();$event.preventDefault();showProductDetailInModal(searchItem.Id,searchItem.GroupId,searchItem.Code,searchItem.Campaign.Type)" style="position: relative; max-width: 22px;padding: 10px;">
+                                    <img ng-show="searchItem.NewProduct == true" alt="New Product" src="/Content/images/new.png" style="position: absolute; top: -4px; left: -4px;">
+                                    <img ng-show="searchItem.IsComingSoon == true" alt="Coming Soon" src="/Content/images/soon.png" style="position: absolute; top: -4px; left: -4px;">
+                                    <img ng-show="searchItem.IsOrder == true" alt="Is Order" src="/Content/images/sipu.png" style="position: absolute; top: -4px; left: -4px;">
+                                    <img ng-if="searchItem.Campaign.Type>0 && (searchItem.Campaign.Type!=1 && searchItem.Campaign.Type!=4)" alt="Campaign Product" src="/Content/images/cmp.png" style="position: absolute; top: -4px; left: -4px;">
+                                    <img ng-if="searchItem.Campaign.Type>0 && (searchItem.Campaign.Type==1 || searchItem.Campaign.Type==4)" alt="Campaign Product" src="/Content/images/net.png" style="position: absolute; top: -4px; left: -4px;">
+                                    <a class="detail-icon"><i id="ic{{searchItem.Id}}" class="glyphicon glyphicon-plus icon-plus"></i></a>
+                                </td>
+                                <td ng-show="CurrentSessions.Customer.AuthorityCustomer._IsTecdoc">
+                                    <a ng-show="searchItem.TecdocOemNumber !== '' " href="javascript:;" ng-click="getTecdocDetailPage(searchItem.TecdocOemNumber,searchItem.TecdocDLNr)">
+                                        <img style="width:20px;height:19px" src="/Content/images/TECDOC2.png">
+                                    </a>
+                                </td>
+                                <td data-title="{{'Common.Code' | translate}}" class="text-left" style="white-space:nowrap;">
+                                    <span>
+                                        {{::searchItem.Code}}
+                                        <button ng-show="!CurrentSessions.Customer.AuthorityCustomer._SearchCopy && CurrentSessions.LoginType===0" id="copyButton" ng-click="copyCode(searchItem.Id, 1, searchItem.Code)">
+                                            <i id="clone{{searchItem.Id}}_1" class="fa fa-clone copy active" aria-hidden="true"></i>
+                                            <i id="check{{searchItem.Id}}_1" class="fa fa-check copied" style="color: green;" aria-hidden="true"></i>
+                                        </button>
+                                        <i ng-if="searchItem.StockMovementCount > 0" 
+                                              ng-mouseover="titleOrderReportValue($event,searchItem)"
+                                              ng-click="titleOrderReportValue($event,searchItem)"
+                                              class="fa fa-history text-primary pull-right" style="font-size: 1.5em"></i>
+                                    </span>
+                                </td>
+                                <td data-title="{{'Common.Name' | translate}}" class="tooltip-name">{{::searchItem.Name}}</td>
+                                <td data-title="{{'Common.Manufacturer' | translate}}">{{::searchItem.Manufacturer}}</td>
+                                <td data-title="{{'Common.ManufacturerCode' | translate}}" style="width:170px;min-width:170px;">
+                                    {{::searchItem.ManufacturerCode}}
+                                    <button ng-show="!CurrentSessions.Customer.AuthorityCustomer._SearchCopy && CurrentSessions.LoginType===0" id="copyButton" ng-click="copyCode(searchItem.Id, 2, searchItem.ManufacturerCode)">
+                                        <i id="clone{{searchItem.Id}}_2" class="fa fa-clone copy active" aria-hidden="true"></i>
+                                        <i id="check{{searchItem.Id}}_2" class="fa fa-check copied" style="color: green;" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                                <td data-title="{{'Common.Unit' | translate}}" class="text-center">{{::searchItem.Unit}}</td>
+                                
+                                <td data-title="Görsel" class="text-center">
+                                    <i ng-if="searchItem.HavePicture==true" class="fa fa-picture-o fa-lg" ng-click="fireProductSlider(searchItem.Id,searchItem.Code)"></i>
+                                    <span ng-if="searchItem.HavePicture==false">-</span>
+                                </td>
+
+                                <td ng-if="CurrentSessions.Customer.RiskLimit!=0" data-title="{{'Search.List' | translate}} {{'Search.Price' | translate}}" class="text-right" ng-click="titlePriceValue($event,searchItem,-1)" ng-mouseover="titlePriceValue($event,searchItem,-1)">
+                                    <span ng-bind-html="searchItem.PriceListStr"></span>
+                                </td>
+                                <td ng-if="CurrentSessions.Customer.RiskLimit==0" data-title="{{'Search.List' | translate}} {{'Search.Price' | translate}}" class="text-center"><span>-</span></td>
+
+                                <td ng-if="customerPriceColumn.Name!=null" data-title="{{customerPriceColumn.Name}}" class="text-right">
+                                    <span ng-bind-html="searchItem.CustomerSearchPriceStr"></span>
+                                </td>
+
+                                <td data-title="{{'Common.Stock' | translate}}" class="text-center" ng-click="titleWarehouseValue($event,searchItem,-1,false,true)" ng-mouseover="titleWarehouseValue($event,searchItem,-1,false,true)" style="min-width:90px;">
+                                    <div class="stock-full">
+                                        <span class="fa-stack fa-sm">
+                                            <i class="{{::searchItem.AvailabilityCssM}}"></i>
+                                        </span>
+                                        <span>
+                                            {{::searchItem.AvailabilityTextM}}
+                                        </span>
+                                    </div>
+                                </td>
+                                <td data-title="{{'Common.Stock' | translate}}" class="text-center" ng-click="titleWarehouseValue($event,searchItem,-1,false,false)" ng-mouseover="titleWarehouseValue($event,searchItem,-1,false,false)" style="min-width:90px;">
+                                    <div class="stock-full">
+                                        <span class="fa-stack fa-sm">
+                                            <i class="{{::searchItem.AvailabilityCss}}"></i>
+                                        </span>
+                                        <span>
+                                            {{::searchItem.AvailabilityText}}
+                                        </span>
+                                    </div>
+                                </td>
+                                <td ng-show="CurrentSessions.Customer.Code == '6005969'" data-title="'E.G.T'" class="text-center" style="min-width:90px;">
+                                    <div class="stock-full">
+                                        <span class="fa-stack fa-sm">
+                                            <i class="{{::searchItem.AvailabilityCssEGT}}"></i>
+                                        </span>
+                                        <span>
+                                            {{::searchItem.AvailabilityTextEGT}}
+                                        </span>
+                                    </div>
+                                </td>
+                                <td data-title="{{'Search.OrderQuantity' | translate}}" class="text-center" style="width:102px;min-width:102px;">
+                                    <div class="input-group-mobile">
+                                        <div class="input-group input-group-sm input-criteria">
+                                            <input id="qty{{::searchItem.Id}}" ng-mouseover="searchItem.Campaign.Type > 0 ? titleCampaignMinOrder($event,searchItem,-1) : null" type="text" ng-keypress="keyPressedBasket($event,searchItem.Id,0,searchItem.IsGift,searchItem.IsDamping)" ng-model="v4Project" ng-click="searchItem.Campaign.Type > 0 ? titleCampaignMinOrder($event,searchItem,-1) : null" placeholder="{{::searchItem.MinOrder}}" class="form-control text-center search-input">
+                                            <span class="input-group-btn search-qty-btn">
+                                                <a class="btn btn-custom-2" href="javascript:;" ng-click="askAvailable(searchItem.Id,0,searchItem.IsGift,searchItem.IsDamping);"><i class="fa fa-shopping-cart fa-lg"></i></a>
+                                            </span>
+                                            <input id="inPackQuantity_{{searchItem.Id}}" class="hidden" value="{{searchItem.MinOrder}}" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-title="{{'Search.Campaign.MinOrder' | translate}}" ng-if="CurrentSessions.LoginType === 1 && searchItem.Campaign.Type>0" class="text-center">{{searchItem.Campaign.RemainQuantity}}</td>
+                                <td data-title="{{'Search.Campaign.MinOrder' | translate}}" ng-if="CurrentSessions.LoginType === 1 && searchItem.Campaign.Type==0" class="text-center">-</td>
+                                <td data-title="İşlemler" class="text-right">
+                                    <div class="dropdown">
+                                        <button class="btn btn-default btn-sm btn-custom-2 dropdown-toggle transparent" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-cog fa-lg"></i>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                            <li><a href="javascript:;" ng-click="getCustomAddBasket(searchItem)"><i class="fa fa-shopping-cart fa-fw"></i> {{'Common.AddBaket' | translate}}</a></li>
+
+                                            <li><a href="javascript:;" ng-click="getCustomReturnProduct(searchItem)"><i class="fa fa-undo fa-fw"></i> {{'Search.ReturnProduct' | translate}}</a></li>
+
+                                            <li ng-if="searchItem.FollowId==0">
+                                                <a href="javascript:;" id="follow{{::searchItem.Id}}" ng-click="getCustomFollowProduct(searchItem)"><i class="fa fa-flag fa-fw"></i> {{'Search.ProductFollow' | translate}}</a>
+                                            </li>
+                                            <li ng-if="searchItem.FollowId!=0">
+                                                <a href="javascript:;" id="followout{{::searchItem.Id}}" ng-click="getCustomFollowProduct(searchItem)"><i class="fa fa-flag fa-fw"></i>{{'Search.UnFollowProduct' | translate}}</a>
+                                            </li>
+
+                                            <li ng-if="searchItem.ComparisonId==0">
+                                                <a href="javascript:;" id="comparison{{::searchItem.Id}}" ng-click="getCustomComparison(searchItem)"><i class="fa fa-compress fa-fw"></i> {{'Search.AddProductComporison' | translate}}</a>
+                                            </li>
+                                            <li ng-if="searchItem.ComparisonId!=0">
+                                                <a href="javascript:;" id="comparisonout{{::searchItem.Id}}" ng-click="getCustomComparison(searchItem)"><i class="fa fa-compress fa-fw"></i>{{'Search.UnProcuctComporison' | translate}}</a>
+                                            </li>
+                                            <li><a href="javascript:;" ng-click="getCustomDataInput(searchItem)"><i class="fa fa-pencil fa-fw"></i>{{'Search.DataInput' | translate}}</a></li>
+
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div ng-if="noData" class="table-responsive-vertical shadow-z-1">
+                        <div class="alert alert-big alert-lightred alert-dismissable">
+                            <p>{{'Admin.EmailGroup.Panel.NoRecord' | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="divSearchCatalog" ng-if="!isTableDisplay" class="box col-md-12 pl-0 pr-0" style="padding-top:15px !important;">
+                    <div class="col-md-3 col-sm-4 col-xs-12" id="itemCatalog{{::searchItem.Id}}" ng-repeat="searchItem in searchResult" on-finish-render="ngRepeatsearchResultFinished">
+                        <div class="item item-hover">
+                            <div class="item-image-wrapper">
+                                <figure class="item-image-container">
+                                    <a href="javascript:;">
+                                        <img ng-src="{{::searchItem.PicturePath}}" alt="{{::searchItem.Code}}" onerror="this.onerror = null; this.src ='Content/images/nophoto.png'" class="item-image">
+                                        <img ng-src="{{::searchItem.PicturePath}}" ng-click="fireProductSlider(searchItem.Id,searchItem.Code)" alt="{{::searchItem.Code}}" onerror="this.onerror = null; this.src ='Content/images/nophoto.png'" class="item-image-hover">
+                                    </a>
+                                </figure>
+                                <div class="item-plus-container">
+                                    <a href="#" class="item-plus" ng-click="$event.stopPropagation();$event.preventDefault();showProductDetailInModal(searchItem.Id,searchItem.GroupId,searchItem.Code,searchItem.Campaign.Type)">{{'Common.Detail' | translate}}</a>
+                                </div>
+                                <div class="item-price-container" ng-mouseover="titlePriceValue($event,searchItem,-1)">
+                                    <span class="item-price" ng-bind-html="::searchItem.PriceListStr"></span>
+                                </div><!-- End .item-price-container -->
+                            </div><!-- End .item-image-wrapper -->
+                            <div class="item-meta-container product-catalog">
+                                <div class="item-search-product">
+                                    <h2 class="item-name product-catalog-name-search" style="font-weight:bold;">{{::searchItem.Code}} </h2>
+                                    <h3 class="item-name product-catalog-name-search">{{::searchItem.Name}}  </h3>
+                                    <h2 class="item-name product-catalog-name-search" style="font-weight:bold;">{{::searchItem.Manufacturer}} </h2>
+                                    <h3 class="item-name product-catalog-name-search" ng-mouseover="titleWarehouseValue($event,searchItem,-1)">
+                                        <span class="fa-stack fa-sm">
+                                            <i class="fa calendar-text"></i>
+                                            <i class="{{::searchItem.AvailabilityCss}}"></i>
+                                        </span>
+                                        <span>
+                                            {{::searchItem.AvailabilityText}}
+                                        </span>
+                                    </h3>
+                                </div>
+                                <div class="input-group input-group-sm input-criteria">
+                                    <input id="inPackQuantity_{{searchItem.Id}}" class="hidden" value="{{searchItem.MinOrder}}" />
+                                    <input id="qtyP{{::searchItem.Id}}" type="text" ng-keypress="keyPressedBasket($event,searchItem.Id,1,searchItem.IsGift,searchItem.IsDamping)" placeholder="{{::searchItem.MinOrder}}" class="form-control text-center product-border">
+                                    <span class="input-group-btn">
+                                        <a class="btn btn-custom-2" href="javascript:;" ng-click="askAvailable(searchItem.Id,1,searchItem.IsGift,searchItem.IsDamping);"><i class="fa fa-shopping-cart fa-lg"></i></a>
+                                    </span>
+                                </div>
+                            </div><!-- End .item-meta-container -->
+                        </div><!-- End .item -->
+                    </div>
+                    <div ng-if="noData" class="table-responsive-vertical shadow-z-1">
+                        <div class="alert alert-big alert-lightred alert-dismissable">
+                            <p>{{'Admin.EmailGroup.Panel.NoRecord' | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="SearchLoadingBar">
+                <div id="fountainG">
+                    <div id="fountainG_1" class="fountainG"></div>
+                    <div id="fountainG_2" class="fountainG"></div>
+                    <div id="fountainG_3" class="fountainG"></div>
+                    <div id="fountainG_4" class="fountainG"></div>
+                    <div id="fountainG_5" class="fountainG"></div>
+                    <div id="fountainG_6" class="fountainG"></div>
+                    <div id="fountainG_7" class="fountainG"></div>
+                    <div id="fountainG_8" class="fountainG"></div>
+                </div>
+                
+            </div>
+            <div class="col-md-12 box" style="padding:1px; margin-top:10px;">
+                <div class="col-md-12 btn-md text-left">
+                    <i class="fa fa-check-circle text-success"></i> {{'Search.InformationOne' | translate}}
+                    <i class="fa fa-adjust fa-flip-horizontal text-success"></i> {{'Search.InformatıonTwo' | translate}}
+                    <i class="fa fa-times-circle text-danger"></i> {{'Search.InformationThree' | translate}}
+                    <i class="fa fa-ship text-primary"></i> {{'Search.InformationFour' | translate}}
+                    <i class="fa fa-circle" style="color:purple"></i> {{'Search.MadeOrder' | translate}}
+                    <img src="/Content/images/plasiyere-sorunuz.png" alt="Plasiyere Sorunuz" style="width:14px;height:14px;"> {{'Search.AskSalesman' | translate}}
+                    <i class="fa fa-file-text-o text-info"></i> {{'Search.InformationFive' | translate}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="btn-md text-center" style="margin-top: 10px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODALS-->
+
+    <div class="modal fade" id="modal-tecdoc-page" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-xlg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <iframe id="iframeTecdoc" style="width:100%;height:100%;min-height: 500px;"></iframe>
+                </div>
+            </div><!-- End .modal-footer -->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">{{'Common.Close' | translate}}</span></button>
+                    <h4 class="modal-title" id="modal-header"></h4>
+                </div><!-- End .modal-header -->
+                <div class="modal-body">
+                    <div class="row"><div class="col-sm-12"></div></div>
+                </div><!-- End .modal-body -->
+                <div id="modal-footer" class="modal-footer">
+                    
+                </div><!-- End .modal-footer -->
+            </div><!-- End .modal-content -->
+        </div><!-- End .modal-dialog -->
+    </div>
+    <div class="modal fade" id="modal-calculate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">{{'Common.Close' | translate}}</span></button>
+                    <h4 class="modal-title" id="modal-header-calculate">{{'Search.CustomCalculate' | translate}}</h4>
+                </div><!-- End .modal-header -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="pnlResult-calculate">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group input-criteria">
+                                            <span class="input-group-addon no-minwidth"><span class="input-text">{{'Common.PriceList' | translate}}</span></span>
+                                            <input type="text" name="calculate-priceList" id="calculate-priceList" ng-change="calculate()" ng-model="calculatePriceListStr" class="form-control text-right eryaz-numeric-input" tabindex="3">
+                                            <span class="input-group-addon no-minwidth-zero" ng-bind-html="calculateCurrency"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="xs-margin"></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group input-criteria input-group-slider">
+                                                    <span class="input-group-addon no-minwidth">{{'Common.DiscOne' | translate}}</span>
+                                                    <input id="calculate-disc1" ng-change="calculate()" ng-model="calculateDisc1" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="0.5" data-slider-value="{{calculateDisc1}}" />
+                                                    <span id="calculate-disc1Val" class="input-group-addon input-group-slider-addon">{{calculateDisc1}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group input-criteria input-group-slider">
+                                                    <span class="input-group-addon no-minwidth">{{'Common.DiscTwo' | translate}}</span>
+                                                    <input id="calculate-disc2" ng-change="calculate()" ng-model="calculateDisc2" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="0.5" data-slider-value="{{calculateDisc2}}" />
+                                                    <span id="calculate-disc2Val" class="input-group-addon input-group-slider-addon">{{calculateDisc2}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group input-criteria input-group-slider">
+                                                    <span class="input-group-addon no-minwidth">{{'Common.DiscThree' | translate}}</span>
+                                                    <input id="calculate-disc3" ng-change="calculate()" ng-model="calculateDisc3" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="0.5" data-slider-value="{{calculateDisc3}}" />
+                                                    <span id="calculate-disc3Val" class="input-group-addon input-group-slider-addon">{{calculateDisc3}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group input-criteria input-group-slider">
+                                                    <span class="input-group-addon no-minwidth">{{'Common.DiscFour' | translate}}</span>
+                                                    <input id="calculate-disc4" ng-change="calculate()" ng-model="calculateDisc4" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="0.5" data-slider-value="{{calculateDisc4}}" />
+                                                    <span id="calculate-disc4Val" class="input-group-addon input-group-slider-addon">{{calculateDisc4}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-group input-criteria">
+                                                    <span class="input-group-addon no-minwidth"><span class="input-text">{{'Common.NetPrice' | translate}}</span></span>
+                                                    <input type="text" name="calculate-priceNet" id="calculate-priceNet" ng-change="calculate()" ng-model="calculatePriceNetStr" class="form-control text-right" tabindex="3">
+                                                    <span class="input-group-addon no-minwidth-zero" ng-bind-html="calculateCurrency"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group input-criteria">
+                                                    <span class="input-group-addon no-minwidth"><span class="input-text">{{'Common.Quantity' | translate}}</span></span>
+                                                    <input type="text" name="calculate-qty" id="calculate-qty" ng-change="calculate()" ng-model="calculateQty" class="form-control text-center eryaz-numeric-input-onlynumber" tabindex="3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="xs-margin"></div>
+                                        <div class="input-group input-criteria">
+                                            <span class="input-group-addon no-minwidth"><span class="input-text">{{'Common.Total' | translate}}</span></span>
+                                            <input type="text" name="calculate-total" id="calculate-total" readonly="readonly" ng-model="calculateTotal" class="form-control text-right" tabindex="3">
+                                            <span class="input-group-addon no-minwidth-zero" ng-bind-html="calculateCurrency"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!-- End .modal-body -->
+                <div id="modal-footer-calculate" class="modal-footer">
+                </div><!-- End .modal-footer -->
+            </div><!-- End .modal-content -->
+        </div><!-- End .modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-product-detail" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="width:1050px;">
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
+            </div><!-- End .modal-footer -->
+        </div>
+    </div>
+    <div class="modal fade" id="spritespin" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
+            </div><!-- End .modal-footer -->
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="GiftModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-body" id="GiftModalContent">
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group input-criteria">
+                                    <span class="input-group-addon no-minwidth">{{'GiftModalContent.ProductCode' | translate}}</span>
+                                    <span class="input-group-text">{{ProductCode}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xs-margin"></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group input-criteria">
+                                    <span class="input-group-addon no-minwidth">{{'GiftModalContent.ProductName' | translate}}</span>
+                                    <span class="input-group-text">{{ProductName}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xs-margin"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group input-criteria">
+                                    <span class="input-group-addon no-minwidth">{{'GiftModalContent.Quantity' | translate}}</span>
+                                    
+                                    <input id="qty{{ProductId}}" class="form-control text-center search-input" type="text" ng-keypress="keyPressedBasket($event,ProductId,0,IsGifts)" ng-model="v4Project" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnAddBasket" class="btn btn-custom-2 cboxClose" ng-click="askAvailable(ProductId,0,IsGifts,IsDampings);" data-dismiss="modal">{{'GiftModalContent.Button.SendGift' | translate}}</button>
+                    <button type="button" class="btn btn-default cboxClose" data-dismiss="modal">{{'GiftProduct.CloseButton' | translate}}</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="StockMovment" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <table id="pDataTableProductOrder" class="new-table table-hover normal" ng-show="productOrderList.length>0" style="margin-top:15px;">
+                        <thead>
+                            <tr>
+                                <th>{{'Common.Date' | translate}}</th>
+                                <th>{{'Common.DocumentNo' | translate}}</th>
+                                <th>{{'Common.ProductTable.ManufactorerCode' | translate}}</th>
+                                <th>{{'Common.ProductTable.ProductName' | translate}}</th>
+                                <th>{{'Common.ProductTable.Manufacturer' | translate}}</th>
+                                <th>{{'Common.ProductTable.Quantity' | translate}}</th>
+                                <th>{{'Common.ProductTable.Unit' | translate}}</th>
+                                <th>{{'Common.ProductTable.Price' | translate}}</th>
+                                <th>{{'Common.Total' | translate}}</th>
+                                <th>{{'Common.DiscOne' | translate}}</th>
+                                <th>{{'Common.DiscTwo' | translate}}</th>
+                                <th>{{'Common.DiscThree' | translate}}</th>
+                                <th>{{'Common.DiscFour' | translate}}</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="row in productOrderList">
+                                <td data-title="'Common.Date'  | translate">{{row.DateStr}}</td>
+                                <td data-title="'Common.DocumentNo'  | translate">{{row.DocumentNo}} </td>
+                                <td data-title="'Common.ProductTable.ManufactorerCode'  | translate">{{row.ProductCode}}</td>
+                                <td data-title="'Common.ProductTable.ProductName'  | translate">{{row.ProductName}}</td>
+                                <td data-title="'Common.ProductTable.Manufacturer'  | translate">{{row.Manufacturer}}</td>
+                                <td data-title="'Common.ProductTable.Quantity'  | translate">{{row.Quantity}}</td>
+                                <td data-title="'Common.ProductTable.Unit'  | translate">{{row.Unit}}</td>
+                                <td data-title="'Common.ProductTable.Price'  | translate">{{row.Price}}</td>
+                                <td data-title="'Common.Total'  | translate">{{row.Total}}</td>
+                                <td data-title="'Common.DiscOne'  | translate">{{row.Discount1}}</td>
+                                <td data-title="'Common.DiscTwo'  | translate">{{row.Discount2}}</td>
+                                <td data-title="'Common.DiscThree'  | translate">{{row.Discount3}}</td>
+                                <td data-title="'Common.DiscFour'  | translate">{{row.Discount4}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin:30px;color:red;"><span ng-show="productOrderList.length==0">Stok Hareketi bulunmamaktadır!!!</span></div>
+                </div>
+            </div>
+        </div><!-- End .modal-footer -->
+    </div>
+
+    
+    <product-Info></product-Info>
+
+    <!-- Coupon List Modal-->
+    <coupon-list></coupon-list>
+</section>
+
+<script>
+    var search;
+    var searchCookieValue = '';
+
+    $(document).ready(function () {
+        if (screen.width >= 992) {
+            var $t_normal = document.getElementsByClassName('normal')[0],
+                tableOffset = $t_normal.offsetTop,
+                $t_fixed = $t_normal.cloneNode(true);
+            $t_fixed.removeChild($t_fixed.getElementsByTagName('tbody')[0]);
+            $t_fixed.className = 'fixed';
+            $t_normal.parentNode.insertBefore($t_fixed, $t_normal);
+            function resizeFixed() {
+                var i,
+                    $t_fixed_th = $t_fixed.getElementsByTagName('th'),
+                    $t_normal_th = $t_normal.getElementsByTagName('th');
+                tableOffset = $t_normal.offsetTop;
+                for (i = 0; i < $t_fixed_th.length; i += 1) {
+                    $t_fixed_th[i].style.width = ($t_normal_th[i].offsetWidth) + "px";
+                }
+            };
+            function scroll() {
+                var offset = window.pageYOffset,
+                    tableOffsetBottom = $t_normal.getElementsByTagName('tbody')[0].offsetHeight + tableOffset;
+                if (offset < 454 || offset < tableOffset || offset > tableOffsetBottom) {
+                    $t_fixed.style.display = 'none';
+                } else if (offset > 454 && offset >= tableOffset && offset <= tableOffsetBottom && $t_fixed.offsetWidth === 0) {
+                    $t_fixed.style.display = 'table';
+                }
+                resizeFixed();
+            };
+            window.onresize = resizeFixed;
+            window.onscroll = scroll;
+            resizeFixed();
+        }
+
+
+    });
+
+    //function autocomplete(inp, arr) {
+    //    /*the autocomplete function takes two arguments,
+    //    the text field element and an array of possible autocompleted values:*/
+    //    var currentFocus;
+    //    /*execute a function when someone writes in the text field:*/
+    //    inp.addEventListener("input", function (e) {
+    //        var a, b, i, val = this.value;
+    //        /*close any already open lists of autocompleted values*/
+    //        closeAllLists();
+    //        if (!val) { return false; }
+    //        currentFocus = -1;
+    //        /*create a DIV element that will contain the items (values):*/
+    //        a = document.createElement("DIV");
+    //        a.setAttribute("id", this.id + "autocomplete-list");
+    //        a.setAttribute("class", "autocomplete-items");
+    //        /*append the DIV element as a child of the autocomplete container:*/
+    //        this.parentNode.appendChild(a);
+    //        /*for each item in the array...*/
+    //        for (i = 0; i < arr.length; i++) {
+    //            /*check if the item starts with the same letters as the text field value:*/
+    //            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+    //                /*create a DIV element for each matching element:*/
+    //                b = document.createElement("DIV");
+    //                /*make the matching letters bold:*/
+    //                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+    //                b.innerHTML += arr[i].substr(val.length);
+    //                /*insert a input field that will hold the current array item's value:*/
+    //                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+    //                /*execute a function when someone clicks on the item value (DIV element):*/
+    //                b.addEventListener("click", function (e) {
+    //                    /*insert the value for the autocomplete text field:*/
+    //                    inp.value = this.getElementsByTagName("input")[0].value;
+    //                    /*close the list of autocompleted values,
+    //                    (or any other open lists of autocompleted values:*/
+    //                    closeAllLists();
+    //                });
+    //                a.appendChild(b);
+    //            }
+    //        }
+    //    });
+
+    //    inp.addEventListener("keydown", function (e) {
+    //        var x = document.getElementById(this.id + "autocomplete-list");
+    //        if (x) x = x.getElementsByTagName("div");
+    //        if (e.keyCode == 40) {
+    //            currentFocus++;
+    //            addActive(x);
+    //        } else if (e.keyCode == 38) {
+    //            currentFocus--;
+    //            addActive(x);
+    //        }
+    //        else if (e.keyCode == 13) {
+    //            e.preventDefault();
+    //            if (currentFocus > -1) {
+    //                if (x) x[currentFocus].click();
+
+    //                angular.element(document.getElementById('divSearch')).scope().txtGeneralSearchText = $("#txtGeneralSearch").val();
+    //                angular.element(document.getElementById('divSearch')).scope().search(1);
+    //            }
+    //            else {
+    //                angular.element(document.getElementById('divSearch')).scope().txtGeneralSearchText = $("#txtGeneralSearch").val();
+    //                angular.element(document.getElementById('divSearch')).scope().search(1);
+
+    //                closeAllLists();
+    //            }
+
+    //        }
+    //    });
+
+    //    function addActive(x) {
+    //        if (!x) return false;
+    //        removeActive(x);
+    //        if (currentFocus >= x.length) currentFocus = 0;
+    //        if (currentFocus < 0) currentFocus = (x.length - 1);
+    //        x[currentFocus].classList.add("autocomplete-active");
+    //    }
+    //    function removeActive(x) {
+    //        for (var i = 0; i < x.length; i++) {
+    //            x[i].classList.remove("autocomplete-active");
+    //        }
+    //    }
+    //    function closeAllLists(elmnt) {
+    //        var x = document.getElementsByClassName("autocomplete-items");
+    //        for (var i = 0; i < x.length; i++) {
+    //            if (elmnt != x[i] && elmnt != inp) {
+    //                x[i].parentNode.removeChild(x[i]);
+    //            }
+    //        }
+    //    }
+    //    document.addEventListener("click", function (e) {
+    //        closeAllLists(e.target);
+    //    });
+    //}
+
+    //var words = [];
+
+    //$.ajax({
+    //    type: "POST",
+    //    url: "/Search/GetCookiieValue",
+    //    data: '{}',
+    //    contentType: "application/json; charset=utf-8",
+    //    success: function (response) {
+    //        searchCookieValue = response;
+    //        if ($.cookie(searchCookieValue) !== undefined && $.cookie(searchCookieValue).length > 0)
+    //            words = $.cookie(searchCookieValue).split(',');
+
+    //        autocomplete(document.getElementById("txtGeneralSearch"), words);
+    //    },
+    //    error: function () {
+    //    }
+    //});
+
+</script>
+
+<script src="/Scripts/Pages/search.js?v=202610042310"></script>
+<script src="/Scripts/Pages/productDetail.js?v=202610042310"></script>
+<script src="/Scripts/Pages/partial/couponList.js?v=202610042310"></script>
+
+<script src="/Scripts/Repo/jquery.mark.js"></script>
+
+<script src="/Scripts/Repo/mark.js"></script>
+
+<script src="/Scripts/Repo/spritespin.js"></script>
+
+<script src="/Scripts/Repo/jquery.colorbox.min.js"></script>
+
+
+<script src="/Scripts/Repo/jquery.infinite-scroll-helper.js"></script>
+
+        </div>
+        <footer id="footer">
+
+            <div id="inner-footer">
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 footer-social-links-container">
+                                    <ul class="social-links clearfix">
+                                            <li><a href="https://www.facebook.com/altayotomotiv.AS/" target="_blank" class=""><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a></li>
+                                            <li><a href="" target="_blank" class=""><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
+                                            <li><a href="" target="_blank" class=""><i class="fa fa-google-plus-square fa-lg" aria-hidden="true"></i></a></li>
+                                            <li><a href="" target="_blank" class=""><i class="fa fa-skype fa-lg" aria-hidden="true"></i></a></li>
+                                            <li><a href="mailto:info@altayoto.com" class=""><i class="fa fa-envelope-square fa-lg" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/company/altay-otomotiv" target="_blank" class=""><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://www.instagram.com/altay.otomotiv/" target="_blank" class=""><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 footer-social-links-container text-right">
+                                    <ul class="social-links clearfix">
+                                        <li><a href="javascirpt:;" class=""><i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i></a></li>
+                                        <li><a href="javascirpt:;" class=""><i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i></a></li>
+                                        <li><a href="javascirpt:;" class=""><i class="fa fa-cc-amex fa-2x" aria-hidden="true"></i></a></li>
+                                        
+                                        <li><a href="javascirpt:;" class=""><img class="troy" src="/Content/images/footer-troy.png" /></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div><!-- End .widget -->
+
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+
+            </div><!-- End #inner-footer -->
+
+            <div id="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-12 text-left">
+                            <p>
+                                &copy; 2026<a href="{{CurrentSessions.CompanyInformation.WebSite}}" target="_blank"> {{CurrentSessions.CompanyInformation.Title}}</a>&trade;{{'Layout.FooterInformation' | translate}}
+                            </p>
+                        </div><!-- End .col-md-5 -->
+
+                        <div class="col-md-7 col-sm-7 col-xs-12 footer-text-container text-right">
+                            <p class="other-link">
+                                <a href="/Footer/ConditionsForReturn" target="_blank">{{'Layout.FooterInformationReturnAndDelivery' | translate}}</a>
+                                <a href="/Footer/PrivacyPolicy" target="_blank">{{'Layout.FooterInformationPrivacyPolicy' | translate}}</a>
+                                <a href="/Footer/TermOfUse" target="_blank">{{'Layout.FooterInformationTermOfUsers' | translate}}</a>
+                                <a href="/Footer/DistanceSalesContract" target="_blank">{{'Layout.FooterInformationSalesContract' | translate}}</a>
+                                <a href="/Footer/CookiePolicy" target="_blank">{{'Layout.FooterInformationCookiePolicy' | translate}}</a>
+                            </p>
+                            <p class="signature text-right">
+                                <span class="signature-content">
+                                    <span>&nbsp;</span><a href="javascirpt:;"></a>
+                                </span>
+                            </p>
+                        </div><!-- End .col-md-5 -->
+
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End #footer-bottom -->
+        </footer>
+    </div>
+
+
+    <div class="modal fade" id="ApprovalDocumentModal" tabindex="-1" role="dialog" aria-labelledby="ApprovalDocumentModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content" style="height: 90vh;">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ApprovalDocumentModalLabel">{{ApprovalDocuments.Header}}</h5>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body" style="padding:0; height: calc(90% - 70px);">
+                    <embed ng-src="{{ApprovalDocuments.FilePath}}" width="100%" height="100%" type="application/pdf">
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" ng-click="addUserApprovalDocuments(ApprovalDocuments.Id)" class="btn btn-success" id="approveButton">{{ApprovalDocuments.ApprovalButtonText}}</button>
+                    <button type="button" ng-click="closeModal()" class="btn btn-secondary" id="closeModalButtonFooter">Kapat</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-loading-wrapper">
+        <div class="custom-loading">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-top" title="Scroll to Top"><i class="fa fa-angle-up"></i></a><!-- End #scroll-top -->
+    <!-- Gift Product Modal -->
+    
+
+
+    <!-- DashboardModal -->
+    <div class="modal fade" id="DashboardModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <!--<div class="modal-header">
+                    <div class="row">
+                        <button type="button" class="btn btn-danger modal-close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>-->
+                
+                <!--</div>
+                </div>-->
+                <div class="modal-body" id="ModalContentDashboard">
+                    <button type="button" class="btn btn-danger modal-close chart-modal-close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <div class="context row">
+                        <div class="col col-xs-12">
+                            <div ng-if="customerTarget.Type != 'GMB'" class="row">
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col col-xs-8 chart-main" id="chartMain">
+                                        </div>
+                                        <div class="col col-xs-4">
+                                            <div class="row"><h4>TOPLAM İADE ORAN</h4></div>
+                                            <div class="row"><h5 class="text-danger">%{{::customerTarget.TotalChart.ReturnRate | number:2}}</h5></div>
+                                            <div class="row"><h4>TOPLAM {{::customerTarget.Type}} ORAN</h4></div>
+                                            <div class="row"><h5 class="text-primary">%{{::customerTarget.TotalChart.TypeRate | number:2}}</h5></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-xs-12">
+                                    <div class="col col-xs-3" ng-repeat="targetReport in customerTarget.PeriodCharts" on-finish-render="ngPeriodChartsRepeatFinished">
+                                        <div class="row chart-row">
+                                            <label ng-if="$first" class="chart-row-label rotate-90" for="chartTarget_{{::targetReport.Id}}">HEDEF GERÇEKLEŞEN</label>
+                                            <div class="chart-header float">
+                                                <h4>{{::targetReport.Header}}</h4>
+                                                <label ng-show="targetReport.ReturnRate > 0" class="label label-danger">İADE %{{::targetReport.ReturnRate | number:2}}</label>
+                                            </div>
+                                            <div id="chartTarget_{{::targetReport.Id}}"></div>
+                                        </div>
+                                        <div class="row chart-row">
+                                            <label ng-if="$first" class="chart-row-label rotate-90" for="chartTargetType_{{::targetReport.Id}}">{{::customerTarget.Type}}</label>
+                                            <div class="col col-xs-10 col-xs-offset-1">
+                                                <div id="chartTargetType_{{::targetReport.Id}}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div class="col-md-6">
+                                <table class="table table-striped table-hover table-custom">-->
+                                <!---table-condensed table-striped table-hover-->
+                                <!--<thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="text-center">HEDEF GERÇEKLEŞEN</th>
+                                                <th class="text-center">MAHER</th>
+                                                <th>İADE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="context" id="ModalContentCargoTracking">
+                                            <tr ng-repeat="targetReport in customerTarget.PeriodCharts" on-finish-render="ngPeriodChartsRepeatFinished">
+                                                <td>
+                                                    {{::targetReport.Header}}
+                                                </td>
+                                                <td>
+                                                    <div id="chartTarget_{{::targetReport.Id}}"></div>
+                                                </td>
+                                                <td>
+                                                    <div id="chartTargetType_{{::targetReport.Id}}"></div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span>%{{::targetReport.ReturnRate | number:2}}</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>-->
+                            </div>
+                            <div ng-if="customerTarget.Type == 'GMB'" class="row">
+                                <div class="col-xs-10">
+                                    <div id="chartProgress" ng-init="fireGMBChart()"></div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <span>%{{::customerTarget.TotalChart.ReturnRate | number:2}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <table class="table table-striped table-hover table-custom table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th class="text-center" ng-repeat="month in customerTarget.MonthData">{{month.Header}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="context">
+                                        <tr>
+                                            <th>MAHER</th>
+                                            <td class="text-right" ng-repeat="month in customerTarget.MonthData"><span ng-bind-html="month.TypeSalesStr"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>GENEL SATIŞ</th>
+                                            <td class="text-right" ng-repeat="month in customerTarget.MonthData"><span ng-bind-html="month.TotalSalesStr"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/bundles/bootstrap?v=JIwSDjg9-y42JgbuCotG1ECJ9OtZ7y5dGFgMrt0QTVA1"></script>
+
+    <script src="/Scripts/Repo/jquery.colorbox.min.js"></script>
+
+
+    
+    <script src="/Scripts/Js/main.js?v=202610042310"></script>
+    
+    <script src="/Content/Charts/core.js"></script>
+    <script src="/Content/Charts/charts.js"></script>
+    <script src="/Content/Charts/kelly.js"></script>
+    <script src="/Scripts/angular-locale_tr-tr.js"></script>
+    <script src="/Content/Charts/animated.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJNXWKM5T9"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            less.refresh();
+            function fireCustomLoading(cntrl) {
+                if (cntrl === undefined || cntrl === null || cntrl === "")
+                    cntrl = false;
+
+                if (cntrl) {
+                    if (!$('.custom-loading-wrapper').hasClass("active"))
+                        $('.custom-loading-wrapper').addClass("active");
+                }
+                else {
+                    if ($('.custom-loading-wrapper').hasClass("active"))
+                        $('.custom-loading-wrapper').removeClass("active");
+                }
+            }
+        });
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JJNXWKM5T9');
+    </script>
+
+</body>
+</html>
+

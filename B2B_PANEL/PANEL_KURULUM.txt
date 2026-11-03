@@ -1,0 +1,36 @@
+B2B ORTAK ARAMA - YONETICI PANELI KURULUMU
+==========================================
+
+Bu paneli bir kere kuracaksiniz. Kurulumdan sonra hangi bilgisayarda eklentinin
+kurulu oldugunu, hangi surumde oldugunu ve su an acik olup olmadigini gorursunuz.
+
+1) E-TABLO OLUSTUR
+   sheets.google.com adresine gidin > Bos e-tablo > adi "B2B Kurulumlar" olsun.
+
+2) KODU EKLE
+   E-tablo icinde: Uzantilar > Apps Script.
+   Acilan ekranda var olan kodu silin, B2B_PANEL klasorundeki Code.gs dosyasinin
+   icerigini yapistirin.
+   PANEL_SIFRE satirindaki yazi yerine kendiniz bir sifre yazin (panele girmek icin).
+   Kaydedin (disket simgesi).
+
+3) YAYINLA
+   Sag ustteki "Dagit" > "Yeni dagitim" > Tur: "Web uygulamasi".
+   Yurut: "Ben".  Erisim: "Herkes".
+   "Dagit" deyin, izin isterse onaylayin.
+   Cikan adresi kopyalayin (sonu /exec ile biter).
+
+4) ADRESI EKLENTIYE YAZ
+   Bu adresi bana gonderin. arka.js icindeki KALP_URL alanina yazip paketi yeniden
+   olusturacagim.
+
+5) PANELE GIRIS
+   Adres sonuna ?sifre=SIFRENIZ ekleyerek acin. Ornek:
+   https://script.google.com/.../exec?sifre=SIFRENIZ
+
+NOTLAR
+- Eklenti acikken her 5 dakikada bir kalp atisi gonderir. Panelde son 15 dakika
+  icinde kalp atisi olan kurulumlar "Acik" gorunur.
+- Panele sadece kurulum kimligi, kullanici adi, surum ve son gorulme zamani gider.
+  Arama terimi, fiyat, musteri ve sifre gitmez.
+- Surum yayinladiginizda Code.gs icindeki SON_SURUM degerini guncelleyin.

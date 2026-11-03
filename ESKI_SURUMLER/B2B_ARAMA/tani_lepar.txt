@@ -1,0 +1,142 @@
+===== TANI Paz 25.10.2026 16:13:28,99 ===== 
+Klasor: C:\Users\HP\OneDrive\Masaüstü\PROGRAM OLANLAR\B2B_ARAMA 
+ 
+----- python_yolu.txt ----- 
+C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\python.exe 
+----- Python surumu ----- 
+Python 3.15.0
+----- Playwright ----- 
+Name: playwright
+Version: 1.64.1
+Summary: A high-level API to automate web browsers
+Home-page: https://github.com/Microsoft/playwright-python
+Author: Microsoft Corporation
+Author-email: 
+License-Expression: Apache-2.0
+Location: C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages
+Requires: greenlet, pyee
+Required-by: 
+ 
+----- Klasordeki dosyalar ----- 
+@AutomationLog.txt
+adresler.txt
+Adres_Bul.bat
+adres_bul.py
+Adres_Bul_Altay.bat
+ag_lepar.txt
+Altay_Incele.bat
+arama.html
+arama_incele.py
+Arama_Incele_Arsan.bat
+Arama_Incele_Lepar.bat
+ayarlar.py
+b2b.ico
+B2B_Ara.bat
+b2b_ara.py
+b2b_ara_yedek_4ba8.py
+B2B_PROJE_AKTARIM.md
+B2B_Sifreler.xlsx
+B2B_Yedek.b2bk
+DURUM_NOTLARI.md
+eryaz_ui.py
+FIREFOX_KUR.bat
+gecmis_oku.py
+giris_arsan.html
+giris_arsan.txt
+giris_askar.html
+giris_askar.txt
+giris_ergin.html
+giris_ergin.txt
+Giris_Incele.bat
+giris_incele.py
+inceleme
+kasa.py
+Kesif.bat
+kesif.py
+kesif_cikti.txt
+KULLANIM.md
+kur.bat
+KURULUM.bat
+kurulum.ps1
+Lepar_Tani.bat
+log
+OKU_BENI.txt
+profil
+profil_firefox
+program_kopyala.py
+python_yolu.txt
+servis_bul.py
+sifreler
+Sifre_Kaydet.bat
+sifre_kaydet.py
+siteler.json
+sonra_lepar.html
+sonra_lepar.txt
+tani_lepar.txt
+UI_Fiyat.bat
+ui_fiyat.txt
+ui_fiyat_test.py
+UI_Kaynak.bat
+ui_kaynak.html
+ui_kaynak.py
+ui_kaynak.txt
+ui_sonuc.txt
+UI_Test.bat
+ui_test.py
+ui_test.txt
+__pycache__
+ 
+----- Arama_Incele_Lepar.bat icerigi ----- 
+@echo off
+chcp 65001 >nul
+cd /d "%~dp0"
+set "PY="
+if exist python_yolu.txt set /p PY=<python_yolu.txt
+if not defined PY set "PY=py"
+echo Lepar sayfasi acilacak.
+echo 1) Giris bilgilerinizi KENDINIZ girin.
+echo 2) Urun arama kutusunda bir parca aratin.
+echo 3) Sonuclar gelince bu pencereye donup Enter basin.
+"%PY%" arama_incele.py https://web.lepar.com.tr lepar
+echo.
+echo Bitti.
+pause
+----- arama_incele.py ----- 
+VAR 
+ 
+----- Calistirma ciktisi ----- 
+Lepar sayfasi acilacak.
+1) Giris bilgilerinizi KENDINIZ girin.
+2) Urun arama kutusunda bir parca aratin.
+3) Sonuclar gelince bu pencereye donup Enter basin.
+1) Acilan pencerede KENDINIZ giris yapin.
+2) Urun arama kutusuna bir parca numarasi yazip aratin (ornek: 2091042).
+3) Sonuclar gelince bu konsola donup Enter'a basin.
+Hazir olunca Enter...Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Masaüstü\PROGRAM OLANLAR\B2B_ARAMA\arama_incele.py", line 67, in <module>
+    sayfa.wait_for_timeout(1000)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\sync_api\_generated.py", line 21403, in wait_for_timeout
+    self._sync(self._impl_obj.wait_for_timeout(timeout=to_milliseconds(timeout)))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_page.py", line 1149, in wait_for_timeout
+    await self._main_frame.wait_for_timeout(timeout)
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_frame.py", line 929, in wait_for_timeout
+    await self._channel.send("waitForTimeout", None, {"waitTimeout": timeout})
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_connection.py", line 78, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\HP\AppData\Local\Python\pythoncore-3.15-64\Lib\site-packages\playwright\_impl\_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed
+
+Bitti.
+Press any key to continue . . . 
+ 
+===== BITTI ===== 

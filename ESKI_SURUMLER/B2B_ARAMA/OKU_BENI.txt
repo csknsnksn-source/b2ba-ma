@@ -1,0 +1,28 @@
+B2B ORTAK ARAMA - KULLANIM
+==========================
+
+ILK KURULUM (bir kez)
+1) kur.bat dosyasina cift tiklayin. Python yoksa kurar, sonra tekrar calistirmanizi ister.
+
+KULLANIM
+2) B2B_Ara.bat dosyasina cift tiklayin.
+   - Ayri bir Chrome penceresi acilir: ilk sekme ARAMA EKRANI, digerleri B2B siteleri.
+3) OTOMATIK GIRIS ICIN: Sifre_Kaydet.bat ile her B2B'nin musteri kodu, kullanici
+   adi ve sifresini bir kez kaydedin. Sifreler Windows sifrelemesiyle saklanir.
+   Oturum dustugunde program kendisi giris yapar.
+   (Kaydetmezseniz: her B2B sekmesinde bir kez elle giris yapin.)
+4) Arama ekranina parca no / OEM no yazip Enter'a basin.
+   Sonuclar KDV haric net fiyata gore ucuzdan pahaliya listelenir.
+   - Turuncu "giris yapin" yazan B2B'ye tiklayinca o sitenin sekmesi acilir.
+   - "Sadece stokta olanlar" kutusu stokta olmayanlari gizler.
+   - "Excel'e aktar" sonuclari CSV dosyasi olarak indirir.
+
+DOSYALAR
+- siteler.json : aranan B2B listesi ("aktif": false yaparak bir B2B'yi kapatabilirsiniz)
+- log\         : her aramanin kaydi (arama_TARIH.txt) ve hata ayrintilari (hata_TARIH.txt)
+- profil\      : B2B girislerinin saklandigi tarayici profili (silmeyin)
+- sifreler\    : sifreli giris bilgileri (sadece bu bilgisayarda cozulebilir)
+
+SU AN DESTEKLENEN B2B'LER
+Basbug, Martas, Dinamik, Rotas, Sayim Rulman (ayni altyapi).
+Diger B2B'ler sirayla eklenecek.

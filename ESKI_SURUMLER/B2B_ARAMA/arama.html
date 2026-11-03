@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>B2B Ortak Arama</title>
+<style>
+  :root { --mavi:#1f4e78; --acik:#eef3f8; --yesil:#2e7d32; --kirmizi:#c62828; --turuncu:#e67e00; --gri:#6b7280; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Segoe UI, Arial, sans-serif; background:#f6f7f9; color:#1f2937; }
+  header { background:var(--mavi); color:#fff; padding:14px 20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:18px; margin:0 16px 0 0; font-weight:600; }
+  #metin { font-size:18px; padding:9px 12px; width:340px; border:0; border-radius:6px; }
+  button { font-size:15px; padding:9px 16px; border:0; border-radius:6px; cursor:pointer; font-family:inherit; }
+  #araBtn { background:#ffb703; color:#1f2937; font-weight:600; }
+  #araBtn:disabled { opacity:.6; cursor:wait; }
+  .ikincil { background:#fff; color:var(--mavi); }
+  .bosluk { flex:1; }
+  #ayarBtn { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.6); }
+  label.secim { color:#fff; font-size:14px; display:flex; gap:6px; align-items:center; }
+  #durumlar { padding:10px 20px; display:flex; flex-wrap:wrap; gap:8px; background:#fff; border-bottom:1px solid #e5e7eb; min-height:46px; }
+  .cip { font-size:13px; padding:5px 10px; border-radius:14px; background:#e5e7eb; }
+  .cip.ok { background:#e6f4ea; color:var(--yesil); }
+  .cip.giris { background:#fff4e0; color:var(--turuncu); cursor:pointer; text-decoration:underline; }
+  .cip.hata { background:#fdecea; color:var(--kirmizi); }
+  .cip.bekle { background:#eef3f8; color:var(--gri); }
+  #filtreler { padding:6px 20px 2px; display:none; }
+  .fgrup { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin:4px 0; }
+  .fgrup b { font-size:13px; min-width:52px; color:#374151; }
+  .fcip { font-size:13px; padding:4px 10px; border-radius:14px; border:1px solid #cbd5e1; background:#fff; cursor:pointer; user-select:none; }
+  .fcip.sec { background:var(--mavi); color:#fff; border-color:var(--mavi); }
+  .fcip .say { opacity:.65; margin-left:4px; }
+  .temizle { font-size:12px; color:var(--mavi); cursor:pointer; text-decoration:underline; margin-left:6px; }
+  #ozet { padding:8px 20px; font-size:14px; color:var(--gri); }
+  #ozet i { color:#9ca3af; }
+  table.sonuc { border-collapse:collapse; width:calc(100% - 40px); margin:0 20px 30px; background:#fff; font-size:14px; }
+  table.sonuc th { background:var(--acik); text-align:left; padding:8px 10px; position:sticky; top:0; border-bottom:2px solid #cbd5e1; white-space:nowrap; z-index:1; }
+  table.sonuc td { padding:6px 10px; border-bottom:1px solid #eef0f3; vertical-align:middle; }
+  table.sonuc tbody tr { cursor:pointer; }
+  table.sonuc tbody tr:hover td { background:#f5f9ff; }
+  td.fiyat { text-align:right; font-weight:600; white-space:nowrap; }
+  td.kdvli { text-align:right; white-space:nowrap; color:#374151; }
+  td.kod { font-weight:600; white-space:nowrap; }
+  td.ad { color:var(--gri); font-size:12px; max-width:420px; }
+  td.foto { width:64px; padding:3px 6px; }
+  .kutu { width:52px; height:52px; border-radius:6px; background:#f1f3f6; display:flex; align-items:center; justify-content:center; overflow:hidden; color:#c0c6cf; font-size:11px; }
+  .kutu img { max-width:100%; max-height:100%; object-fit:contain; }
+  tr.ilk td { background:#f1faf3; }
+  .yok { color:#b0b7c3; }
+  .var { color:var(--yesil); }
+  #onizleme { position:fixed; display:none; z-index:50; background:#fff; border:1px solid #cbd5e1; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.18); padding:6px; pointer-events:none; }
+  #onizleme img { display:block; height:min(520px, 70vh); width:auto; max-width:45vw; object-fit:contain; }
+  .kutu { cursor:zoom-in; }
+  #tamEkran { position:fixed; inset:0; background:rgba(15,23,42,.85); display:none; z-index:70; align-items:center; justify-content:center; flex-direction:column; cursor:zoom-out; }
+  #tamEkran img { height:84vh; width:auto; max-width:92vw; background:#fff; border-radius:8px; padding:10px; object-fit:contain; box-shadow:0 20px 60px rgba(0,0,0,.4); }
+  #tamEkran .baslik { color:#fff; margin-top:14px; font-size:15px; text-align:center; }
+  #tamEkran .baslik small { display:block; opacity:.7; margin-top:4px; }
+  #bildirim { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#1f2937; color:#fff; padding:10px 18px; border-radius:8px; font-size:14px; display:none; z-index:60; max-width:80vw; }
+
+  /* ---------- KISAYOLLAR ---------- */
+  #kisaBtn { background:#ffb703; color:#1f2937; font-weight:600; }
+  #kisaPanel { position:fixed; top:64px; right:20px; width:min(760px, calc(100% - 40px)); max-height:75vh; background:#fff; border-radius:10px;
+               box-shadow:0 14px 40px rgba(0,0,0,.25); display:none; flex-direction:column; z-index:45; overflow:hidden; }
+  #kisaPanel .ust { padding:10px 12px; background:var(--acik); display:flex; gap:8px; align-items:center; }
+  #kisaFiltre { flex:1; font-size:15px; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; }
+  #kisaListe { overflow:auto; padding:10px 12px; display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:6px; }
+  #kisaListe button { text-align:left; font-size:13px; padding:8px 10px; background:#f8fafc; border:1px solid #e5e7eb; color:#1f2937; }
+  #kisaListe button:hover { background:var(--mavi); color:#fff; }
+
+  /* ---------- AYARLAR ---------- */
+  #ayarlar { position:fixed; inset:0; background:rgba(15,23,42,.45); display:none; z-index:40; }
+  #ayarPanel { position:absolute; top:24px; bottom:24px; left:50%; transform:translateX(-50%); width:min(1100px, calc(100% - 32px)); background:#fff; border-radius:10px; display:flex; flex-direction:column; overflow:hidden; }
+  .ayarBas { background:var(--mavi); color:#fff; padding:14px 20px; display:flex; align-items:center; }
+  .ayarBas h2 { margin:0; font-size:18px; font-weight:600; flex:1; }
+  .ayarBas button { background:#fff; color:var(--mavi); }
+  .ayarIc { overflow:auto; padding:16px 20px 24px; }
+  .bolum { border:1px solid #e5e7eb; border-radius:8px; padding:14px 16px; margin-bottom:16px; }
+  .bolum h3 { margin:0 0 6px; font-size:15px; color:var(--mavi); }
+  .bolum p { margin:0 0 10px; font-size:13px; color:#4b5563; line-height:1.5; }
+  .dugmeler { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .dugmeler button { background:var(--acik); color:var(--mavi); font-size:14px; padding:8px 14px; }
+  .dugmeler button.ana { background:var(--mavi); color:#fff; }
+  .dugmeler input { font-size:14px; padding:7px 10px; border:1px solid #cbd5e1; border-radius:6px; width:200px; }
+  table.ayar { border-collapse:collapse; width:100%; font-size:14px; }
+  table.ayar th { text-align:left; background:var(--acik); padding:7px 8px; font-weight:600; white-space:nowrap; }
+  table.ayar td { padding:5px 8px; border-bottom:1px solid #eef0f3; }
+  table.ayar input[type=text], table.ayar input[type=password] { width:100%; font-size:14px; padding:6px 8px; border:1px solid #cbd5e1; border-radius:5px; }
+  table.ayar button { font-size:13px; padding:6px 10px; background:var(--acik); color:var(--mavi); }
+  table.ayar button.sil { color:var(--kirmizi); background:#fdecea; }
+  .rozet { font-size:12px; padding:3px 8px; border-radius:10px; white-space:nowrap; }
+  .rozet.var { background:#e6f4ea; color:var(--yesil); }
+  .rozet.yok { background:#fff4e0; color:var(--turuncu); }
+  .ayarMesaj { margin-top:8px; font-size:13px; }
+  .ayarMesaj.ok { color:var(--yesil); }
+  .ayarMesaj.hata { color:var(--kirmizi); }
+</style>
+</head>
+<body>
+<header>
+  <h1>B2B Ortak Arama</h1>
+  <input id="metin" placeholder="Parça no / OEM no yazın, Enter" autofocus>
+  <button id="araBtn">Ara</button>
+  <label class="secim"><input type="checkbox" id="stokta"> Sadece stokta olanlar</label>
+  <button class="ikincil" id="excelBtn">Excel'e aktar</button>
+  <span class="bosluk"></span>
+  <button id="kisaBtn">🚀 B2B Kısayolları</button>
+  <button id="ayarBtn">⚙ Ayarlar / Şifreler</button>
+</header>
+<div id="durumlar"><span class="cip bekle">B2B sekmeleri açılıyor...</span></div>
+<div id="filtreler">
+  <div class="fgrup" id="fB2b"></div>
+  <div class="fgrup" id="fMarka"></div>
+</div>
+<div id="ozet"></div>
+<table class="sonuc">
+  <thead><tr>
+    <th>#</th><th>Foto</th><th>B2B</th><th>Parça No</th><th>Marka</th><th>OEM Kodu</th><th>Ürün Adı</th><th>Stok</th>
+    <th style="text-align:right">Net Fiyat (KDV hariç)</th><th style="text-align:right">KDV dahil</th>
+  </tr></thead>
+  <tbody id="govde"></tbody>
+</table>
+<div id="onizleme"><img alt=""></div>
+<div id="tamEkran"><img alt=""><div class="baslik"></div></div>
+<div id="bildirim"></div>
+<div id="kisaPanel">
+  <div class="ust"><input id="kisaFiltre" placeholder="B2B adı yazın (Enter: ilkini açar)"><button class="ikincil" id="kisaKapat">Kapat</button></div>
+  <div id="kisaListe"></div>
+</div>
+
+<!-- ================= AYARLAR ================= -->
+<div id="ayarlar">
+  <div id="ayarPanel">
+    <div class="ayarBas"><h2>Ayarlar ve Şifreler</h2><button id="ayarKapat">Kapat</button></div>
+    <div class="ayarIc">
+      <div class="bolum">
+        <h3>1. Excel ile toplu şifre girişi</h3>
+        <p>Excel şablonunu açın, sarı hücrelere müşteri kodu, kullanıcı adı ve şifreleri yazın, <b>kaydedip Excel'i kapatın</b>,
+           sonra <b>Excel'den içe aktar</b>'a basın. Şifreler bu bilgisayarda şifrelenerek saklanır ve Excel'deki şifreler silinir.</p>
+        <div class="dugmeler">
+          <button class="ana" data-islem="excel_ac">Excel şablonunu aç</button>
+          <button class="ana" data-islem="excel_ice_aktar">Excel'den içe aktar</button>
+          <button data-islem="excel_yenile">Şablonu yenile (B2B listesi değiştiyse)</button>
+        </div>
+        <div class="ayarMesaj" id="m_excel"></div>
+      </div>
+
+      <div class="bolum">
+        <h3>2. B2B listesi ve giriş bilgileri</h3>
+        <p>Tek tek de girebilirsiniz. Şifre kutusunu boş bırakırsanız kayıtlı şifre değişmez.
+           "Arasın" kutusu kapalı olan B2B aramalara katılmaz.</p>
+        <table class="ayar">
+          <thead><tr><th>Arasın</th><th>B2B</th><th>Durum</th><th>Müşteri Kodu</th><th>Kullanıcı Adı</th><th>Şifre</th><th></th><th></th></tr></thead>
+          <tbody id="ayarGovde"></tbody>
+        </table>
+        <div class="ayarMesaj" id="m_tablo"></div>
+      </div>
+
+      <div class="bolum">
+        <h3>3. Başka bilgisayara taşıma (yedek)</h3>
+        <p><b>Yedek al</b>: Tüm giriş bilgileri, belirlediğiniz <b>ana şifre</b> ile kilitlenip program klasörüne
+           <code>B2B_Yedek.b2bk</code> olarak kaydedilir. Diğer bilgisayarda programı kurduktan sonra bu dosyayı program klasörüne
+           kopyalayın, aynı ana şifreyi yazıp <b>Yedekten yükle</b>'ye basın. Ana şifreyi unutursanız yedek açılamaz.</p>
+        <div class="dugmeler">
+          <input type="password" id="anaSifre" placeholder="Ana şifre (en az 6 karakter)">
+          <button class="ana" data-islem="yedek_al">Yedek al</button>
+          <button class="ana" data-islem="yedek_yukle">Yedekten yükle</button>
+          <button data-islem="klasor_ac">Program klasörünü aç</button>
+        </div>
+        <div class="ayarMesaj" id="m_yedek"></div>
+        <p style="margin-top:14px">Diğer bilgisayara programın kendisini götürmek için <b>Kurulum paketi oluştur</b>'a basın.
+           Oluşan zip dosyasında şifreler ve kişisel veriler <b>yoktur</b>; diğer bilgisayarda açıp <b>KURULUM.bat</b>'a çift tıklayın.</p>
+        <div class="dugmeler"><button class="ana" data-islem="paket">Kurulum paketi oluştur (zip)</button></div>
+        <div class="ayarMesaj" id="m_paket"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let sonuclar = [], sonMetin = "";
+const secili = { b2b: new Set(), marka: new Set() };
+const tl = n => n.toLocaleString("tr-TR", {minimumFractionDigits:2, maximumFractionDigits:2}) + " ₺";
+const kacis = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $ = id => document.getElementById(id);
+
+function bildir(mesaj, sure = 3000) {
+  const b = $("bildirim"); b.textContent = mesaj; b.style.display = "block";
+  clearTimeout(bildir.t); bildir.t = setTimeout(() => b.style.display = "none", sure);
+}
+
+// ---------------- durum şeridi
+function durumGoster(durumlar) {
+  const k = $("durumlar");
+  k.innerHTML = "";
+  for (const d of durumlar) {
+    const c = document.createElement("span");
+    c.className = "cip " + d.durum;
+    if (d.durum === "ok") c.textContent = `${d.site}: ${d.adet} sonuç`;
+    else if (d.durum === "giris") { c.textContent = `${d.site}: giriş yapın →`; c.title = (d.mesaj ? d.mesaj + " — " : "") + "Tıklayın, sekmesi açılsın"; c.onclick = () => pySekme(d.site); }
+    else if (d.durum === "hata") { c.textContent = `${d.site}: hata – ${(d.mesaj || "").slice(0, 60)}`; c.title = d.mesaj || ""; }
+    else c.textContent = `${d.site}: aranıyor...`;
+    k.appendChild(c);
+  }
+}
+
+// ---------------- filtreler
+function filtreliListe() {
+  const sadeceStok = $("stokta").checked;
+  return sonuclar.filter(r =>
+    (!sadeceStok || r.stokVar) &&
+    (secili.b2b.size === 0 || secili.b2b.has(r.b2b)) &&
+    (secili.marka.size === 0 || secili.marka.has(r.marka)));
+}
+function filtreGrubu(kutuId, baslik, alan) {
+  const say = {};
+  for (const r of sonuclar) say[r[alan]] = (say[r[alan]] || 0) + 1;
+  const adlar = Object.keys(say).sort((a, b) => a.localeCompare(b, "tr"));
+  const k = $(kutuId);
+  k.innerHTML = `<b>${baslik}:</b>`;
+  for (const ad of adlar) {
+    const c = document.createElement("span");
+    c.className = "fcip" + (secili[alan].has(ad) ? " sec" : "");
+    c.innerHTML = `${kacis(ad || "(boş)")}<span class="say">${say[ad]}</span>`;
+    c.onclick = () => { secili[alan].has(ad) ? secili[alan].delete(ad) : secili[alan].add(ad); filtreleriCiz(); tabloyuCiz(); };
+    k.appendChild(c);
+  }
+  if (secili[alan].size) {
+    const t = document.createElement("span");
+    t.className = "temizle"; t.textContent = "temizle";
+    t.onclick = () => { secili[alan].clear(); filtreleriCiz(); tabloyuCiz(); };
+    k.appendChild(t);
+  }
+}
+function filtreleriCiz() {
+  $("filtreler").style.display = sonuclar.length ? "block" : "none";
+  filtreGrubu("fB2b", "B2B", "b2b");
+  filtreGrubu("fMarka", "Marka", "marka");
+}
+
+// ---------------- fotoğraflar (görünür olunca yüklenir)
+const resimYukleyici = new IntersectionObserver(girdiler => {
+  for (const g of girdiler) {
+    if (!g.isIntersecting) continue;
+    const kutu = g.target; resimYukleyici.unobserve(kutu);
+    pyResim(kutu.dataset.url).then(veri => {
+      if (veri) { kutu.innerHTML = ""; const im = new Image(); im.src = veri; kutu.appendChild(im); }
+      else kutu.textContent = "–";
+    }).catch(() => kutu.textContent = "–");
+  }
+}, { rootMargin: "200px" });
+
+const oniz = $("onizleme");
+async function onizlemeGoster(e, r, kutu) {
+  if (!r.resim) return;
+  const url = r.resimBuyuk || r.resim;
+  oniz.dataset.url = url;
+  const veri = await pyResim(url) || (kutu.querySelector("img") || {}).src;
+  if (!veri || oniz.dataset.url !== url) return;
+  oniz.querySelector("img").src = veri;
+  oniz.style.display = "block";
+  onizlemeKonum(e);
+}
+function onizlemeKonum(e) {
+  const gw = oniz.offsetWidth || 400, gh = oniz.offsetHeight || 400;
+  let x = e.clientX + 24;
+  if (x + gw > window.innerWidth - 10) x = Math.max(10, e.clientX - gw - 24);
+  const y = Math.min(Math.max(10, e.clientY - gh / 2), window.innerHeight - gh - 10);
+  oniz.style.left = x + "px";
+  oniz.style.top = Math.max(10, y) + "px";
+}
+async function tamEkranAc(r, kutu) {
+  onizlemeGizle();
+  const te = $("tamEkran");
+  te.querySelector("img").src = (kutu.querySelector("img") || {}).src || "";
+  te.querySelector(".baslik").innerHTML = `${kacis(r.kod)} — ${kacis(r.marka)} <small>${kacis(r.b2b)} · ${kacis(r.ad)}</small>`;
+  te.style.display = "flex";
+  const buyuk = await pyResim(r.resimBuyuk || r.resim);
+  if (buyuk && te.style.display === "flex") te.querySelector("img").src = buyuk;
+}
+$("tamEkran").onclick = () => $("tamEkran").style.display = "none";
+function onizlemeGizle() { oniz.style.display = "none"; oniz.dataset.url = ""; }
+
+// ---------------- sonuç tablosu
+function tabloyuCiz() {
+  const sadeceStok = $("stokta").checked;
+  const liste = filtreliListe();
+  const filtreVar = sadeceStok || secili.b2b.size || secili.marka.size;
+  const g = $("govde");
+  g.innerHTML = liste.map((r, i) => `
+    <tr class="${i === 0 ? "ilk" : ""}" data-i="${sonuclar.indexOf(r)}" title="Çift tıklayın: ${kacis(r.b2b)} sayfasında açılır">
+      <td>${i + 1}</td>
+      <td class="foto"><div class="kutu" ${r.resim ? `data-url="${kacis(r.resim)}"` : ""}>${r.resim ? "…" : "yok"}</div></td>
+      <td>${kacis(r.b2b)}</td><td class="kod">${kacis(r.kod)}</td><td>${kacis(r.marka)}</td>
+      <td>${kacis(r.oem)}</td><td class="ad">${kacis(r.ad)}</td>
+      <td class="${r.stokVar === null ? "" : (r.stokVar ? "var" : "yok")}">${r.stokVar === null ? "?" : (r.stokVar ? kacis(r.stok) : "Yok")}</td>
+      <td class="fiyat">${tl(r.fiyat)}</td>
+      <td class="kdvli">${r.fiyatKdvli ? tl(r.fiyatKdvli) : "–"}</td>
+    </tr>`).join("");
+  g.querySelectorAll(".kutu[data-url]").forEach(k => resimYukleyici.observe(k));
+  g.querySelectorAll("tr").forEach(tr => {
+    const r = sonuclar[+tr.dataset.i];
+    tr.ondblclick = () => { onizlemeGizle(); bildir(`${r.b2b} açılıyor: ${r.kod}`); pyGoster(r.b2b, r.kod); };
+    const kutu = tr.querySelector(".kutu");
+    if (r.resim) {
+      kutu.onmouseenter = e => onizlemeGoster(e, r, kutu);
+      kutu.onmousemove = onizlemeKonum;
+      kutu.onmouseleave = onizlemeGizle;
+      kutu.onclick = e => { e.stopPropagation(); tamEkranAc(r, kutu); };
+      kutu.ondblclick = e => e.stopPropagation();
+    }
+  });
+  $("ozet").innerHTML = sonMetin
+    ? kacis(`"${sonMetin}" için ${liste.length} sonuç`) + (filtreVar ? kacis(` (toplam ${sonuclar.length}, filtreli)`) : "")
+      + " — ucuzdan pahalıya sıralı <i>· fotoğrafın üzerine gelin: büyür, tıklayın: tam ekran · satıra çift tıklayın: B2B'de açılır</i>"
+    : "";
+}
+
+async function ara() {
+  const metin = $("metin").value.trim();
+  if (!metin) return;
+  const btn = $("araBtn");
+  if (btn.disabled) return;
+  btn.disabled = true; btn.textContent = "Aranıyor...";
+  const siteler = await pySiteler();
+  durumGoster(siteler.map(s => ({site: s, durum: "bekle"})));
+  try {
+    const cevap = await pyAra(metin);
+    if (cevap.mesgul) return;
+    sonuclar = cevap.sonuclar; sonMetin = metin;
+    secili.b2b.clear(); secili.marka.clear();
+    durumGoster(cevap.durumlar);
+    filtreleriCiz();
+    tabloyuCiz();
+  } catch (e) {
+    $("ozet").textContent = "Arama sırasında hata: " + e;
+  } finally {
+    btn.disabled = false; btn.textContent = "Ara";
+    $("metin").select();
+  }
+}
+
+function excel() {
+  const liste = filtreliListe();
+  if (!liste.length) return;
+  const bas = ["B2B","Parça No","Marka","OEM Kodu","Ürün Adı","Stok","Net Fiyat (KDV hariç)","KDV dahil"];
+  const sayi = n => n == null ? "" : String(n).replace(".", ",");
+  const satir = r => [r.b2b, r.kod, r.marka, r.oem, r.ad, r.stokVar === null ? "?" : (r.stokVar ? r.stok : "Yok"), sayi(r.fiyat), sayi(r.fiyatKdvli)]
+    .map(v => `"${String(v).replace(/"/g, '""')}"`).join(";");
+  const csv = "﻿" + [bas.join(";"), ...liste.map(satir)].join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], {type: "text/csv;charset=utf-8"}));
+  a.download = `B2B_arama_${sonMetin.replace(/[^\w-]+/g, "_")}.csv`;
+  a.click();
+}
+
+// ================= AYARLAR =================
+function mesaj(id, cevap) {
+  const m = $(id); m.textContent = cevap.mesaj || ""; m.className = "ayarMesaj " + (cevap.ok ? "ok" : "hata");
+}
+
+async function ayarlarCiz() {
+  const liste = await pyAyarListe();
+  const g = $("ayarGovde");
+  g.innerHTML = "";
+  for (const s of liste) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td style="text-align:center"><input type="checkbox" ${s.aktif ? "checked" : ""}></td>
+      <td><b>${kacis(s.ad)}</b></td>
+      <td><span class="rozet ${s.kayitli ? "var" : "yok"}">${s.kayitli ? "Şifre kayıtlı" : "Şifre yok"}</span></td>
+      <td><input type="text" class="mus" value="${kacis(s.musteri)}" placeholder="(yoksa boş)"></td>
+      <td><input type="text" class="kul" value="${kacis(s.kullanici)}"></td>
+      <td><input type="password" class="sif" placeholder="${s.kayitli ? "değiştirmek için yazın" : "şifre"}"></td>
+      <td><button class="kaydet">Kaydet</button></td>
+      <td>${s.kayitli ? '<button class="sil">Sil</button>' : ""}</td>`;
+    tr.querySelector("input[type=checkbox]").onchange = async e => {
+      await pyAktif(s.ad, e.target.checked);
+      mesaj("m_tablo", {ok: true, mesaj: `${s.ad}: ${e.target.checked ? "aramalara katılacak" : "aramalardan çıkarıldı"}.`});
+      sekmeDurumlariniYenile();
+    };
+    tr.querySelector(".kaydet").onclick = async () => {
+      const c = await pyGirisKaydet(s.ad, tr.querySelector(".mus").value, tr.querySelector(".kul").value, tr.querySelector(".sif").value);
+      mesaj("m_tablo", c);
+      if (c.ok) ayarlarCiz();
+    };
+    const sil = tr.querySelector(".sil");
+    if (sil) sil.onclick = async () => {
+      if (sil.dataset.onay !== "1") { sil.dataset.onay = "1"; sil.textContent = "Emin misiniz?"; return; }
+      mesaj("m_tablo", await pyGirisSil(s.ad));
+      ayarlarCiz();
+    };
+    g.appendChild(tr);
+  }
+  return liste;
+}
+
+function ayarlariAc() { $("ayarlar").style.display = "block"; ayarlarCiz(); }
+function ayarlariKapat() { $("ayarlar").style.display = "none"; sekmeDurumlariniYenile(); }
+
+document.querySelectorAll("[data-islem]").forEach(b => b.onclick = async () => {
+  const islem = b.dataset.islem;
+  const hedef = islem.startsWith("excel") ? "m_excel" : (islem === "paket" ? "m_paket" : "m_yedek");
+  const ana = $("anaSifre").value;
+  if (islem.startsWith("yedek") && !ana) { mesaj(hedef, {ok:false, mesaj:"Önce ana şifreyi yazın."}); return; }
+  b.disabled = true;
+  try {
+    const c = await pyAyarIslem(islem, ana);
+    if (c.mesaj) mesaj(hedef, c);
+    if (islem === "excel_ice_aktar" || islem === "yedek_yukle") ayarlarCiz();
+    if (islem.startsWith("yedek")) $("anaSifre").value = "";
+  } finally { b.disabled = false; }
+});
+
+async function sekmeDurumlariniYenile() {
+  try {
+    const s = await pySiteler();
+    $("durumlar").innerHTML = s.map(x => `<span class="cip bekle">${kacis(x)}: hazır</span>`).join("");
+  } catch {}
+}
+
+$("araBtn").onclick = ara;
+$("metin").addEventListener("keydown", e => { if (e.key === "Enter") ara(); });
+$("stokta").onchange = tabloyuCiz;
+$("excelBtn").onclick = excel;
+$("ayarBtn").onclick = ayarlariAc;
+
+// ---------- B2B kisayollari
+let kisaAdlar = [];
+function kisaCiz() {
+  const f = $("kisaFiltre").value.toLocaleLowerCase("tr");
+  const g = kisaAdlar.filter(a => a.toLocaleLowerCase("tr").includes(f));
+  $("kisaListe").innerHTML = g.map(a => `<button data-ad="${kacis(a)}">${kacis(a)}</button>`).join("")
+    || '<span style="color:#6b7280;font-size:13px">Bulunamadı</span>';
+}
+async function kisaAc(ad) {
+  const r = await pyKisayolAc(ad);
+  bildir(r.mesaj);
+  if (r.ok) $("kisaPanel").style.display = "none";
+}
+$("kisaBtn").onclick = async () => {
+  const p = $("kisaPanel");
+  if (p.style.display === "flex") { p.style.display = "none"; return; }
+  kisaAdlar = await pyKisayollar();
+  $("kisaFiltre").value = "";
+  kisaCiz();
+  p.style.display = "flex";
+  $("kisaFiltre").focus();
+};
+$("kisaKapat").onclick = () => $("kisaPanel").style.display = "none";
+$("kisaFiltre").addEventListener("input", kisaCiz);
+$("kisaFiltre").addEventListener("keydown", e => {
+  if (e.key === "Enter") { const b = $("kisaListe").querySelector("button"); if (b) kisaAc(b.dataset.ad); }
+});
+$("kisaListe").addEventListener("click", e => { const b = e.target.closest("button"); if (b) kisaAc(b.dataset.ad); });
+$("ayarKapat").onclick = ayarlariKapat;
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  if ($("tamEkran").style.display === "flex") $("tamEkran").style.display = "none";
+  else if ($("kisaPanel").style.display === "flex") $("kisaPanel").style.display = "none";
+  else if ($("ayarlar").style.display === "block") ayarlariKapat();
+});
+
+setTimeout(async () => {
+  await sekmeDurumlariniYenile();
+  // ilk kurulum: hiç şifre yoksa ayarları otomatik aç
+  try {
+    const liste = await pyAyarListe();
+    if (!liste.some(s => s.kayitli)) {
+      ayarlariAc();
+      mesaj("m_excel", {ok: true, mesaj: "Hoş geldiniz! Önce B2B şifrelerini girin: Excel şablonunu açıp doldurabilir ya da aşağıdaki tabloyu kullanabilirsiniz."});
+    }
+  } catch {}
+}, 1200);
+</script>
+</body>
+</html>

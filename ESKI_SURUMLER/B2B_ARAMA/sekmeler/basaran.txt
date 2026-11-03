@@ -1,0 +1,334 @@
+=== basaran / 'BAŞARAN OTOMOTİV' / parca=2091042 ===
+Arama kutusu: 'Ürün Ara...' #tbGeneralSearch
+  [GroupControl]   #form1
+          [HyperlinkControl] Logo. Eksik resim açıklamalarını almak için içerik menüsünü açın.
+            [ImageControl] Logo. Eksik resim açıklamalarını almak için içerik menüsünü açın.
+          [GroupControl]   #lblHelloText
+            [TextControl] Merhaba,
+          [GroupControl]   #lnkCustName
+            [TextControl] 20291662 - OTO SEN BURSA OTOMOTIV SANAYI VE TIC.LTD.STI.
+          [TextControl] |
+          [HyperlinkControl] Çıkış  #HyperLink1
+            [TextControl] Çıkış
+              [ImageControl] Müşteri Görseli  #imgSalesman
+            [GroupControl]   #lblSalesmanInfoText
+              [TextControl] Temsilci Bilgileri
+              [ImageControl] Kullanıcı Simgesi
+              [GroupControl]   #lbSalesmanName
+                [TextControl] FEYYAZ ÖKTEM
+              [ImageControl] Telefon Simgesi
+              [GroupControl]   #lbSalesmanTel
+                [TextControl] 05457303445
+              [ImageControl] Telefon Simgesi
+              [GroupControl]   #lbSalesmanTel2
+              [ImageControl] E-Posta Simgesi
+              [HyperlinkControl] feyyaz@basaran-ot...  #mailtoSalesman
+                [GroupControl]   #lbSalesmanEmail
+                  [TextControl] feyyaz@basaran-ot...
+        [HyperlinkControl] Sepetim: (3) Ürün
+          [GroupControl]   #uptCartCount
+              [TextControl] Sepetim:
+                [GroupControl]   #lblMyCartText
+                  [TextControl] Sepetim:
+              [TextControl] (3) Ürün
+                [GroupControl]   #lbCartCount
+                  [TextControl] (3) Ürün
+      [GroupControl]   #cssmenu
+          [ListItemControl] Ana Sayfa
+            [HyperlinkControl] Ana Sayfa
+              [GroupControl]   #lblMenuMainText
+                [TextControl] Ana Sayfa
+          [ListItemControl] Arama
+            [HyperlinkControl] Arama
+              [GroupControl]   #lblMenuSearchText
+                [TextControl] Arama
+          [ListItemControl] Sepet
+            [HyperlinkControl] Sepet
+              [GroupControl]   #lblMenCartText
+                [TextControl] Sepet
+          [ListItemControl] Siparişler
+            [HyperlinkControl] Siparişler
+              [GroupControl]   #lblMenuOrdersText
+                [TextControl] Siparişler
+          [ListItemControl] Cari Hesap  #lnkFinance
+            [HyperlinkControl] Cari Hesap
+              [GroupControl]   #lblMenuFinanceText
+                [TextControl] Cari Hesap
+          [ListItemControl] Online Ödeme  #lnkPayment
+            [HyperlinkControl] Online Ödeme
+              [GroupControl]   #lblMenuPaymentText
+                [TextControl] Online Ödeme
+          [ListItemControl] Dosyalar
+            [HyperlinkControl] Dosyalar
+              [GroupControl]   #lblMenuCatalogText
+                [TextControl] Dosyalar
+          [ListItemControl] Katalog
+            [HyperlinkControl] Katalog
+              [GroupControl]   #Label33
+                [TextControl] Katalog
+          [ListItemControl] Diğer Bilgiler
+            [HyperlinkControl] Diğer Bilgiler
+              [GroupControl]   #lblMenuOthersText
+                [TextControl] Diğer Bilgiler
+            [ImageControl] USD
+            [GroupControl]   #lblCurrencyUSD
+              [TextControl] 49,6540
+            [ImageControl] EU
+            [GroupControl]   #lblCurrencyEU
+              [TextControl] 55,5997
+            [ImageControl] Arama Simgesi
+            [TextControl] Ürün Arama
+            [HyperlinkControl] Excel'e Aktar  #ContentPlaceHolder1_btnExport
+                [TextControl] Excel'e Aktar
+        [GroupControl]   #ContentPlaceHolder1_upSearch
+          [GroupControl]   #searchPanel
+                    [GroupControl]   #ContentPlaceHolder1_lblManufacturerText
+                      [TextControl] Üretici
+                    [ComboBoxControl]   #comboManufacturer
+                    [GroupControl]   #ContentPlaceHolder1_lblVehicleBrandText
+                      [TextControl] Araç Marka
+                    [ComboBoxControl]   #comboVehicleBrand
+                [GroupControl]   #searchPanelTopPartLine
+                    [TextControl] Sütunları Gizle
+                    [ImageControl] Sütunları Gizle  #imgEye
+                  [CheckBoxControl] Kampanya  #chkCampaign
+                  [CheckBoxControl] Stokta Olanlar  #chkQtyAvaible
+                  [CheckBoxControl] Yeni Ürün  #chkNew
+                  [CheckBoxControl] Yolda Olanlar  #chkOnWay
+                [GroupControl]   #ContentPlaceHolder1_lblGeneralSearchText
+                  [TextControl] Genel Arama
+                [EditControl]   #tbGeneralSearch
+                [HyperlinkControl] Ara  #btnSearch
+                  [TextControl] Ara
+                [HyperlinkControl] Temizle  #btnClear
+                  [TextControl] Temizle
+                    [GroupControl]   #onofflabel
+                        [TextControl] Katalog
+                        [TextControl] Liste
+                [GroupControl]   #divSearchBanner
+          [GroupControl]   #searchReaultPanel
+                [GroupControl] MERKEZ  #divStoreGeneral
+                  [TextControl] MERKEZ
+                [GroupControl] DEPO  #divStoreIntermobil
+                  [TextControl] DEPO
+                [GroupControl] Alt.
+                  [TextControl] Alt.
+                [GroupControl] Sip.Mik.
+                  [TextControl] Sip.Mik.
+                [GroupControl] Koli Ad.
+                  [TextControl] Koli Ad.
+                [GroupControl] Sepete At
+                  [TextControl] Sepete At
+                [GroupControl] Kodu
+                    [GroupControl]   #spanCodeSortInfo
+                      [GroupControl]   #ContentPlaceHolder1_lblSearchCodeText
+                        [TextControl] Kodu
+                [GroupControl] Adı
+                    [GroupControl]   #spanNameSortInfo
+                      [GroupControl]   #ContentPlaceHolder1_Label1
+                        [TextControl] Adı
+                [GroupControl] Üretici
+                    [GroupControl]   #ContentPlaceHolder1_lblSearchManufacturerText
+                      [TextControl] Üretici
+                [GroupControl] Birim
+                    [GroupControl]   #ContentPlaceHolder1_lblSearchUnitText
+                      [TextControl] Birim
+                [GroupControl] Açıklama
+                    [ImageControl] Açıklama
+                [GroupControl] Resim
+                    [ImageControl] Resim
+                [GroupControl] Liste Fiyatı
+                    [GroupControl]   #spanListPriceSortInfo
+                      [GroupControl]   #ContentPlaceHolder1_Label7
+                        [TextControl] Liste Fiyatı
+                [GroupControl] KDV'siz Net
+                    [GroupControl]   #ContentPlaceHolder1_Label9
+                      [TextControl] KDV'siz Net
+                [GroupControl] KDV'li Net
+                    [GroupControl]   #ContentPlaceHolder1_Label10
+                      [TextControl] KDV'li Net
+                [GroupControl] İsk
+                    [GroupControl]   #ContentPlaceHolder1_lblSearchDiscText
+                      [TextControl] İsk
+                [GroupControl] Kmp. İsk.
+                    [GroupControl]   #ContentPlaceHolder1_Label12
+                      [TextControl] Kmp. İsk.
+                [GroupControl] Kmp. Fyt.
+                    [GroupControl]   #ContentPlaceHolder1_Label11
+                      [TextControl] Kmp. Fyt.
+                [GroupControl] ✖
+                    [TextControl] ✖
+              [GroupControl]   #gvResult
+                    [EditControl]   #qty15660
+                  [GroupControl] 1
+                      [TextControl] 1
+                  [GroupControl] Sepete Ekle
+                    [ButtonControl] Sepete Ekle
+                  [GroupControl] HMC-20910-42D00-WME
+                    [TextControl] HMC-20910-42D00-WME
+                  [GroupControl] TAKIM CONTA
+                      [TextControl] TAKIM CONTA
+                  [GroupControl] MOBIS
+                      [TextControl] MOBIS
+                  [GroupControl] AD
+                      [TextControl] AD
+                  [GroupControl] Resim
+                    [HyperlinkControl] Resim
+                      [ImageControl] Resim
+                  [GroupControl] 7.818,44 TL
+                      [TextControl] 7.818,44 TL
+                  [GroupControl] 5.316,54 TL
+                      [TextControl] 5.316,54 TL
+                  [GroupControl] 6.379,85 TL
+                      [TextControl] 6.379,85 TL
+                  [GroupControl] %32
+                      [TextControl] %32
+                  [GroupControl] % 0
+                      [TextControl] % 0
+                  [GroupControl] -
+                      [TextControl] -
+                  [GroupControl] Detay
+                      [HyperlinkControl] Detay
+                    [EditControl]   #qty22312
+                  [GroupControl] 1
+                      [TextControl] 1
+                  [GroupControl] Sepete Ekle
+                    [ButtonControl] Sepete Ekle
+                  [GroupControl] KOR-20910-42D00-WME
+                    [TextControl] KOR-20910-42D00-WME
+                  [GroupControl] TAKIM CONTA HYUNDAI H100 STAREX 04 PORTER TCI DYG
+                      [TextControl] TAKIM CONTA HYUNDAI H100 STAREX 04 PORTER TCI DYG
+                  [GroupControl] KOREA
+                      [TextControl] KOREA
+                  [GroupControl] AD
+                      [TextControl] AD
+                  [GroupControl] Resim
+                    [HyperlinkControl] Resim
+                      [ImageControl] Resim
+                  [GroupControl] 1.180,39 TL
+                      [TextControl] 1.180,39 TL
+                  [GroupControl] 802,67 TL
+                      [TextControl] 802,67 TL
+                  [GroupControl] 963,20 TL
+                      [TextControl] 963,20 TL
+                  [GroupControl] %32
+                      [TextControl] %32
+                  [GroupControl] % 0
+                      [TextControl] % 0
+                  [GroupControl] -
+                      [TextControl] -
+                  [GroupControl] Detay
+                      [HyperlinkControl] Detay
+                    [EditControl]   #qty53848
+                  [GroupControl] 1
+                      [TextControl] 1
+                  [GroupControl] Sepete Ekle
+                    [ButtonControl] Sepete Ekle
+                  [GroupControl] KOR-20910-42C10-WME
+                    [TextControl] KOR-20910-42C10-WME
+                  [GroupControl] TAKIM CONTA H100 MIN. H100 KMYT. 97- STAREX DYG
+                      [TextControl] TAKIM CONTA H100 MIN. H100 KMYT. 97- STAREX DYG
+                  [GroupControl] KOREA
+                      [TextControl] KOREA
+                  [GroupControl] AD
+                      [TextControl] AD
+                  [GroupControl] 1.566,68 TL
+                      [TextControl] 1.566,68 TL
+                  [GroupControl] 1.065,34 TL
+                      [TextControl] 1.065,34 TL
+                  [GroupControl] 1.278,41 TL
+                      [TextControl] 1.278,41 TL
+                  [GroupControl] %32
+                      [TextControl] %32
+                  [GroupControl] % 0
+                      [TextControl] % 0
+                  [GroupControl] -
+                      [TextControl] -
+                  [GroupControl] Detay
+                      [HyperlinkControl] Detay
+                    [EditControl]   #qty79984
+                  [GroupControl] 1
+                      [TextControl] 1
+                  [GroupControl] Sepete Ekle
+                    [ButtonControl] Sepete Ekle
+                  [GroupControl] HMC-20910-42D00
+                    [TextControl] HMC-20910-42D00
+                  [GroupControl] TAKIM CONTA HYUNDAI H100 KMYT 97-03 H100 KMYT 2004-
+                      [TextControl] TAKIM CONTA HYUNDAI H100 KMYT 97-03 H100 KMYT 2004-
+                  [GroupControl] MOBIS
+                      [TextControl] MOBIS
+                  [GroupControl] AD
+                      [TextControl] AD
+                  [GroupControl] 5.651,23 TL
+                      [TextControl] 5.651,23 TL
+                  [GroupControl] 3.842,84 TL
+                      [TextControl] 3.842,84 TL
+                  [GroupControl] 4.611,40 TL
+                      [TextControl] 4.611,40 TL
+                  [GroupControl] %32
+                      [TextControl] %32
+                  [GroupControl] % 0
+                      [TextControl] % 0
+                  [GroupControl] -
+                      [TextControl] -
+                  [GroupControl] Detay
+                      [HyperlinkControl] Detay
+                    [EditControl]   #qty79983
+                  [GroupControl] 1
+                      [TextControl] 1
+                  [GroupControl] Sepete Ekle
+                    [ButtonControl] Sepete Ekle
+                  [GroupControl] HMC-20910-42C10
+                    [TextControl] HMC-20910-42C10
+                  [GroupControl] TAKIM CONTA HYUNDAI H100 MIN
+                      [TextControl] TAKIM CONTA HYUNDAI H100 MIN
+                  [GroupControl] MOBIS
+                      [TextControl] MOBIS
+                  [GroupControl] AD
+                      [TextControl] AD
+                  [GroupControl] 4.314,59 TL
+                      [TextControl] 4.314,59 TL
+                  [GroupControl] 2.933,92 TL
+                      [TextControl] 2.933,92 TL
+                  [GroupControl] 3.520,71 TL
+                      [TextControl] 3.520,71 TL
+                  [GroupControl] %32
+                      [TextControl] %32
+                  [GroupControl] % 0
+                      [TextControl] % 0
+                  [GroupControl] -
+                      [TextControl] -
+                  [GroupControl] Detay
+                      [HyperlinkControl] Detay
+          [GroupControl]   #searchCatalogShow
+            [GroupControl]   #gvResultCatalog
+              [ImageControl] Var
+              [GroupControl]   #ContentPlaceHolder1_lblCurrencyUSD
+                [TextControl] Var
+              [ImageControl] Az Var
+              [GroupControl]   #ContentPlaceHolder1_Label4
+                [TextControl] Az Var
+              [ImageControl] Yok
+              [GroupControl]   #ContentPlaceHolder1_Label5
+                [TextControl] Yok
+              [ImageControl] Yolda
+              [GroupControl]   #ContentPlaceHolder1_Label6
+                [TextControl] Yolda
+              [ImageControl] Temin Edilebilir
+              [GroupControl]   #ContentPlaceHolder1_Label8
+                [TextControl] Temin Edilebilir
+            [TextControl] HABERLER
+        [GroupControl]   #brandsMain
+        [GroupControl]   #lblCompanyName
+          [TextControl] BAŞARAN OTOMOTİV SAN. VE TİC. A.Ş
+        [TextControl] © 2026
+        [HyperlinkControl] İade ve Teslimat
+          [TextControl] İade ve Teslimat
+        [HyperlinkControl] Gizlilik Politikamız
+          [TextControl] Gizlilik Politikamız
+        [HyperlinkControl] Kullanım Koşulları
+          [TextControl] Kullanım Koşulları
+        [HyperlinkControl] Satış Sözleşmesi
+          [TextControl] Satış Sözleşmesi
+        [HyperlinkControl] Garanti Koşulları
+          [TextControl] Garanti Koşulları

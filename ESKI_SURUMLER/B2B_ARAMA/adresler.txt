@@ -1,0 +1,41 @@
+=== Servis adresleri taraniyor (25.10.2026 09:38) ===
+ARKAŞ OTOMOTİV | B2B_SETUP_arkas | https://sadeceb2b.com
+ASLAN KARDEŞLER ONLINE - 1  | AskB4B | http://www.certum.pl/CPS0 ; http://subca.ocsp-certum.com02 ; http://repository.certum.pl/ctnca2.cer09 ; http://subca.ocsp-certum.com01 ; http://repository.certum.pl/ctnca.cer09 ; http://subca.repository.certum.pl/ctsca2021.cer0 ; http://subca.ocsp-certum.com0 ; http://cevcsca2021.ocsp-certum.com07 ; http://repository.certum.pl/cevcsca2021.cer0 ; https://www.certum.pl/CPS0 ; https://b4b.askotomotiv.com/Login/sLogin ; http://b4b.askotomotiv.com/LoginService.asmx
+AkayOto | AkayOtoB2B | http://b2b.akayoto.com.tr/loginservice.asmx
+Akkar Motor LTD. ŞTİ. | AkkarB2B | http://www.certum.pl/CPS0 ; http://subca.ocsp-certum.com02 ; http://repository.certum.pl/ctnca2.cer09 ; http://subca.ocsp-certum.com01 ; http://repository.certum.pl/ctnca.cer09 ; http://subca.repository.certum.pl/ctsca2021.cer0 ; http://subca.ocsp-certum.com0 ; http://cevcsca2021.ocsp-certum.com07 ; http://repository.certum.pl/cevcsca2021.cer0 ; https://www.certum.pl/CPS0 ; https://b2b.akkarmotor.com/slogin.aspx ; https://get.teamviewer.com/eryazsoftware
+Altay Otomotiv A.Ş. | AltayOtoB4B | http://www.certum.pl/CPS0 ; http://subca.ocsp-certum.com02 ; http://repository.certum.pl/ctnca2.cer09 ; https://b4b.altayoto.com/loginservice.asmx ; http://subca.ocsp-certum.com01 ; http://repository.certum.pl/ctnca.cer09 ; http://subca.repository.certum.pl/ctsca2021.cer0 ; http://subca.ocsp-certum.com0 ; http://cevcsca2021.ocsp-certum.com07 ; http://repository.certum.pl/cevcsca2021.cer0 ; https://www.certum.pl/CPS0 ; https://b4b.altayoto.com/Login/sLogin
+Arsan Motor | B2B_SETUP_arsanmotor | https://b2b.arsanmotor.com.tr ; https://sadeceb2b.com
+Askar Otomotiv 01.16.0051 | AskarB2B | http://b2b.askarauto.com/loginservice.asmx
+Aşin Otomotiv | AsinB2B | http://b2b.asinotomotiv.com/loginservice.asmx
+Başaran Otomotiv | BasaranOtoB2B | http://b2b.basaran-otomotiv.com.tr/loginservice.asmx
+Başdaş Dış Ticaret | BasdasB2B | http://b2b.basdasotomotiv.com/loginservice.asmx
+Doğan Otomotiv B4B | DoganOtomotivB4b | http://www.certum.pl/CPS0 ; http://subca.ocsp-certum.com02 ; http://repository.certum.pl/ctnca2.cer09 ; http://subca.ocsp-certum.com01 ; http://repository.certum.pl/ctnca.cer09 ; http://subca.repository.certum.pl/ctsca2021.cer0 ; http://subca.ocsp-certum.com0 ; http://cevcsca2021.ocsp-certum.com07 ; http://repository.certum.pl/cevcsca2021.cer0 ; https://www.certum.pl/CPS0 ; https://b4b.doganotomotiv.com.tr/Login/sLogin ; https://b4b.doganotomotiv.com.tr/LoginService.asmx
+Ergin Otomotiv Yeni | B2B_SETUP_erginotomotiv2 | https://b2b.erginotomotiv.com ; https://sadeceb2b.com
+GMW | GMWB4b | http://b4b.gmw.net/loginservice.asmx
+Grup Işık | Grup Işık B4b | http://www.certum.pl/CPS0 ; http://subca.ocsp-certum.com02 ; http://repository.certum.pl/ctnca2.cer09 ; http://subca.ocsp-certum.com01 ; http://repository.certum.pl/ctnca.cer09 ; http://subca.repository.certum.pl/ctsca2021.cer0 ; http://subca.ocsp-certum.com0 ; http://cevcsca2021.ocsp-certum.com07 ; http://repository.certum.pl/cevcsca2021.cer0 ; https://www.certum.pl/CPS0 ; http://b4b.grupisik.com.tr/loginservice.asmx
+Hamle Otomotiv | Hamle Otomotiv B4b | https://b4b.hamlesiparis.com/loginservice.asmx ; https://b4b.hamlesiparis.com/Login/sLogin
+KARPART OTOMOTİV | B2B_SETUP_karpart2 | https://sadeceb2b.com
+KORTAS OTOMOTİV | KortasB2b | http://b2b.kortasotomotiv.com/loginservice.asmx
+Karakaş Otomotiv | KarakasB2B | https://b2b.karakasoto.com/loginservice.asmx
+Korea Otomotiv | KoreaB2B | http://b2b.koreaotomotiv.com/loginservice.asmx
+Lepar Otomotiv | LeparB2B | http://web.lepar.com.tr/loginservice.asmx
+MEGA-TEK Otomotiv Makina Yedek Parça Ltd.Şti. | MegatekJaponB4b | https://b4b.megatekotomotiv.com/loginservice.asmx ; https://b4b.megatekotomotiv.com/Login/sLogin
+MURAT OTOMOTİV | Murat Otomotiv B4b | https://b4b.muratotomotiv.com.tr/Login/sLogin ; https://b4b.muratotomotiv.com.tr/LoginService.asmx ; https://b4b.muratotomotiv.com.tr/loginservice.asmx
+Mydpar OTOMOTİV | B2B_SETUP_mydpar | https://sadeceb2b.com
+NES Oto Parçaları | NES | http://b2b.nesotoparcalari.com/loginservice.asmx
+Rulman Dünyası | RulmanDunyasiB4b | https://b4b.rulman.com.tr/loginservice.asmx ; https://b4b.rulman.com.tr/Login/sLogin
+SAYILI OTOMOTİV | SayiliB2b | http://b2b.sayiliotomotiv.com/loginservice.asmx
+SAYINER | SayinerB2b | http://b2b.sayiner.com.tr/loginservice.asmx
+Sahinoglu Motor LTD. ŞTİ. | SahinogluB2B | http://b2b.sahinogluotomotiv.net/loginservice.asmx
+Taypar A.Ş. | Taypar B4b | https://b4b.taypar.com/loginservice.asmx ; https://b4b.taypar.com/Login/sLogin
+Teknopar Otomotiv | Teknopar Otomotiv | https://www.newtonsoft.com/jsonschema ; https://www.newtonsoft.com/json ; https://b2b.teknoparotomotiv.com ; https://sadeceb2b.com/setup_img
+Tok Otomotiv A.Ş. | TokOtoB2B | http://bayi.tokotomarket.com.tr/loginservice.asmx
+Universal Otomotiv | Universal Otomotiv | https://www.newtonsoft.com/jsonschema ; https://www.newtonsoft.com/json ; https://bayi.universaloto.com ; https://sadeceb2b.com/setup_img
+WAHA OTOMOTİV | B2B_SETUP_wahaoto | https://sadeceb2b.com
+YEDEKCİ OTOMOTİV | YEDEKCIOTOB2B | http://b2b.yedekciotomotiv.com/loginservice.asmx
+Yak Otomotiv | YakOtoB2B | https://b2b.yakotomotiv.com.tr/slogin.aspx ; https://get.teamviewer.com/eryazsoftware ; http://b2b.yakotomotiv.com.tr/loginservice.asmx
+Yeni Alka Otomotiv | YeniAlkaB2B | http://b2b.yenialkaotomotiv.com/loginservice.asmx
+Çıtak Yedek Parça Ltd. | CitakYedekParca | https://b2b.citak.com.tr/loginservice.asmx
+İLSEM OTOMOTİV | B2B_SETUP_ilsem | https://sadeceb2b.com
+İzmir Teknik Rulman Otomotiv San. ve Tic.Ltd. Şti. | IzmirTeknikRulmanB2B | http://b2b.izmirteknikrulman.com/loginservice.asmx
+=== bitti ===
