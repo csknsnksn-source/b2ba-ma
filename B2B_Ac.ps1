@@ -83,6 +83,31 @@ function AcikPencereler {
     return $liste
 }
 
+# Bu kisayol icin acilan YENI pencereyi bul. Once acilistan sonra olusan pencerelere bakar,
+# basliginda firmanin ilk kelimesi gecen tek pencereyi secer. Belirsizse $0 (bulunamadi) doner:
+# yanlis pencereye tus gondermemek icin durulur.
+function YeniPencereBul([string]$ad, $once) {
+    $yeniler = @()
+    foreach ($p in (Get-Process -ErrorAction SilentlyContinue)) {
+        try {
+            $hw = $p.MainWindowHandle
+            if ($hw -eq [IntPtr]::Zero) { continue }
+            if ($once -contains [int64]$hw) { continue }
+            $sinif = [B2BWin]::Cls($hw)
+            if ($sinif -in 'Progman', 'WorkerW', 'Shell_TrayWnd') { continue }
+            $baslik = [B2BWin]::Title($hw)
+            if ([string]::IsNullOrWhiteSpace($baslik)) { continue }
+            $yeniler += [pscustomobject]@{ Hwnd = $hw; Baslik = $baslik }
+        } catch { }
+    }
+    if (-not $yeniler) { return [IntPtr]::Zero }
+    $anahtar = (($ad.Trim()) -split '\s+')[0].ToLowerInvariant()
+    $eslesen = @($yeniler | Where-Object { $_.Baslik.ToLowerInvariant().Contains($anahtar) })
+    if ($eslesen.Count -eq 1) { return $eslesen[0].Hwnd }
+    if ($eslesen.Count -eq 0 -and $yeniler.Count -eq 1) { return $yeniler[0].Hwnd }
+    return [IntPtr]::Zero
+}
+
 # SendKeys ozel karakterlerini kacir (sifrede + ^ % ~ ( ) { } [ ] varsa)
 function Kacis([string]$t) {
     if (-not $t) { return '' }
@@ -210,11 +235,9 @@ foreach ($f in $dosyalar) {
             $proc.Refresh()
             if ($proc.MainWindowHandle -ne [IntPtr]::Zero) { $h = $proc.MainWindowHandle }
         }
-        if ($h -eq [IntPtr]::Zero) {
-            $yeni = AcikPencereler | Where-Object { $once -notcontains $_ } | Select-Object -Last 1
-            if ($yeni) { $h = [IntPtr]$yeni }
-        }
-        if ($h -eq [IntPtr]::Zero) { $h = [B2BWin]::GetForegroundWindow() }
+        # Proses penceresi yoksa (Chrome uygulama kisayolu gibi) yeni pencereyi ada gore bul.
+        # Eski "son acilan" / "on plandaki" tahminleri yanlis firmanin penceresini secebiliyordu.
+        if ($h -eq [IntPtr]::Zero) { $h = YeniPencereBul $ad $once }
 
         $sinif  = [B2BWin]::Cls($h)
         $baslik = [B2BWin]::Title($h)
@@ -223,7 +246,14 @@ foreach ($f in $dosyalar) {
         }
         Log "   Pencere: $baslik"
 
-        if (-not [B2BWin]::Focus($h)) {
+        $odaklandi = [B2BWin]::Focus($h)
+        if (-not $odaklandi) {
+            # Windows odak kilidi icin bir kez Alt tusu ile tekrar dene
+            [System.Windows.Forms.SendKeys]::SendWait('%')
+            Start-Sleep -Milliseconds 200
+            $odaklandi = [B2BWin]::Focus($h)
+        }
+        if (-not $odaklandi) {
             throw "Pencere one getirilemedi: $baslik"
         }
         Start-Sleep -Milliseconds 500
