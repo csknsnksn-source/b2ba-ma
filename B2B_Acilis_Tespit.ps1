@@ -39,9 +39,12 @@ foreach ($f in Get-ChildItem -LiteralPath $Klasor -Filter *.lnk) {
     $url = ''
     if ($arg -match 'https?://\S+') { $url = $matches[0] }
 
-    if ($hedef -match '(chrome|msedge)\.exe$') { $yontem = 'chrome' } else { $yontem = 'pencere' }
+    # chrome_proxy.exe / msedge_proxy.exe: Chrome/Edge uygulama (PWA) kısayolları
+    if ($hedef -match '(chrome|msedge)(_proxy)?\.exe$') { $yontem = 'chrome' } else { $yontem = 'pencere' }
     $ad = $f.BaseName
     if ($elle.ContainsKey($ad)) { $eleAlan = $elle[$ad] } else { $eleAlan = '' }
+    # Elle verilen yöntem tespitin önüne geçer
+    if ($eleAlan -in @('chrome', 'pencere')) { $yontem = $eleAlan }
 
     $liste += [pscustomobject]@{
         kisayol = $ad
