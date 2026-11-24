@@ -21,13 +21,14 @@ Sonuçlar tek tabloda gelir ve ucuzdan pahalıya sıralanır. Her satırda B2B, 
    3. Açılan pencerede adres kutusuna **Ctrl+V** yapıştırıp Enter'a basın, sonra **Klasör seç**'e basın.
    4. Yapboz simgesinden **B2B Ortak Arama**'yı raptiye ile sabitleyin.
 4. Eklentiyi, B2B sitelerine giriş yaptığınız **Chrome profiline** kurun. Sekmeler hangi profildeyse eklenti de orada olmalıdır.
-5. Otomatik giriş istiyorsanız şifreleri **B2B_Sifre_Kaydet.bat** ile kaydedin. Şifreler o bilgisayarda Windows tarafından şifrelenir ve başka bilgisayara taşınmaz.
+5. Otomatik giriş istiyorsanız şifreleri **B2B_Sifre_Kaydet.bat** ile kaydedin. Şifreler o bilgisayarda Windows tarafından şifrelenir ve başka bilgisayara taşınmaz. İstemezseniz Chrome'daki kayıtlı şifre kullanılır.
+6. **Açılış tespiti:** B2B kısayollarını bu bilgisayar için tanımak üzere `B2B_Acilis_Tespit.ps1` dosyasını çalıştırın (sağ tık → PowerShell ile çalıştır). Her firmanın bu bilgisayarda **Chrome'da mı yoksa kendi penceresinde mi** açılacağı kaydedilir. Tespit yanlış çıkan firma olursa `acilis_ayar.json` içindeki `elle` alanına `pencere` veya `chrome` yazın.
 
 `chrome://extensions` adresi yazılarak açılmazsa Chrome menüsünü kullanın: ⋮ → Uzantılar → Uzantıları yönet.
 
 ## Kullanım
 1. Simgeye tıklayın, **B2B Ortak Arama** sayfası açılır.
-2. **Kapalıları aç** düğmesi, açık olmayan B2B'leri açar. Web adresi olan siteler (Başbuğ, Martaş, Lepar vb.) yeni sekmede açılır. Masaüstü programı olanlar (Altay, Taypar vb.) kısayoluyla açılır. Açılan sitelere giriş yapın.
+2. **Kapalıları aç** düğmesi, açık olmayan B2B'leri açar. Her firmanın açılış yöntemi o bilgisayara göre belirlenir: kısayolu Chrome'u açıyorsa Chrome'da, masaüstü programını açıyorsa kendi penceresinde açılır. Firmanın türü tek başına belirleyici değildir, aynı program iki bilgisayarda farklı açılabilir. Açılan sitelere giriş yapın.
    - **Kısayolları tara** düğmesi: kısayol klasörünü tarar ve hangi sitenin hangi kısayola eşleştiğini `kisayol_listesi.txt` dosyasına yazıp açar. Eşleşmeyen site varsa buradan görebilirsiniz.
 3. Parça numarasını yazıp **Ara**'ya basın.
 4. Üst çubuktaki **Var / Yok / Hata** kutuları:
