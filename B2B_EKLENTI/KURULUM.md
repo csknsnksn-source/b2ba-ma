@@ -9,6 +9,9 @@ Sonuçlar tek tabloda gelir ve ucuzdan pahalıya sıralanır. Her satırda B2B, 
 - B2B sitelerini siz açarsınız. İsterseniz eklenti, masaüstündeki kısayollardan sizin yerinize açabilir.
 
 ## Yeni bilgisayara kurulum
+**Mağaza bağlantısı (liste dışı):** https://chrome.google.com/webstore/detail/aaadlpbpfihdodailmofimkmmngmdfpl
+Eklenti bu bağlantıdan Chrome'a eklenir. Aşağıdaki "Paketlenmemiş öğe" yöntemi yalnızca geliştirme içindir.
+
 1. `B2B_KURULUM_x.zip` dosyasını **B2B kısayollarının bulunduğu klasöre** (örneğin `Masaüstü\PROGRAM OLANLAR`) çıkartın.
    - Kısayol adları ana bilgisayardakilerle aynıysa "kapalı – aç" düğmeleri çalışır.
 2. **KURULUM.bat** dosyasına çift tıklayın. Bu dosya:
