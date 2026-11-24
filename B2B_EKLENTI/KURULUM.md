@@ -1,4 +1,4 @@
-﻿# B2B Ortak Arama – Kurulum ve Kullanım (sürüm 1.5.11)
+﻿# B2B Ortak Arama – Kurulum ve Kullanım (sürüm 1.7.0)
 
 ## Ne yapar?
 Chrome'da **açık ve giriş yapılmış** B2B sekmelerinin hepsinde aynı anda parça arar.

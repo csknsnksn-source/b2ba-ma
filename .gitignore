@@ -29,6 +29,11 @@ desktop.ini
 log/
 **/log/
 
+# --- Makineye özel kurulum ayarları (her bilgisayarda yeniden üretilir) ---
+kisayol_ayar.json
+kisayol_eslesme.json
+acilis_ayar.json
+
 # --- Eklenti imzalama anahtarı (özel anahtar) ---
 **/*.pem
 **/*.crx
