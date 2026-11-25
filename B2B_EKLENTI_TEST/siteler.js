@@ -60,7 +60,7 @@ const SITELER = [
   { ad: "Güneybağlılar", kisayol: "Güneybağlılar (coşkun)",            desen: "*://b2b.guneybaglilar.com/*",    okuyucu: "guneybaglilar", ayar: { kdv: 20 } },
   { ad: "DE-GA",         kisayol: "DE-GA B4B (coşkun)",                desen: "*://b4b.de-ga.com.tr/*",         okuyucu: "dega", ayar: { kdv: 20 } },
   { ad: "Şenbay",        kisayol: "Şenbay Otomotiv- Ege B2B (coşkun)", desen: "*://b2b.senbayankara.com.tr/*",  okuyucu: "senbay", ayar: { kdv: 20 } },
-  { ad: "GloPar",        kisayol: "GloPar-B2B (coşkun)",               desen: "*://b2b.glopar.com.tr/*",        okuyucu: "glopar", ayar: { kdv: 20, popup: true, popupNet: "^\\s*Net Fiyat\\s*$", popupKdv: "Net Fiyat Kdv Dahil" } },
+  { ad: "GloPar",        kisayol: "GloPar-B2B (coşkun)",               desen: "*://b2b.glopar.com.tr/*",        okuyucu: "glopar", ayar: { kdv: 20, dovizKur: true } },
   { ad: "KRAW",          kisayol: "KRAW  \u00a0B2B (coşkun)",               desen: "*://b2b.kraw.com.tr/*",          okuyucu: "kraw", ayar: { kdv: 20, marka: "KRAW" } },
   { ad: "Bursa Nisa",    kisayol: "BURSA NİSA OTOMOTİV SAN.TİC.LTD.ŞTİ - Otomasyon", desen: "*://www.nisaotobursa.com/*", okuyucu: "bursa_nisa", ayar: { kdv: 20 } },
   // SadeceB2B masaustu kurulumu (C:\SadeceB2b) - Chrome'da aciliyorsa basliktan bulunur

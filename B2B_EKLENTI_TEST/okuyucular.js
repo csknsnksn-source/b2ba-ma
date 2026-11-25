@@ -568,6 +568,9 @@ async function genel_oku(ayar, cfg) {
   if (cfg.bekle && !new RegExp(cfg.bekle, "i").test(document.body.innerText || document.body.textContent || "") && performance.now() < 15000) { sonuc.imza = "bekle" + Date.now(); return sonuc; }
 
   const kdv = Number(ayar.kdv || 20), carpan = Number(ayar.carpan || 1);
+  // TEST (dovizKur): sayfanin ust cubugundaki kur ("USD: 50,6286") ile doviz fiyati TL'ye cevrilir
+  const kurOku = cur => { const m = new RegExp(cur + ":\\s*(\\d{1,3}(?:\\.\\d{3})*,\\d+)", "i").exec(document.body.innerText || ""); return m ? Number(m[1].replace(/\./g, "").replace(",", ".")) : null; };
+  let dovizSorun = false;
   for (const tablo of alan.querySelectorAll("table")) {
     const trler = [...tablo.querySelectorAll("tr")];
     if (trler.length < 2) continue;
@@ -583,13 +586,22 @@ async function genel_oku(ayar, cfg) {
       const hucreler = [...tr.children].map(c => temiz(c.innerText || c.textContent));
       if (hucreler.length < 3) continue;
       const u = {};
-      // TEST: doviz cinsi fiyat (ornek GloPar: "$7,84") TL degildir; tablodan alinmaz, yoksa TL gibi okunup yanlis net cikar
+      // TEST: doviz cinsi fiyat (ornek GloPar: "$7,84") TL degildir; TL gibi okunmaz.
+      // dovizKur ayari aciksa tutar + para birimi saklanir, asagida kurla TL'ye cevrilir.
+      let dovizli = null;
       basliklar.forEach((a, i) => {
         if (!a || !hucreler[i] || u[a] != null) return;
-        if (["liste", "net", "ozel", "kdvli", "listeKdvli"].includes(a) && /[$€]|USD|EUR/i.test(hucreler[i])) return;
+        if (["liste", "net", "ozel", "kdvli", "listeKdvli"].includes(a) && /[$€]|USD|EUR/i.test(hucreler[i])) {
+          if (a === "liste" && ayar.dovizKur) dovizli = { v: Number(hucreler[i].replace(/[^\d,]/g, "").replace(",", ".")), cur: /EUR|€/i.test(hucreler[i]) ? "EUR" : "USD" };
+          return;
+        }
         u[a] = hucreler[i];
       });
-      const liste = u.liste != null ? sayi(u.liste) : null;
+      let liste = u.liste != null ? sayi(u.liste) : null;
+      if (dovizli && !isNaN(dovizli.v)) {
+        const kur = kurOku(dovizli.cur);
+        if (kur) liste = dovizli.v * kur; else dovizSorun = true;
+      }
       let net = u.net != null ? sayi(u.net) : null, kdvli = u.kdvli != null ? sayi(u.kdvli) : null;
       const ozel = u.ozel != null ? sayi(u.ozel) : null;
       // kdvliAlan (Arkas): "Net Fiyat KDV'li" sutunu KDV dahildir; net = KDV dahil / 1,20 (liste/iskonto kullanilmaz)
@@ -633,6 +645,8 @@ async function genel_oku(ayar, cfg) {
       });
     }
   }
+  // TEST: doviz fiyati var ama kur okunamadiysa "yok" yerine acik hata goster
+  if (dovizSorun && !sonuc.satirlar.length) { sonuc.hata = "SITE"; sonuc.mesaj = "Döviz kuru okunamadı (USD/EUR), fiyat gösterilemiyor"; }
   return sonuc;
 }
 
