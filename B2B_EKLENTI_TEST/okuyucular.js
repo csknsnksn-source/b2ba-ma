@@ -1332,8 +1332,6 @@ const OKUYUCULAR = {
   a_grup: okuyucu_a_grup,
   eryaz_web: okuyucu_eryaz_web,
   eryaz_b2b: { gonder: eryaz_b2b_gonder, oku: eryaz_b2b_oku },   // iki adimli (sayfa yenilenir)
-  // TEST: Basdas - her aramada adresle (?q=) yukleme; eski sonuc gosterilmez
-  eryaz_b2b_adres: { gonder: p => eryaz_b2b_gonder(p, { adresleAra: true }), oku: eryaz_b2b_oku },
   sadece_b2b: { gonder: genel_gonder, oku: genel_oku, cfg: { kutu: ["quick-kelime"], dugme: ["urunAra"], alan: "aramaekrani" } },
   guneybaglilar: { gonder: genel_gonder, oku: genel_oku, cfg: { kutu: ["txtAra"], dugme: ["btnAra"], alan: "tablo_wrapper" } },
   bursa_nisa: { gonder: genel_gonder, oku: genel_oku, cfg: { kutu: ["urun-ara"], dugmeSec: "#searchform button", alan: "formUrunSearch" } },

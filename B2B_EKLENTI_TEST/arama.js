@@ -30,7 +30,7 @@ async function siteAra(site, parca) {
   if (!sekme) return { durum: "yok", mesaj: "Sekme açık değil" };
   if (sekme.discarded) { try { await chrome.tabs.reload(sekme.id); await new Promise(r => setTimeout(r, 3000)); } catch (e) { } }
   // Intermobil: arama kutusu yalniz arama sayfasinda; sekme ana sayfadaysa eklenti kendisi arama sayfasina gecer
-  if (site.okuyucu === "eryaz_web" && !/\/search/i.test(sekme.url || "")) {
+  if ((site.tur || site.okuyucu) === "eryaz_web" && !/\/search/i.test(sekme.url || "")) {
     try {
       await chrome.tabs.update(sekme.id, { url: new URL("/tr/search", sekme.url).href });
       for (let i = 0; i < 40; i++) {
@@ -41,7 +41,8 @@ async function siteAra(site, parca) {
       await new Promise(r => setTimeout(r, 1500));
     } catch (e) { }
   }
-  const okuyucu = OKUYUCULAR[site.okuyucu];
+  // Firma dosyasi (okuyucular/<firma>.js) yoksa eski ortak okuyucuya (tur) dusulur
+  const okuyucu = OKUYUCULAR[site.okuyucu] || OKUYUCULAR[site.tur];
   let sonuc;
   try {
     sonuc = typeof okuyucu === "function"
@@ -182,13 +183,13 @@ const ALIM_OKUYUCU = { /* a_grup: a_grup_gecmis (Basbug - sonra yapilacak) */ er
 async function alimGecmisiTopla(parca) {
   const isler = [];
   for (const site of SITELER) {
-    const fn = site.ayar && site.ayar.klikPopup ? karpart_gecmis : site.ayar && site.ayar.mydparGecmis ? mydpar_gecmis : site.ayar && site.ayar.asinGecmis ? asin_gecmis : ALIM_OKUYUCU[site.okuyucu];
+    const fn = site.ayar && site.ayar.klikPopup ? karpart_gecmis : site.ayar && site.ayar.mydparGecmis ? mydpar_gecmis : site.ayar && site.ayar.asinGecmis ? asin_gecmis : ALIM_OKUYUCU[site.tur || site.okuyucu];
     const d = durumlar[site.ad];
     if (!fn || !d || !d.sekmeId) continue;
     const satir = sonuclar.filter(r => r.b2b === site.ad && r.kod);
     if (!satir.length) continue;
     // V4 siteleri urun koduyla, Lepar urun numarasiyla (Id) sorgular
-    const kodlar = (["eryaz_json", "eryaz_b2b", "a_grup"].includes(site.okuyucu) || fn === karpart_gecmis || fn === mydpar_gecmis || fn === asin_gecmis) ? satir.map(r => ({ kod: r.kod, id: r.urunId, ad: r.ad, alimVar: r.alimVar })) : satir.map(r => r.kod);
+    const kodlar = (["eryaz_json", "eryaz_b2b", "a_grup"].includes(site.tur || site.okuyucu) || fn === karpart_gecmis || fn === mydpar_gecmis || fn === asin_gecmis) ? satir.map(r => ({ kod: r.kod, id: r.urunId, ad: r.ad, alimVar: r.alimVar })) : satir.map(r => r.kod);
     isler.push({ site, fn, sekmeId: d.sekmeId, kodlar });
   }
   if (!isler.length) { alimDurum = ""; alimCiz(); return; }
