@@ -1,4 +1,5 @@
-// Karpart arama kodu - otomatik uretildi (araclar/okuyucu_uret.ps1), tur: sadece_b2b
+// OZEL: elle duzenlendi (tablo iki istekle dolar; hazir olmadan okunmaz). Uretici bu dosyayi ezmez.
+// Karpart arama kodu (baslangicta uretildi: araclar/okuyucu_uret.ps1), tur: sadece_b2b
 // Bu dosya ortak okuyucunun BIREBIR kopyasidir. Duzeltme yalnizca bu firmaya yapilir.
 // Yukleme sirasi: okuyucular.js sonrasi, arama.js oncesi.
 
@@ -27,6 +28,8 @@ function b2b_karpart_gonder(parca, cfg) {
   const alan = document.getElementById(cfg.alan);
   const eski = alan ? (alan.innerText || alan.textContent || "").slice(0, 800) : "";
   window.__b2bIsaret = Date.now();
+  window.__b2bGonderZaman = Date.now();          // hazir kontrolu icin: gonderim zamani
+  window.__b2bAranan = String(parca);            // hazir kontrolu icin: aranan parca
   // Sitenin arka plan isteklerini izle: tiklamadan sonra baslayan istekler bitince "bitti" de
   window.__b2bBitti = false;
   (function () {
@@ -124,6 +127,19 @@ async function b2b_karpart_oku(ayar, cfg) {
   };
   const sonuc = { isaret: window.__b2bIsaret || null, bitti: window.__b2bBitti === true, hazir: document.readyState === "complete", imza: "", satirlar: [] };
   if (document.querySelector('input[type="password"]')) { sonuc.hata = "GIRIS"; sonuc.mesaj = "Oturum kapanmış, sekmede tekrar giriş yapın"; return sonuc; }
+  // Karpart tablosu iki istekle dolar: sonuc hazir degilse "bekle" donup okumayi tekrarlat.
+  // Hazir: islem gostergesi yok VE (aranan parca tabloda ya da gonderimden 4 sn sonra bos tablo ya da 20 sn gecti).
+  {
+    const gecen = Date.now() - (window.__b2bGonderZaman || 0);
+    const aranan = String(window.__b2bAranan || "").replace(/[^a-z0-9]/gi, "").toUpperCase();
+    const islem = document.querySelector("#urunListesi_processing");
+    const islemde = !!islem && islem.offsetParent !== null;
+    const esles = !!aranan && [...document.querySelectorAll("#urunListesi tbody tr")].some(tr => (tr.innerText || "").replace(/[^a-z0-9]/gi, "").toUpperCase().includes(aranan));
+    const bilgi = (document.querySelector("#urunListesi_info") || {}).innerText || "";
+    const bos = /0 kay|bulunamad|kayıt yok|kayit yok/i.test(bilgi) || !!document.querySelector("td.dataTables_empty");
+    const hazir = !islemde && (esles || (bos && gecen > 4000) || gecen > 20000);
+    if (!hazir) { sonuc.imza = "bekle" + Date.now(); return sonuc; }
+  }
   const alan = document.getElementById(cfg.alan) || document.body;
   sonuc.imza = (alan.innerText || alan.textContent || "").slice(0, 800);
   // Adresle arayan sitelerde (DE-GA) sonuc yazisi cikana kadar bekle

@@ -7,6 +7,12 @@ Yeni kayıt en üste eklenir.
 
 ## 25.11.2026
 
+**43386-4B000 · Karpart**
+- Site: 2 satır (HN000-3333 HMC liste 492,48 / KDV'li 590,98; HN000-6934 KORE liste 399,27 / KDV'li 479,12), tablo iki istekle doluyor
+- Eklenti önce: "yok (1.5 sn)": tablo dolmadan okunuyordu
+- Düzeltme: `okuyucular/karpart.js` (OZEL) tablo hazır olana kadar bekliyor
+- Onay: bekliyor (kullanıcı testi)
+
 **2091042 · Başaran (stok noktaları)**
 - Site: 5 satır, fiyatlar değişmedi (HMC-20910-42D00-WME net 5.316,54 / KDV dahil 6.379,85). Stok MERKEZ ve DEPO sütunlarında renkli noktalar (`images/status/green.png` = Var; diğerleri kırmızı = Yok).
 - Eklenti önce: stok "?", Foto sütununda kırmızı top.

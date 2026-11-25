@@ -20,3 +20,7 @@
 ### 2461022600 (FYC)
 - Karpart ürün kodu: HYN000-80103 ve HN000-8505 (791201J500 için)
 - **Onay:** Kullanıcı onayladı
+
+## Bilinen sorunlar (25.11)
+- Tablo iki istekle doluyor (arama + tablo verisi). Eski okuma tablo dolmadan bitip "yok (1.5 sn)" veriyordu. Cozum: `okuyucular/karpart.js` (OZEL), tablo hazir olana kadar bekler.
+- Fiyat: tablo Liste/KDV'li; klikPopup tiklayinca maliyet okunur (onceden onayli).
