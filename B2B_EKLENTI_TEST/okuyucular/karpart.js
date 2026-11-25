@@ -163,6 +163,11 @@ async function b2b_karpart_oku(ayar, cfg) {
   const durumKoy = src => {
     const ad = ((src || "").split("/").pop() || "").split("?")[0].toLowerCase();
     if (lejand[ad]) return lejand[ad];
+    // Karpart ikonlari: /images/UrunIkonlari/var.png, yok.png, kritik.png, yolda.png
+    if (/^var/.test(ad)) return "Var";
+    if (/^yok/.test(ad)) return "Yok";
+    if (/^kritik/.test(ad)) return "Kritik";
+    if (/^yolda/.test(ad)) return "Yolda";
     if (/tick|check|green|yesil|onay/.test(ad)) return "Var";
     if (/red|cross|close|kirmizi|yok/.test(ad)) return "Yok";
     if (/orange|yellow|sari|kritik|amber/.test(ad)) return "Kritik";
