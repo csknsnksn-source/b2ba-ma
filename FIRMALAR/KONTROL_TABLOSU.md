@@ -23,7 +23,7 @@ Arama kayıtları: `ARAMA_KAYITLARI.md`
 | Kuzey Oto | ONAYLANDI | ONAYLANDI | mydparGecmis | Kod bağlantısına tıklayarak |
 | Universal | ONAYLANDI (02.11) | BEKLİYOR | popup | Arama ve fiyat (popup'tan) onaylandı |
 | Lepar | ONAYLANDI | BEKLİYOR | — | Fiyat kullanıcı onayladı |
-| Başaran | ONAYLANDI | BEKLİYOR | — | Arama ve fiyat onaylandı (Ara düğmesi düzeltmesi) |
+| Başaran | ONAYLANDI (25.11) | BEKLİYOR | — | Arama, fiyat ve stok noktaları (MERKEZ/DEPO) onaylandı (25.11). Alım geçmişi sonra |
 | Mest | BEKLİYOR | BEKLİYOR | — | 19893 için "gene yanlış" bildirildi, çözülmedi |
 | Vahdet | ONAYLANDI (02.11) | BEKLİYOR | eryaz_v4 | Arama ve fiyat onaylandı; alım geçmişi sonra |
 | Başbuğ | ONAYLANDI (02.11) | BEKLİYOR | a_grup | Arama ve fiyat onaylandı; alım geçmişi sonra |

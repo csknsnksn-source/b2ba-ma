@@ -7,6 +7,12 @@ Yeni kayıt en üste eklenir.
 
 ## 25.11.2026
 
+**2091042 · Başaran (stok noktaları)**
+- Site: 5 satır, fiyatlar değişmedi (HMC-20910-42D00-WME net 5.316,54 / KDV dahil 6.379,85). Stok MERKEZ ve DEPO sütunlarında renkli noktalar (`images/status/green.png` = Var; diğerleri kırmızı = Yok).
+- Eklenti önce: stok "?", Foto sütununda kırmızı top.
+- Düzeltme: MERKEZ/DEPO durum resimlerinden okunuyor, foto stok noktası sayılmıyor (`okuyucular/basaran.js`, `// OZEL`).
+- Onay: **Kullanıcı onayladı** ("BAŞARAN TAMAM", 25.11). Alım geçmişi ayrı bekliyor.
+
 **SA072 · Başdaş**
 - Site (kendi ekranı, `search.aspx?q=SA072`): 58305-44A40/J (Dyb. yeşil, İst. yeşil, İzm. kırmızı, KDV dahil 844,63 TL) · MB903639 TERMİK KONTAK (üç nokta yeşil, KDV dahil 314,72 TL)
 - Eklenti önce: stok "?" ve foto olarak yeşil top (stok noktası resimleri yanlış okunuyordu)

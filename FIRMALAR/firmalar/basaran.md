@@ -11,5 +11,11 @@
 - Sorun: ana sayfadan aramada sonuç çıkmıyordu → düzeltildi (Ara düğmesine tıklama)
 - **Onay:** Kullanıcı onayladı ("geldi şimdi")
 
+### 2091042 (25.11, stok noktaları)
+- Site: stok iki sütun, MERKEZ ve DEPO, renkli nokta resimleri (`images/status/green.png` = Var). Diğer noktalar kırmızı (Yok).
+- Eklenti önce: stok "?", Foto sütununda kırmızı top (stok noktası ürün resmi sanılıyordu).
+- Düzeltme: ilk iki durum resmi MERKEZ/DEPO olarak okunuyor, foto stok noktası saymıyor (`okuyucular/basaran.js`, `// OZEL`).
+- **Onay:** Kullanıcı "BAŞARAN TAMAM" dedi (25.11).
+
 ### Kullanıcı notu
 - Başaran'da masaüstü kısayolu ("Başaran Otomotiv.appref-ms") tercihi, tıklayınca programın açılması için Kısayol ekle'de seçilir.
