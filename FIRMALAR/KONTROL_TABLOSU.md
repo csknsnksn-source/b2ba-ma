@@ -54,6 +54,7 @@ Arama kayıtları: `ARAMA_KAYITLARI.md`
 | Merkez Oto | ONAYLANDI (02.11) | BEKLİYOR | sadece_b2b | Arama ve fiyat onaylandı; alım geçmişi sonra |
 | Ergin | BEKLİYOR | BEKLİYOR | — | Denenmedi |
 | Şenbay | BEKLİYOR | BEKLİYOR | senbay | Satırı eksikti, eklendi. Test edilmedi |
-| Bursa Nisa, DE-GA, GloPar, Güneybağlılar, KRAW | BEKLİYOR | BEKLİYOR | bursa_nisa, dega, glopar, guneybaglilar, kraw | Satırı eksikti, eklendi. Test edilmedi |
+| GloPar | ONAYLANDI (25.11) | BEKLİYOR | glopar (dovizKur) | Dolar fiyatı kurla TL'ye çevrildi (test sürümü). Alım geçmişi sonra |
+| Bursa Nisa, DE-GA, Güneybağlılar, KRAW | BEKLİYOR | BEKLİYOR | bursa_nisa, dega, guneybaglilar, kraw | Satırı eksikti, eklendi. Test edilmedi |
 | ABS, Carpar, Ekici, HİS-KA, HYK, İntur, Motor Aşin, Orient, Şahinler | YOK | YOK | — | Okuyucu yazılmadı |
 | Akbilya, Arena, Bayar vb. (16 kısayol) | — | — | — | Eklentide site yok, kısayol klasörde duruyor |

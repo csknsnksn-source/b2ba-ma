@@ -5,6 +5,15 @@ Yeni kayıt en üste eklenir.
 
 ---
 
+## 25.11.2026
+
+**sp1074 · GloPar**
+- Site (fare üstü pencere): Liste $7,84 · Fiyat ₺396,93 · Net ₺396,93 · Net Fiyat Kdv Dahil ₺476,31 (kur USD 50,6286)
+- Eklenti önce: "yok" (dolar fiyatı atlanıp popup'a bağlıydı, popup yoktu)
+- Düzeltme: dolar fiyatı sayfa kuruyla TL'ye çevrilir (`dovizKur`)
+- Eklenti sonra: kullanıcı "evet oldu" dedi (test sürümü)
+- Onay: **Kullanıcı onayladı**
+
 ## 01.11.2026
 
 **264102f · Korea**
