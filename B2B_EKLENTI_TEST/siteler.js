@@ -10,7 +10,7 @@ const SITELER = [
   { ad: "İntermobil",   kisayol: "ioto B4B - İntermobil (coşkun)", desen: "https://b4b.intermobil.com.tr/*",  okuyucu: "intermobil", tur: "eryaz_web",  acilis: "https://b4b.intermobil.com.tr/tr/search" },
   // Eryaz B2B (WebForms). "ayar.carpan": tabloda net fiyat yoksa liste fiyatina uygulanan cari iskonto carpani
   { ad: "Lepar",        kisayol: "Lepar Otomotiv", desen: "*://web.lepar.com.tr/*",           okuyucu: "lepar", tur: "eryaz_json", acilis: "https://web.lepar.com.tr/search.aspx", ayar: { kdv: 20 } },
-  { ad: "Başaran",      kisayol: "Başaran Otomotiv", desen: "*://b2b.basaran-otomotiv.com.tr/*", okuyucu: "basaran", tur: "eryaz_b2b", acilis: "https://b2b.basaran-otomotiv.com.tr/Default.aspx", ayar: { kdv: 20 } },
+  { ad: "Başaran",      kisayol: "Başaran Otomotiv", desen: "*://b2b.basaran-otomotiv.com.tr/*", okuyucu: "basaran", tur: "eryaz_b2b", acilis: "https://b2b.basaran-otomotiv.com.tr/Default.aspx", ayar: { kdv: 20, asinGecmis: true } },
   { ad: "Askar",        kisayol: "Askar Otomotiv 01.16.0051", desen: "*://b2b.askarauto.com/*",          okuyucu: "askar", tur: "eryaz_b2b",  acilis: "http://b2b.askarauto.com/Default.aspx", ayar: { kdv: 20, popupFiyat: true } },
   // Ayni altyapi (Eryaz B2B) - 0.3.0 ile eklendi, sitede ilk aramada dogrulanacak
   { ad: "Akay", kisayol: "AkayOto", desen: "*://b2b.akayoto.com.tr/*", okuyucu: "akay", tur: "eryaz_b2b", acilis: "https://b2b.akayoto.com.tr/Default.aspx", ayar: { kdv: 20 } },

@@ -12,7 +12,7 @@ description: Başaran B2B arama kodu ve kurallari (kod dosyasi okuyucular/basara
 - Okuyucu turu (eski ortak): eryaz_b2b
 - Kod dosyasi: B2B_EKLENTI_TEST/okuyucular/basaran.js
 - Fonksiyonlar: b2b_basaran_gonder, b2b_basaran_oku
-- Ayar (siteler.js): { kdv: 20 }
+- Ayar (siteler.js): { kdv: 20, asinGecmis: true }
 - cfg: (yok)
 
 ## Firma notu (FIRMALAR/firmalar)

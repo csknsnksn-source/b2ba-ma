@@ -1,7 +1,7 @@
 # Başaran
 
 **Ayar:** standart (eryaz_b2b, `b2b.basaran-otomotiv.com.tr`)
-**Genel durum:** Arama ONAYLANDI · Fiyat ONAYLANDI · Alım geçmişi BEKLİYOR
+**Genel durum:** Arama ONAYLANDI · Fiyat ONAYLANDI · Alım geçmişi: test bekliyor (25.11, yöntem: ürün detayı, Stok Hareketleri, `asinGecmis` ile aynı mekanizma)
 
 ## Aramalar
 
