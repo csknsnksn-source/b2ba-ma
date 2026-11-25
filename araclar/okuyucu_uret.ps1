@@ -125,6 +125,7 @@ for ($i = 0; $i -lt $siL.Count; $i++) {
 $plan = New-Object System.Collections.Generic.List[object]
 $uyarilar = New-Object System.Collections.Generic.List[string]
 $jsListe = New-Object System.Collections.Generic.List[string]
+$ozelListe = New-Object System.Collections.Generic.List[string]
 $sirali = @($firmalar | Sort-Object slug)
 
 foreach ($f in $sirali) {
@@ -168,7 +169,14 @@ foreach ($f in $sirali) {
             if ($ad -eq 'OKUYUCULAR' -or $sahip -contains $ad) { continue }
             if ($icerik -match ('\b' + $ad + '\b')) { $uyarilar.Add("UYARI $($f.slug).js: ust duzey ada referans: $ad") }
         }
-        $plan.Add(@{ yol = (Join-Path $ekl ('okuyucular\' + $f.slug + '.js')); icerik = $icerik })
+        # Ilk satiri "// OZEL" olan dosya elle duzenlenmistir: yeniden uretilmez (degisiklikler silinmesin)
+        $mevcutYol = Join-Path $ekl ('okuyucular\' + $f.slug + '.js')
+        $ozel = $false
+        if (Test-Path -LiteralPath $mevcutYol) {
+            $ilk = [IO.File]::ReadAllLines($mevcutYol, $utf8) | Select-Object -First 1
+            if ($ilk -match '^// OZEL') { $ozel = $true }
+        }
+        if ($ozel) { $ozelListe.Add($f.slug) } else { $plan.Add(@{ yol = $mevcutYol; icerik = $icerik }) }
         $jsListe.Add($f.slug)
     }
 
@@ -237,7 +245,8 @@ if (-not $Kontrol) {
         if (-not (Test-Path -LiteralPath $dir)) { New-Item -ItemType Directory -Force -Path $dir | Out-Null }
         [IO.File]::WriteAllText($p.yol, $p.icerik, $utf8)
     }
-    Write-Output ("Yazildi: {0} dosya ({1} firma JS, {2} skill)" -f $plan.Count, $jsListe.Count, $sirali.Count)
+    foreach ($o in $ozelListe) { Write-Output "OZEL (elle duzenlenmis, yeniden uretilmedi): $o" }
+    Write-Output ("Yazildi: {0} dosya ({1} firma JS, {2} skill, {3} ozel atlandi)" -f $plan.Count, $jsListe.Count, $sirali.Count, $ozelListe.Count)
 } else {
     $hata = 0
     foreach ($p in $plan) {
@@ -247,6 +256,7 @@ if (-not $Kontrol) {
         if ($disk -ne $p.icerik) { Write-Output "HATA elle degistirilmis (yeniden uret): $rel"; $hata++ }
     }
     foreach ($u in $uyarilar) { Write-Output $u }
+    foreach ($o in $ozelListe) { Write-Output "OZEL (elle duzenlenmis, yeniden uretilmedi): $o" }
     Write-Output ("Denetim: {0} dosya kontrol edildi, {1} hata, {2} uyari" -f $plan.Count, $hata, $uyarilar.Count)
     if ($hata -gt 0) { exit 1 }
 }

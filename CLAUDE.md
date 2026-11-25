@@ -19,7 +19,7 @@ Bu depo, Chrome eklentisi "B2B Ortak Arama"nın (Chrome Web Mağazası, liste d�
 
 ## Arama kodu yapısı (firma basina ayri)
 - Her firmanin arama kodu `B2B_EKLENTI_TEST/okuyucular/<firma>.js` icindedir, `.claude/skills/firma-<firma>/SKILL.md` ile belgelenir.
-- Bu dosyalar `araclar/okuyucu_uret.ps1` ile uretilir. Elle degistirilirse `-Kontrol` bildirir. Firma-ozel duzeltme skill'e not edilip ilgili dosyaya uygulanir.
+- Bu dosyalar `araclar/okuyucu_uret.ps1` ile uretilir. Firma-ozel duzeltme yapilacaksa dosyanin ilk satiri `// OZEL` yapilir; betik bu dosyayi ezmez.
 - Ortak `okuyucular.js` ve `arama.js` diger firmalar icin aynen kalir; bir firmanin sorununu ortak okuyucuya bayrak ekleyerek cozme.
 - Okuyucu fonksiyonu sayfaya (`executeScript`) yalnizca kendi govdesiyle gider. Baska fonksiyona veya ust duzey degiskene referans verme; ayar gerekiyorsa kayittaki `cfg` ile ver.
 

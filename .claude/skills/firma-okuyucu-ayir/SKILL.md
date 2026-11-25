@@ -20,7 +20,7 @@ Ortak `okuyucular.js` diger firmalar icin degistirilmez. Tum firmalar uretici be
 3. Denetle:
    `powershell -NoProfile -ExecutionPolicy Bypass -File araclar\okuyucu_uret.ps1 -Kontrol`
    Hata (eksik veya elle degistirilmis dosya) varsa betigi yeniden calistir; elle yapilan degisiklik uretimde kaybolur, bu yuzden firma kodunu `okuyucular/<firma>.js` icinde degil, betigin kaynak mantiginda degistirme.
-4. Firma-ozel bir duzeltme gerekiyorsa `okuyucular/<firma>.js` icinde yapilir ve skill'e not dusulur. Betik yeniden calistirilirsa bu duzeltme silinir; bu yuzden firma-ozel duzeltmeler icin once firma skill'ine yazilir, sonra ilgili dosyaya el ile uygulanir ve `-Kontrol` "elle degistirilmis" diye bildirir (bilerek).
+4. Firma-ozel bir duzeltme gerekiyorsa `okuyucular/<firma>.js` dosyasinin ILK SATIRI `// OZEL` yapilir ve duzeltme orada yapilir. Betik bu isaretli dosyayi yeniden uretmez, `-Kontrol` "OZEL (elle duzenlenmis, yeniden uretilmedi)" diye listeler. Isaretsiz dosyalar betik tarafindan ezilir.
 5. Test: eklentiyi `chrome://extensions` sayfasinda yenile, firmada bir parca ara.
 
 ## Dikkat
