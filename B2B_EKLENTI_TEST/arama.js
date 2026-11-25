@@ -183,13 +183,13 @@ const ALIM_OKUYUCU = { /* a_grup: a_grup_gecmis (Basbug - sonra yapilacak) */ er
 async function alimGecmisiTopla(parca) {
   const isler = [];
   for (const site of SITELER) {
-    const fn = site.ayar && site.ayar.klikPopup ? karpart_gecmis : site.ayar && site.ayar.mydparGecmis ? mydpar_gecmis : site.ayar && site.ayar.asinGecmis ? asin_gecmis : ALIM_OKUYUCU[site.tur || site.okuyucu];
+    const fn = site.ayar && site.ayar.klikPopup ? karpart_gecmis : site.ayar && site.ayar.mydparGecmis ? mydpar_gecmis : site.ayar && site.ayar.asinGecmis ? asin_gecmis : site.ayar && site.ayar.basaranGecmis ? b2b_basaran_gecmis : ALIM_OKUYUCU[site.tur || site.okuyucu];
     const d = durumlar[site.ad];
     if (!fn || !d || !d.sekmeId) continue;
     const satir = sonuclar.filter(r => r.b2b === site.ad && r.kod);
     if (!satir.length) continue;
     // V4 siteleri urun koduyla, Lepar urun numarasiyla (Id) sorgular
-    const kodlar = (["eryaz_json", "eryaz_b2b", "a_grup"].includes(site.tur || site.okuyucu) || fn === karpart_gecmis || fn === mydpar_gecmis || fn === asin_gecmis) ? satir.map(r => ({ kod: r.kod, id: r.urunId, ad: r.ad, alimVar: r.alimVar })) : satir.map(r => r.kod);
+    const kodlar = (["eryaz_json", "eryaz_b2b", "a_grup"].includes(site.tur || site.okuyucu) || fn === karpart_gecmis || fn === mydpar_gecmis || fn === asin_gecmis || fn === b2b_basaran_gecmis) ? satir.map(r => ({ kod: r.kod, id: r.urunId, ad: r.ad, alimVar: r.alimVar })) : satir.map(r => r.kod);
     isler.push({ site, fn, sekmeId: d.sekmeId, kodlar });
   }
   if (!isler.length) { alimDurum = ""; alimCiz(); return; }

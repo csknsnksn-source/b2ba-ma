@@ -1,6 +1,34 @@
 // OZEL: elle duzenlendi (stok noktalari MERKEZ/DEPO resim dosya adindan okunur). Uretici bu dosyayi ezmez.
 // Başaran arama kodu (baslangicta uretildi: araclar/okuyucu_uret.ps1), tur: eryaz_b2b
 // Bu dosya ortak okuyucunun BIREBIR kopyasidir. Duzeltme yalnizca bu firmaya yapilir.
+
+// Basaran alim gecmisi: sonuc satirlari div.Row yapisinda (tr degil). Satirdaki ProductDetail
+// baglantisi -> urun detayi -> Stok Hareketleri tablosu (#gvOrders). Self-contained (sayfaya tek basina gider).
+async function b2b_basaran_gecmis(urunler) {
+  const satirlar = [];
+  const sayi = t => { const s = String(t || "").replace(/[^\d.,-]/g, ""); return s.includes(",") ? (Number(s.replace(/\./g, "").replace(",", ".")) || 0) : (Number(s) || 0); };
+  const satirDom = [...document.querySelectorAll(".Row")].filter(r => !r.querySelector(".Row"));
+  for (const u of urunler.slice(0, 10)) {
+    const satir = satirDom.find(r => (r.innerText || "").includes(u.kod) && r.querySelector('a[href*="ProductDetail"]'));
+    const link = satir && satir.querySelector('a[href*="ProductDetail"]');
+    if (!link) continue;
+    const html = await (await fetch(link.href, { credentials: "include" })).text();
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    const kap = doc.getElementById("gvOrders");
+    if (!kap) continue;
+    const basliklar = [...kap.querySelectorAll(".Heading .Cell")].map(c => (c.textContent || "").trim().toLowerCase());
+    const idx = ad => basliklar.findIndex(b => b.startsWith(ad));
+    const iTar = idx("tarih"), iDos = idx("dosya"), iMik = idx("miktar"), iBir = idx("birim"), iFiy = idx("fiyat"), iIsk = idx("iskonto 1"), iTop = idx("toplam");
+    for (const r of kap.querySelectorAll(".Row")) {
+      const h = [...r.querySelectorAll(".Cell")].map(c => (c.textContent || "").trim());
+      if (!h.length || iTar < 0) continue;
+      const t = /(\d{2})\/(\d{2})\/(\d{4})/.exec(h[iTar] || "");
+      const miktar = sayi(h[iMik]), fiyat = sayi(h[iFiy]);
+      satirlar.push({ kod: u.kod, ad: u.ad || "", evrak: (iDos >= 0 && h[iDos]) || h[iTar], miktar, birim: iBir >= 0 ? h[iBir] : "", fiyat, toplam: iTop >= 0 && sayi(h[iTop]) ? sayi(h[iTop]) : Math.round(miktar * fiyat * 100) / 100, isk: iIsk >= 0 && sayi(h[iIsk]) ? [sayi(h[iIsk])] : [], tarih: t ? new Date(+t[3], +t[2] - 1, +t[1]).getTime() : 0 });
+    }
+  }
+  return { satirlar };
+}
 // Yukleme sirasi: okuyucular.js sonrasi, arama.js oncesi.
 
 function b2b_basaran_gonder(parca, cfg) {
