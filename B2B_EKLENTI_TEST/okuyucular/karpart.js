@@ -282,6 +282,9 @@ async function b2b_karpart_oku(ayar, cfg) {
   }
   // TEST: doviz fiyati var ama kur okunamadiysa "yok" yerine acik hata goster
   if (dovizSorun && !sonuc.satirlar.length) { sonuc.hata = "SITE"; sonuc.mesaj = "Döviz kuru okunamadı (USD/EUR), fiyat gösterilemiyor"; }
+  // Satir cikmadi ama sayfa yeni yuklenmis/yuklenmekte olabilir: 20 sn'e kadar okumaya devam et ("yok" hemen donme)
+  const yas = window.__b2bGonderZaman ? Date.now() - window.__b2bGonderZaman : performance.now();
+  if (!sonuc.satirlar.length && !sonuc.hata && yas < 20000) { sonuc.imza = "bekle" + Date.now(); return sonuc; }
   // Tabloda aranan parca var ama satir okunamadiysa sessizce "yok" yerine acik hata goster
   if (!sonuc.satirlar.length && !sonuc.hata) {
     const aranan = String(new URLSearchParams(location.search).get("Key") || (() => { try { return sessionStorage.getItem("b2bAranan") || ""; } catch (e) { return ""; } })()).replace(/[^a-z0-9]/gi, "").toUpperCase();
