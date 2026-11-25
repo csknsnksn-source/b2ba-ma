@@ -169,6 +169,35 @@ async function b2b_karpart_oku(ayar, cfg) {
     if (/truck|blue|yolda|transit/.test(ad)) return "Yolda";
     return "? (" + ad + ")";
   };
+  // STOK hucresinin durumu: ikon turu bilinmediginden sirayla dener: img, CSS arka plan, sinif adi, renk.
+  // Hicbiri tutmazsa "? [html]" gosterir (test icin: gercek yapi ekranda okunur).
+  const durumCoz = hucre => {
+    const ogeler = [hucre, ...hucre.querySelectorAll("*")];
+    const im = hucre.querySelector("img");
+    if (im) return durumKoy(im.getAttribute("src"));
+    for (const el of ogeler) {
+      const m = /url\(["']?([^"')]+)/.exec(getComputedStyle(el).backgroundImage || "");
+      if (m) return durumKoy(m[1]);
+    }
+    const sinif = ogeler.map(e => (e.getAttribute && e.getAttribute("class")) || "").join(" ").toLowerCase();
+    if (/check|tick|\bok\b|success|green|yesil|\bvar\b/.test(sinif)) return "Var";
+    if (/times|remove|close|cross|danger|\bred\b|yok/.test(sinif)) return "Yok";
+    if (/warning|orange|kritik|amber/.test(sinif)) return "Kritik";
+    if (/truck|yolda|blue|transit/.test(sinif)) return "Yolda";
+    for (const el of ogeler) {
+      const cs = getComputedStyle(el);
+      for (const c of [cs.color, cs.backgroundColor]) {
+        const m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(c || "");
+        if (!m) continue;
+        const r = +m[1], g = +m[2], b = +m[3];
+        if (g > 120 && r < 120 && b < 120) return "Var";
+        if (r > 150 && g < 100 && b < 100) return "Yok";
+        if (r > 200 && g > 120 && g < 200 && b < 100) return "Kritik";
+        if (b > 150 && r < 120) return "Yolda";
+      }
+    }
+    return "? [" + hucre.innerHTML.replace(/\s+/g, " ").slice(0, 80) + "]";
+  };
   // TEST (dovizKur): sayfanin ust cubugundaki kur ("USD: 50,6286") ile doviz fiyati TL'ye cevrilir
   const kurOku = cur => { const m = new RegExp(cur + ":\\s*(\\d{1,3}(?:\\.\\d{3})*,\\d+)", "i").exec(document.body.innerText || ""); return m ? Number(m[1].replace(/\./g, "").replace(",", ".")) : null; };
   let dovizSorun = false;
@@ -238,8 +267,7 @@ async function b2b_karpart_oku(ayar, cfg) {
       // STOK sutunundaki ikon -> durum (yoksa yazidaki stok); foto yalnizca Gorsel sutunundan (stok ikonu foto sayilmaz)
       const stokIdx = basliklar.indexOf("stok");
       const stokHucre = stokIdx >= 0 ? tr.children[stokIdx] : null;
-      const stokImg = stokHucre && stokHucre.querySelector("img");
-      const stok = stokImg ? durumKoy(stokImg.getAttribute("src")) : (u.stok || "");
+      const stok = stokHucre ? durumCoz(stokHucre) : (u.stok || "");
       const gorselIdx = basMetin.findIndex(t => /g[öo]rsel/i.test(t));
       const gorselHucre = gorselIdx >= 0 ? tr.children[gorselIdx] : null;
       const img = gorselHucre ? gorselHucre.querySelector("img[src]") : null;
