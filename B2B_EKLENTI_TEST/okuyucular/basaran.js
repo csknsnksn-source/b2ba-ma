@@ -9,10 +9,12 @@ async function b2b_basaran_gecmis(urunler) {
   const sayi = t => { const s = String(t || "").replace(/[^\d.,-]/g, ""); return s.includes(",") ? (Number(s.replace(/\./g, "").replace(",", ".")) || 0) : (Number(s) || 0); };
   const satirDom = [...document.querySelectorAll(".Row")].filter(r => !r.querySelector(".Row"));
   for (const u of urunler.slice(0, 10)) {
-    const satir = satirDom.find(r => (r.innerText || "").includes(u.kod) && r.querySelector('a[href*="ProductDetail"]'));
+    const satir = satirDom.find(r => (r.innerText || "").includes(u.kod));
     const link = satir && satir.querySelector('a[href*="ProductDetail"]');
-    if (!link) continue;
-    const html = await (await fetch(link.href, { credentials: "include" })).text();
+    // Baglanti yoksa urun kimligi (satirdaki qty kutusu) ile urun detayina git
+    const adres = link ? link.href : (u.id ? location.origin + "/ProductDetail.aspx?Id=" + u.id : null);
+    if (!adres) continue;
+    const html = await (await fetch(adres, { credentials: "include" })).text();
     const doc = new DOMParser().parseFromString(html, "text/html");
     const kap = doc.getElementById("gvOrders");
     if (!kap) continue;
