@@ -190,6 +190,15 @@ async function okuyucu_eryaz_web(parca) {
 // (eklenti sayfa yuklenene kadar birkac kez dener).
 function eryaz_b2b_gonder(parca, cfg) {
   cfg = cfg || {};
+  // adresleAra (Basdas): her aramada sonuc sayfasi parcayla (?q=) yeniden yuklenir; eski tablo okunmaz.
+  // Sayfa zaten bu parca icin acik ise tekrar yonlendirme yapilmaz (sonsuz dongu olmasin).
+  if (cfg.adresleAra) {
+    const q = new URLSearchParams(location.search).get("q");
+    if (!(/search\.aspx/i.test(location.pathname) && q === parca)) {
+      setTimeout(() => { location.href = location.origin + "/search.aspx?q=" + encodeURIComponent(parca); }, 30);
+      return { yonlendi: true };
+    }
+  }
   // Asin: ana sayfadaki arama calismiyor; arama sayfasini parcayla (?q=) acmak sonucu getiriyor
   if (/asinotomotiv/i.test(location.hostname) && !/search\.aspx/i.test(location.pathname)) {
     setTimeout(() => { location.href = location.origin + "/search.aspx?q=" + encodeURIComponent(parca); }, 30);
@@ -1317,6 +1326,8 @@ const OKUYUCULAR = {
   a_grup: okuyucu_a_grup,
   eryaz_web: okuyucu_eryaz_web,
   eryaz_b2b: { gonder: eryaz_b2b_gonder, oku: eryaz_b2b_oku },   // iki adimli (sayfa yenilenir)
+  // TEST: Basdas - her aramada adresle (?q=) yukleme; eski sonuc gosterilmez
+  eryaz_b2b_adres: { gonder: p => eryaz_b2b_gonder(p, { adresleAra: true }), oku: eryaz_b2b_oku },
   sadece_b2b: { gonder: genel_gonder, oku: genel_oku, cfg: { kutu: ["quick-kelime"], dugme: ["urunAra"], alan: "aramaekrani" } },
   guneybaglilar: { gonder: genel_gonder, oku: genel_oku, cfg: { kutu: ["txtAra"], dugme: ["btnAra"], alan: "tablo_wrapper" } },
   bursa_nisa: { gonder: genel_gonder, oku: genel_oku, cfg: { kutu: ["urun-ara"], dugmeSec: "#searchform button", alan: "formUrunSearch" } },

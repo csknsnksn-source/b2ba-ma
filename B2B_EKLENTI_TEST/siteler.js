@@ -16,7 +16,7 @@ const SITELER = [
   { ad: "Akay", kisayol: "AkayOto", desen: "*://b2b.akayoto.com.tr/*", okuyucu: "eryaz_b2b", acilis: "https://b2b.akayoto.com.tr/Default.aspx", ayar: { kdv: 20 } },
   { ad: "Akkar", kisayol: "Akkar Motor LTD. ŞTİ.", desen: "*://b2b.akkarmotor.com/*", okuyucu: "eryaz_b2b", acilis: "https://b2b.akkarmotor.com/Default.aspx", ayar: { kdv: 20 } },
   { ad: "Aşin", kisayol: "Aşin Otomotiv", desen: "*://b2b.asinotomotiv.com/*", okuyucu: "eryaz_b2b", acilis: "https://b2b.asinotomotiv.com/Default.aspx", ayar: { kdv: 20, asinGecmis: true } },
-  { ad: "Başdaş", kisayol: "Başdaş Dış Ticaret", desen: "*://b2b.basdasotomotiv.com/*", okuyucu: "eryaz_b2b", acilis: "https://b2b.basdasotomotiv.com/Default.aspx", ayar: { kdv: 20 } },
+  { ad: "Başdaş", kisayol: "Başdaş Dış Ticaret", desen: "*://b2b.basdasotomotiv.com/*", okuyucu: "eryaz_b2b_adres",acilis: "https://b2b.basdasotomotiv.com/Default.aspx", ayar: { kdv: 20 } },
   { ad: "Kortaş", kisayol: "KORTAS OTOMOTİV", desen: "*://b2b.kortasotomotiv.com/*", okuyucu: "eryaz_b2b", acilis: "https://b2b.kortasotomotiv.com/Default.aspx", ayar: { kdv: 20, ozelKdvHaric: true } },
   { ad: "Karakaş", kisayol: "Karakaş Otomotiv", desen: "*://b2b.karakasoto.com/*", okuyucu: "eryaz_b2b", acilis: "https://b2b.karakasoto.com/Default.aspx", ayar: { kdv: 20 } },
   { ad: "Korea", kisayol: "Korea Otomotiv", desen: "*://b2b.koreaotomotiv.com/*", okuyucu: "eryaz_b2b", acilis: "https://b2b.koreaotomotiv.com/Default.aspx", ayar: { kdv: 20, popupNetler: true } },

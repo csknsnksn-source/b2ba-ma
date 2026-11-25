@@ -3,6 +3,10 @@
 **Ayar:** standart (eryaz_b2b)
 **Genel durum:** Arama BEKLİYOR (25.11: yanlış sonuç) · Fiyat BEKLİYOR · Alım geçmişi BEKLİYOR
 
+## Bilinen sorunlar (25.11)
+- **Eski sonuç:** Arama kutuya yazılıyor ama sayfa yenilenmediği için önceki aramanın tablosu okunabiliyor (ör. `search.aspx?q=2091042` açıkken `sa072` aramasında MB903639 göründü, sitede çıkmıyordu). Eski "sonuç filtresi" kaldırılmıştı, yani bu sorunu yakalamıyordu. Çözüm (test sürümü): `okuyucu: eryaz_b2b_adres`, her aramada `search.aspx?q=<parça>` ile yükleme.
+- **Stok:** Site stoğu yazıyla değil renkli noktalarla veriyor (yeşil Var, yarım Az Var, kırmızı X Yok). Eklenti yazı okuduğu için "?" gösteriyor ve nokta resmini ürün resmi sanıyor. Çözüm için DevTools görüntüsü bekleniyor.
+
 ## Aramalar
 
 ### sa072 (25.11)
