@@ -68,15 +68,39 @@ const calistir = (tabId, func, args) =>
   chrome.scripting.executeScript({ target: { tabId }, world: "MAIN", func, args })
     .then(r => (r && r[0] && r[0].result) || null);
 
+// B2B sitelerinin bildirim/duyuru popup'larini kapatir (aramayi engellemesin diye). Self-contained (sayfaya tek basina gider).
+// Yalnizca diyalog/modal kutularinin ICINDEKI kapatma dugmelerine tiklar; kutu disina dokunmaz.
+async function popupKapat() {
+  const dugmeMetinleri = ["tamam", "kapat", "anladım", "anladim", "okudum", "sonra", "daha sonra", "hayır", "hayir", "ok", "×", "x", "vazgeç", "vazgec"];
+  const kapandi = [];
+  const gorunur = el => { const r = el.getBoundingClientRect(); const s = getComputedStyle(el); return r.width > 0 && r.height > 0 && s.visibility !== "hidden" && s.display !== "none"; };
+  const kutular = [...document.querySelectorAll('[role="dialog"], [aria-modal="true"], .modal.show, .modal.in, .swal2-popup, .ui-dialog, .bootbox, [class*="modal" i], [class*="popup" i], [class*="duyuru" i], [class*="bildirim" i]')].filter(gorunur);
+  for (const k of kutular) {
+    const dugme = [...k.querySelectorAll("button, a, input[type=button], input[type=submit], span, div")].find(b => {
+      if (b.children.length > 1) return false;
+      const t = (b.innerText || b.value || "").trim().toLowerCase();
+      return t && dugmeMetinleri.includes(t) && gorunur(b);
+    });
+    if (dugme) { dugme.click(); kapandi.push((dugme.innerText || dugme.value || "").trim()); }
+  }
+  // Kapatilamayan arka plan perdesi aramanin tiklamalarini engelleyebilir: kaldir
+  for (const o of document.querySelectorAll(".modal-backdrop, .swal2-container, .overlay-backdrop")) {
+    if (gorunur(o)) { o.remove(); kapandi.push("perde"); }
+  }
+  return kapandi;
+}
+
 // Sayfa yenilenmeyen siteler: tek fonksiyon arar ve sonucu dondurur
 async function tekAdim(tabId, func, parca, ayar) {
   const zaman = new Promise(r => setTimeout(() => r({ hata: "ZAMAN", mesaj: "Site cevap vermedi" }), SURE_SINIRI));
+  await calistir(tabId, popupKapat, []).catch(() => null);   // bildirim popup'i aramayi engellemesin
   return (await Promise.race([calistir(tabId, func, [parca, ayar]), zaman])) || { hata: "SITE", mesaj: "Sonuç alınamadı" };
 }
 
 // "Ara"da sayfasi bastan yuklenen siteler: once gonder, sonra sayfa yuklenince oku
 async function ikiAdim(tabId, okuyucu, parca, ayar) {
   const cfg = okuyucu.cfg || {};
+  await calistir(tabId, popupKapat, []).catch(() => null);   // gonderimden once popup'lari kapat
   let g = await calistir(tabId, okuyucu.gonder, [parca, cfg]);
   if (g && g.yonlendi) {
     // Sekme arama sayfasina geciyor: yuklenmesini bekleyip aramayi yeniden baslat
@@ -100,6 +124,7 @@ async function ikiAdim(tabId, okuyucu, parca, ayar) {
   await bekle(600);
   while (Date.now() < bitis) {
     let r = null;
+    await calistir(tabId, popupKapat, []).catch(() => null);   // okumadan once popup'lari kapat
     try { r = await calistir(tabId, okuyucu.oku, [ayar, cfg]); } catch (e) { r = null; }   // sayfa yuklenirken hata normal
     if (r) {
       if (r.hata === "GIRIS" || r.hata === "SITE") return r;
