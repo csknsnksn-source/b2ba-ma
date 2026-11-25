@@ -151,6 +151,24 @@ async function b2b_karpart_oku(ayar, cfg) {
   if (cfg.bekle && !new RegExp(cfg.bekle, "i").test(document.body.innerText || document.body.textContent || "") && performance.now() < 15000) { sonuc.imza = "bekle" + Date.now(); return sonuc; }
 
   const kdv = Number(ayar.kdv || 20), carpan = Number(ayar.carpan || 1);
+  // STOK ikonu (yesil onay / kirmizi carpi) -> durum. Once sayfanin aciklama satirindaki (Var/Yok/Kritik/Yolda) ikonlarindan
+  // dosya adi eslemesi cikarilir; bilinmeyen dosya adi "? (dosya)" olarak gosterilir (test icin).
+  const lejand = {};
+  for (const el of document.querySelectorAll("span, div, td, p, label, b")) {
+    const t = (el.textContent || "").trim().toLowerCase();
+    if (el.children.length || !["var", "yok", "kritik", "yolda"].includes(t)) continue;
+    const im = (el.parentElement && el.parentElement.querySelector("img")) || (el.previousElementSibling && el.previousElementSibling.tagName === "IMG" ? el.previousElementSibling : null);
+    if (im) lejand[((im.getAttribute("src") || "").split("/").pop().split("?")[0]).toLowerCase()] = t.charAt(0).toUpperCase() + t.slice(1);
+  }
+  const durumKoy = src => {
+    const ad = ((src || "").split("/").pop() || "").split("?")[0].toLowerCase();
+    if (lejand[ad]) return lejand[ad];
+    if (/tick|check|green|yesil|onay/.test(ad)) return "Var";
+    if (/red|cross|close|kirmizi|yok/.test(ad)) return "Yok";
+    if (/orange|yellow|sari|kritik|amber/.test(ad)) return "Kritik";
+    if (/truck|blue|yolda|transit/.test(ad)) return "Yolda";
+    return "? (" + ad + ")";
+  };
   // TEST (dovizKur): sayfanin ust cubugundaki kur ("USD: 50,6286") ile doviz fiyati TL'ye cevrilir
   const kurOku = cur => { const m = new RegExp(cur + ":\\s*(\\d{1,3}(?:\\.\\d{3})*,\\d+)", "i").exec(document.body.innerText || ""); return m ? Number(m[1].replace(/\./g, "").replace(",", ".")) : null; };
   let dovizSorun = false;
@@ -217,13 +235,19 @@ async function b2b_karpart_oku(ayar, cfg) {
       const kmp = u.kampanya != null ? sayi(u.kampanya) : null;          // daha ucuz kampanya fiyati (KDV haric)
       let kampanyaVar = false, normNet = null, normKdv = null;
       if (kmp && kmp > 0 && kmp < net) { normNet = net; normKdv = kdvli; kdvli = kdvli * kmp / net; net = kmp; kampanyaVar = true; }
-      const stok = u.stok || "";
-      const img = tr.querySelector("img[src]");
+      // STOK sutunundaki ikon -> durum (yoksa yazidaki stok); foto yalnizca Gorsel sutunundan (stok ikonu foto sayilmaz)
+      const stokIdx = basliklar.indexOf("stok");
+      const stokHucre = stokIdx >= 0 ? tr.children[stokIdx] : null;
+      const stokImg = stokHucre && stokHucre.querySelector("img");
+      const stok = stokImg ? durumKoy(stokImg.getAttribute("src")) : (u.stok || "");
+      const gorselIdx = basMetin.findIndex(t => /g[öo]rsel/i.test(t));
+      const gorselHucre = gorselIdx >= 0 ? tr.children[gorselIdx] : null;
+      const img = gorselHucre ? gorselHucre.querySelector("img[src]") : null;
       sonuc.satirlar.push({
         kampanya: kampanyaVar, normalFiyat: normNet != null ? Math.round(normNet * 100) / 100 : null, normalKdvli: normKdv != null ? Math.round(normKdv * 100) / 100 : null,
         kod: u.kod || "", marka: u.marka || "", oem: u.oem || "", ad: u.ad || "",
         fiyat: Math.round(net * 100) / 100, fiyatKdvli: Math.round(kdvli * 100) / 100,
-        stok, stokVar: stok ? !/yok|0$/i.test(stok) : null,
+        stok, stokVar: /^(var|kritik)/i.test(stok) ? true : /^(yok|yolda)/i.test(stok) ? false : null,
         resim: img ? img.src : null, resimBuyuk: img ? img.src : null,
       });
     }
