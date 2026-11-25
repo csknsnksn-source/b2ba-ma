@@ -4,7 +4,7 @@
 **Genel durum:** Arama BEKLİYOR (stok noktaları yanlış okunuyor) · Fiyat ONAYLANMADI (test bekliyor) · Alım geçmişi BEKLİYOR
 
 ## Bilinen sorunlar (25.11)
-- **Stok:** Site stoğu yazıyla değil renkli noktalarla veriyor (yeşil = Var, yarım = Az Var, kırmızı X = Yok, kamyon = Yolda, pembe = Sipariş Üzerine). Eklenti yazı okuduğu için stok "?" gösteriyor ve nokta resmini ürün resmi sanıyor (Foto sütununda yeşil top çıkıyor). Çözüm için DevTools görüntüsü bekleniyor.
+- **Stok:** Site stoğu yazıyla değil renkli noktalarla veriyor (yeşil = Var, yarım = Az Var, kırmızı X = Yok, kamyon = Yolda, pembe = Sipariş Üzerine). Eklenti yazı okuduğu için stok "?" gösteriyor ve nokta resmini ürün resmi sanıyor (Foto sütununda yeşil top çıkıyor). Çözüm (25.11, DevTools): stok noktası `<img src="images/status/green2.png">` olarak geliyor. Dosya adından durum çıkarılır (green = Var, yellow/orange/half = Az Var, red/cross = Yok, truck = Yolda, pink/purple = Sipariş Üzerine). `green2.png` = Var kesin. Kırmızı X'in dosya adı henüz doğrulanmadı; tanınmazsa "?" görünür ve ad stokta okunabilir. Kod: `okuyucular/basdas.js` (`// OZEL`).
 - **Adresle yükleme:** Test sürümünde her aramada `search.aspx?q=<parça>` ile yükleniyor (`adresleAra`, sessionStorage bayrağı). Gerekli değildi, ama zararsız; "Arama başlatılamadı" hatasının düzeltilmesiyle birlikte kaldı.
 - Not: Başta "eski sonuç" sanıldı, sonra yanlış çıktı. Site SA072 için MB903639 satırını gerçekten döndürüyor (üç stok noktası yeşil). Eski sonuç sorunu yok.
 

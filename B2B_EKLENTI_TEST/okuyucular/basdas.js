@@ -1,4 +1,5 @@
-// Başdaş arama kodu - otomatik uretildi (araclar/okuyucu_uret.ps1), tur: eryaz_b2b
+// OZEL: elle duzenlendi (stok noktalari resim dosya adindan okunur). Uretici bu dosyayi ezmez.
+// Başdaş arama kodu (baslangicta uretildi: araclar/okuyucu_uret.ps1), tur: eryaz_b2b
 // Bu dosya ortak okuyucunun BIREBIR kopyasidir. Duzeltme yalnizca bu firmaya yapilir.
 // Yukleme sirasi: okuyucular.js sonrasi, arama.js oncesi.
 
@@ -161,6 +162,18 @@ async function b2b_basdas_oku(ayar) {
   if (!metinSira.length) metinSira = ["kod", "oem", "arac", "ad", "marka"];
   if (!fiyatSira.length) fiyatSira = ["liste"];
 
+  // Basdas stok noktalari: <img src="images/status/green2.png"> gibi. Dosya adindan durum cikarilir.
+  // Dyb./Ist./Izm. sirasiyla ilk uc status resmi. Taninmayan ad "?" olarak kalir (ham ad stokta gorunur).
+  const durumAd = src => String(src || "").split("/").pop().split("?")[0].replace(/\.[a-z]+$/i, "").toLowerCase();
+  const durumKarsilik = src => {
+    const a = durumAd(src);
+    if (/green|yesil/.test(a)) return "Var";
+    if (/yellow|orange|sari|half|az/.test(a)) return "Az Var";
+    if (/red|cross|close|yok/.test(a)) return "Yok";
+    if (/truck|yolda|transit/.test(a)) return "Yolda";
+    if (/pink|purple|magenta|siparis|order/.test(a)) return "Siparis Uzerine";
+    return "?";
+  };
   const satirElemanlari = [];
   for (const q of tablo.querySelectorAll('input[id^="qty"]')) {
     let satir = q, ust = q.parentElement;
@@ -170,6 +183,13 @@ async function b2b_basdas_oku(ayar) {
   const carpan = Number(ayar.carpan || 1), kdv = Number(ayar.kdv || 20);
   for (const tr of satirElemanlari) {
     const u = { stok: "", isk: 0 };
+    // Stok noktalari (Dyb., Ist., Izm.): satirdaki status resimleri
+    const durumResimleri = [...tr.querySelectorAll("img")].filter(i => /status/i.test(i.getAttribute("src") || "")).slice(0, 3);
+    if (durumResimleri.length) {
+      const durumlar = durumResimleri.map(i => durumKarsilik(i.getAttribute("src")));
+      u.stok = ["Dyb", "Ist", "Izm"].slice(0, durumlar.length).map((e, k) => e + " " + durumlar[k]).join(" · ");
+      u.stokVarBul = durumlar.some(d => d === "Var" || d === "Az Var") ? true : (durumlar.every(d => d === "Yok") ? false : null);
+    }
     const fiyatlar = [], metinler = [];
     let iskAlindi = false;
     for (const m of yapraklar(tr)) {
@@ -253,14 +273,15 @@ async function b2b_basdas_oku(ayar) {
       const kNet = kmpDahil ? u.kampanya / (1 + kdv / 100) : u.kampanya;
       if (kNet < net - 0.01) { normNet = net; normKdv = kdvli; net = kNet; kdvli = kNet * (1 + kdv / 100); kampanyaVar = true; }
     }
-    const img = tr.querySelector("img[src*='Thumb'], img[src*='thumb'], img[src*='Image'], img[src*='image']");
+    // Urun resmi: stok noktasi resimleri (status) urun resmi sayilmaz
+    const img = [...tr.querySelectorAll("img[src*='Thumb'], img[src*='thumb'], img[src*='Image'], img[src*='image']")].find(i => !/status/i.test(i.getAttribute("src") || "")) || null;
     sonuc.satirlar.push({
       kampanya: kampanyaVar, normalFiyat: normNet != null ? Math.round(normNet * 100) / 100 : null, normalKdvli: normKdv != null ? Math.round(normKdv * 100) / 100 : null,
       urunId: (() => { const q = tr.querySelector('input[id^="qty"]'); const m = q && /^qty(\d+)$/.exec(q.id); return m ? Number(m[1]) : null; })(),
       kod: u.kod || "", marka: u.marka || "", oem: (u.oem || "").replace(/[\s/]+$/, ""),
       ad: (u.ad || "") + (u.arac ? " – " + u.arac : "") + popupNot,
       fiyat: Math.round(net * 100) / 100, fiyatKdvli: Math.round(kdvli * 100) / 100,
-      stok: u.stok, stokVar: u.stok ? ["var", "az var", "az", "kritik"].includes(u.stok.toLowerCase()) : null,
+      stok: u.stok, stokVar: u.stokVarBul !== undefined ? u.stokVarBul : (u.stok ? ["var", "az var", "az", "kritik"].includes(u.stok.toLowerCase()) : null),
       resim: img ? img.src : null, resimBuyuk: img ? img.src : null,
     });
   }
