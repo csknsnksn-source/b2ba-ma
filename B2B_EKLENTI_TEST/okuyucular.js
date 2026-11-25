@@ -190,11 +190,17 @@ async function okuyucu_eryaz_web(parca) {
 // (eklenti sayfa yuklenene kadar birkac kez dener).
 function eryaz_b2b_gonder(parca, cfg) {
   cfg = cfg || {};
-  // adresleAra (Basdas): her aramada sonuc sayfasi parcayla (?q=) yeniden yuklenir; eski tablo okunmaz.
-  // Sayfa zaten bu parca icin acik ise tekrar yonlendirme yapilmaz (sonsuz dongu olmasin).
+  // adresleAra (Basdas): her aramada sonuc sayfasi yeniden yuklenir; eski tablo okunmaz.
+  // Basdas adres cubugundaki q= parametresini dusurdugu icin q'ya bakilmaz. Bunun yerine
+  // sessionStorage'daki yonlendirme bayragi kullanilir: bayrak bu parca icin tazeyse ve bu sayfa
+  // bayraktan SONRA yuklendiyse (performance.timeOrigin) tekrar yonlendirme yapilmaz -> dongu olmaz.
   if (cfg.adresleAra) {
-    const q = new URLSearchParams(location.search).get("q");
-    if (!(/search\.aspx/i.test(location.pathname) && q === parca)) {
+    let bayrak = null;
+    try { bayrak = JSON.parse(sessionStorage.getItem("b2bAdresAra") || "null"); } catch (e) { bayrak = null; }
+    const taze = !!bayrak && bayrak.parca === parca && Date.now() - bayrak.zaman < 60000;
+    const yeniSayfa = taze && performance.timeOrigin > bayrak.zaman;
+    if (!(/search\.aspx/i.test(location.pathname) && yeniSayfa)) {
+      try { sessionStorage.setItem("b2bAdresAra", JSON.stringify({ parca: parca, zaman: Date.now() })); } catch (e) { }
       setTimeout(() => { location.href = location.origin + "/search.aspx?q=" + encodeURIComponent(parca); }, 30);
       return { yonlendi: true };
     }
