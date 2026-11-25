@@ -1,4 +1,4 @@
-﻿B2B KISAYOL TARAMASI - 30.10.2026 17:21
+﻿B2B KISAYOL TARAMASI - 25.11.2026 10:08
 Klasor: C:\Users\HP\OneDrive\Masaüstü\PROGRAM OLANLAR
 
 SITE                 ->  KLASORDEKI KISAYOL
@@ -15,7 +15,7 @@ Akay                 ->  AkayOto
 Akkar                ->  Akkar Motor LTD. ŞTİ.
 Aşin                 ->  Aşin Otomotiv
 Başdaş               ->  Başdaş Dış Ticaret
-Kortaş               ->  KORTAS OTOMOTİV
+Kortaş               ->  Martaş Otomotiv
 Karakaş              ->  Karakaş Otomotiv
 Korea                ->  Korea Otomotiv
 NES                  ->  NES Oto Parçaları
@@ -68,12 +68,13 @@ Orient               ->  Orient Ekspres Ltd. Şti. (coşkun)
 Şahinler             ->  Şahinler   Şahinler Motorlu Araçlar San.ve Tic. A.Ş (coşkun)
 
 Klasorde olup hicbir siteye eslesmeyen kisayollar:
-  Akbilya B2B
   AlaaAlbik B2b
   Arena Oto B2b
   Arsan Motor
+  BasariOtomotiveB4B
   Bayar Oto
   JETPAR TURBO
+  KORTAS OTOMOTİV
   Mertpar Otomotiv Ltd. Şti.
   Meydan.IO
   OTO SEN
@@ -83,4 +84,3 @@ Klasorde olup hicbir siteye eslesmeyen kisayollar:
   Yak Otomotiv
   Özaş Otomotiv
   İlpar
-  İzmir Bilya San. ve Tic.Ltd. Şti.

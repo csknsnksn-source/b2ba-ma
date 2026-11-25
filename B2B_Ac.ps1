@@ -8,7 +8,8 @@
 # ==========================================================
 param(
     [int]$AraBekleme = 3,  # iki program arasi ekstra bekleme (saniye)
-    [string]$Sadece = ''   # bos degilse yalniz bu kisayollar acilir (ad|ad|ad, uzantisiz)
+    [string]$Sadece = '',  # bos degilse yalniz bu kisayollar acilir (ad|ad|ad, uzantisiz)
+    [string]$KisayolKlasor = ''  # kisayollarin klasoru (bos ise bu dosyanin klasoru)
 )
 
 $ErrorActionPreference = 'Stop'
@@ -111,7 +112,8 @@ function TusGonder([string]$tuslar, [string]$kul, [string]$sif) {
 }
 
 # ---------------- KISAYOLLAR ----------------
-$dosyalar = @(Get-ChildItem -Path $Klasor -File |
+$kisayolDizin = if ($KisayolKlasor -and (Test-Path -LiteralPath $KisayolKlasor)) { $KisayolKlasor } else { $Klasor }
+$dosyalar = @(Get-ChildItem -Path $kisayolDizin -File |
               Where-Object { $_.Extension.ToLower() -in '.lnk', '.url', '.appref-ms' } |
               Sort-Object Name)
 if ($Sadece) {
