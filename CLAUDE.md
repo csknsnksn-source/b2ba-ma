@@ -17,6 +17,12 @@ Bu depo, Chrome eklentisi "B2B Ortak Arama"nın (Chrome Web Mağazası, liste d�
 - `ESKI_SURUMLER/` – eski zip'ler ve betikler. Silinmez, referans olarak kalır.
 - `.claude/` – skill'ler (`skills/`) ve ajanlar (`agents/`).
 
+## Arama kodu yapısı (firma basina ayri)
+- Her firmanin arama kodu `B2B_EKLENTI_TEST/okuyucular/<firma>.js` icindedir, `.claude/skills/firma-<firma>/SKILL.md` ile belgelenir.
+- Bu dosyalar `araclar/okuyucu_uret.ps1` ile uretilir. Elle degistirilirse `-Kontrol` bildirir. Firma-ozel duzeltme skill'e not edilip ilgili dosyaya uygulanir.
+- Ortak `okuyucular.js` ve `arama.js` diger firmalar icin aynen kalir; bir firmanin sorununu ortak okuyucuya bayrak ekleyerek cozme.
+- Okuyucu fonksiyonu sayfaya (`executeScript`) yalnizca kendi govdesiyle gider. Baska fonksiyona veya ust duzey degiskene referans verme; ayar gerekiyorsa kayittaki `cfg` ile ver.
+
 ## Değişmeyen düzen
 - Eklenti Chrome Web Mağazası'nda **liste dışı** yayınlanıyor. Güncellemeler orada tutuluyor.
 - Python'a geçilmiyor. Kurulum ve yardımcılar PowerShell ile kalıyor.
