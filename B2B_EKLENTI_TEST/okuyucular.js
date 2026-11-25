@@ -524,7 +524,10 @@ async function genel_oku(ayar, cfg) {
       }
       return null;
     };
-    const r = { net: etiketli(/KDV.?S.{1,2}Z\s*MAL/i), kdvli: etiketli(/KDV.?L.{1,2}\s*MAL/i) };
+    // TEST: site ayarinda popupNet / popupKdv verilmisse (ornek GloPar) onlari kullan
+    const netRe = ayar.popupNet ? new RegExp(ayar.popupNet, "i") : /KDV.?S.{1,2}Z\s*MAL/i;
+    const kdvRe = ayar.popupKdv ? new RegExp(ayar.popupKdv, "i") : /KDV.?L.{1,2}\s*MAL/i;
+    const r = { net: etiketli(netRe), kdvli: etiketli(kdvRe) };
     if (r.net == null && r.kdvli == null) throw new Error("etiket yok, cevap: " + html.replace(/\s+/g, " ").slice(0, 80));
     return r;
   };
@@ -580,7 +583,12 @@ async function genel_oku(ayar, cfg) {
       const hucreler = [...tr.children].map(c => temiz(c.innerText || c.textContent));
       if (hucreler.length < 3) continue;
       const u = {};
-      basliklar.forEach((a, i) => { if (a && hucreler[i] && u[a] == null) u[a] = hucreler[i]; });
+      // TEST: doviz cinsi fiyat (ornek GloPar: "$7,84") TL degildir; tablodan alinmaz, yoksa TL gibi okunup yanlis net cikar
+      basliklar.forEach((a, i) => {
+        if (!a || !hucreler[i] || u[a] != null) return;
+        if (["liste", "net", "ozel", "kdvli", "listeKdvli"].includes(a) && /[$€]|USD|EUR/i.test(hucreler[i])) return;
+        u[a] = hucreler[i];
+      });
       const liste = u.liste != null ? sayi(u.liste) : null;
       let net = u.net != null ? sayi(u.net) : null, kdvli = u.kdvli != null ? sayi(u.kdvli) : null;
       const ozel = u.ozel != null ? sayi(u.ozel) : null;
