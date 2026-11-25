@@ -7,6 +7,13 @@ Yeni kayıt en üste eklenir.
 
 ## 25.11.2026
 
+**SA072 · Başdaş**
+- Site (kendi ekranı, `search.aspx?q=SA072`): 58305-44A40/J (Dyb. yeşil, İst. yeşil, İzm. kırmızı, KDV dahil 844,63 TL) · MB903639 TERMİK KONTAK (üç nokta yeşil, KDV dahil 314,72 TL)
+- Eklenti önce: stok "?" ve foto olarak yeşil top (stok noktası resimleri yanlış okunuyordu)
+- Düzeltme: stok noktaları `status` resminin dosya adından okunuyor (`okuyucular/basdas.js`)
+- Eklenti sonra: kullanıcı testi yaptı, "OK DOĞRU"
+- Onay: **Kullanıcı onayladı** (25.11)
+
 **sp1074 · GloPar**
 - Site (fare üstü pencere): Liste $7,84 · Fiyat ₺396,93 · Net ₺396,93 · Net Fiyat Kdv Dahil ₺476,31 (kur USD 50,6286)
 - Eklenti önce: "yok" (dolar fiyatı atlanıp popup'a bağlıydı, popup yoktu)

@@ -12,7 +12,7 @@ Arama kayıtları: `ARAMA_KAYITLARI.md`
 | Yeni Alka | ONAYLANDI (01.11) | BEKLİYOR | tekFiyatKdvli | Tek fiyat KDV'li |
 | Akkar | ONAYLANDI | BEKLİYOR | — | Başlık "Stok Kodu" düzeltildi |
 | Aşin | ONAYLANDI | BEKLİYOR | asinGecmis | Alım: Stok Hareketleri tıklamayla yükleniyor, Id bağlantısı yok |
-| Başdaş | BEKLİYOR (25.11: yanlış sonuç) | BEKLİYOR | — | "sa072" aramasında alakasız eski satır (MB903639 TERMİK KONTAK) gösterdi. Eski sonuç filtresi tekrar test edilecek |
+| Başdaş | ONAYLANDI (25.11) | BEKLİYOR | basdas (eryaz_b2b, adresleAra) | SA072 testi onaylandı (stok noktaları status resminden okunuyor). Alım geçmişi sonra |
 | Balkan Radyatör | ONAYLANDI (01.11) | BEKLİYOR | tekFiyatKdvli, kdvliAlan | "KDV'li Net" sütunu doğrudan KDV dahil |
 | Karpart | ONAYLANDI | ONAYLANDI | klikPopup | Fiyat ve alım tıklamayla |
 | Mydpar | ONAYLANDI | ONAYLANDI | netKdvli, mydparGecmis | |
