@@ -30,6 +30,7 @@ function b2b_karpart_gonder(parca, cfg) {
   window.__b2bIsaret = Date.now();
   window.__b2bGonderZaman = Date.now();          // hazir kontrolu icin: gonderim zamani
   window.__b2bAranan = String(parca);            // hazir kontrolu icin: aranan parca
+  try { sessionStorage.setItem("b2bAranan", String(parca)); } catch (e) { }   // sayfa yeniden yuklense de kalsin
   // Sitenin arka plan isteklerini izle: tiklamadan sonra baslayan istekler bitince "bitti" de
   window.__b2bBitti = false;
   (function () {
@@ -130,8 +131,12 @@ async function b2b_karpart_oku(ayar, cfg) {
   // Karpart tablosu iki istekle dolar: sonuc hazir degilse "bekle" donup okumayi tekrarlat.
   // Hazir: islem gostergesi yok VE (aranan parca tabloda ya da gonderimden 4 sn sonra bos tablo ya da 20 sn gecti).
   {
-    const gecen = Date.now() - (window.__b2bGonderZaman || 0);
-    const aranan = String(window.__b2bAranan || "").replace(/[^a-z0-9]/gi, "").toUpperCase();
+    // Karpart ARA sayfayi yeniden yukler: once adresteki Key, sonra sessionStorage (yeniden yuklemede de kalir)
+    let kayitli = null; try { kayitli = sessionStorage.getItem("b2bAranan"); } catch (e) { }
+    const arananHam = new URLSearchParams(location.search).get("Key") || kayitli || window.__b2bAranan || "";
+    const aranan = String(arananHam).replace(/[^a-z0-9]/gi, "").toUpperCase();
+    // Gecen sure: gonderimden beri (ajax) ya da sayfa yuklenmesinden beri (yeniden yukleme)
+    const gecen = window.__b2bGonderZaman ? Date.now() - window.__b2bGonderZaman : performance.now();
     const islem = document.querySelector("#urunListesi_processing");
     const islemde = !!islem && islem.offsetParent !== null;
     const esles = !!aranan && [...document.querySelectorAll("#urunListesi tbody tr")].some(tr => (tr.innerText || "").replace(/[^a-z0-9]/gi, "").toUpperCase().includes(aranan));
@@ -225,6 +230,12 @@ async function b2b_karpart_oku(ayar, cfg) {
   }
   // TEST: doviz fiyati var ama kur okunamadiysa "yok" yerine acik hata goster
   if (dovizSorun && !sonuc.satirlar.length) { sonuc.hata = "SITE"; sonuc.mesaj = "Döviz kuru okunamadı (USD/EUR), fiyat gösterilemiyor"; }
+  // Tabloda aranan parca var ama satir okunamadiysa sessizce "yok" yerine acik hata goster
+  if (!sonuc.satirlar.length && !sonuc.hata) {
+    const aranan = String(new URLSearchParams(location.search).get("Key") || (() => { try { return sessionStorage.getItem("b2bAranan") || ""; } catch (e) { return ""; } })()).replace(/[^a-z0-9]/gi, "").toUpperCase();
+    const var_ = !!aranan && [...document.querySelectorAll("#urunListesi tbody tr")].some(tr => (tr.innerText || "").replace(/[^a-z0-9]/gi, "").toUpperCase().includes(aranan));
+    if (var_) { sonuc.hata = "SITE"; sonuc.mesaj = "Karpart: tabloda parça var ama satır okunamadı"; }
+  }
   return sonuc;
 }
 
